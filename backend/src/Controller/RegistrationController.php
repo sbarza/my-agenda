@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\PersonalTrainer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,27 +17,36 @@ class RegistrationController extends AbstractController
     #[Route('/register', name: 'register', methods: "POST")]
     public function index(ManagerRegistry $doctrine, Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
-        $decoded = json_decode($request->getContent());
-        $x = 4;
-        /*
         $em = $doctrine->getManager();
-        $decoded = json_decode($request->getContent());
-        $email = $decoded->email;
-        $plaintextPassword = $decoded->password;
-        $roles = ["ROLE_USER"];
+        $data = $request->toArray();
 
         $user = new User();
+        $user->setAddress($data['address']);
+        $user->setCountry($data['country']);
+        $user->setState($data['state']);
+        $user->setCity($data['city']);
+        $user->setZipCode($data['zipCode']);
+        $user->setFirstName($data['firstName']);
+        $user->setLastName($data['lastName']);
+
+        $plaintextPassword = $data['password'];
+        $email = $data['email'];
+
+        $user->setEmail($data['email']);
+        $user->setUsername($email);
+        $user->setRoles(["ROLE_PERSONAL"]);
         $hashedPassword = $passwordHasher->hashPassword(
             $user,
             $plaintextPassword
         );
         $user->setPassword($hashedPassword);
-        $user->setEmail($email);
-        $user->setUsername($email);
-        $user->setRoles($roles);
-        $em->persist($user);
+
+        $personal = new PersonalTrainer();
+        $personal->setNif($data['lastName']);
+        $personal->setUser($user);
+
+        $em->persist($personal);
         $em->flush();
-        */
         return $this->json(['message' => 'Registered Successfully']);
     }
 }
