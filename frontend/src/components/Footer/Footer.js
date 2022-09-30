@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import livro from './livro-de-reclamacoes.png';
+import livro from '../../images/./livro-de-reclamacoes.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
