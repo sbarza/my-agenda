@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import PersonalForm from "./components/Forms/PersonalForm/PersonalForm";
+import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import styles from "./App.module.css";
 
 library.add(faFacebookF, faInstagram, faPhone, faEnvelope, faBars, faXmark, faAngleRight)
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <main>
         <div className="container">
-          <PersonalForm />
+          <PersonalTrainerForm />
         </div>
       </main>
       <Footer />
