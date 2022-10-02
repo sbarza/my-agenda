@@ -2,8 +2,10 @@ import useInput from "../../../hooks/use-input";
 import Password from "../Password/Password";
 import styles from "./PersonalTrainerForm.module.css";
 
+const emailRegex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const isNotEmpty = (value) => value.trim() !== "";
-const isEmail = (value) => value.includes("@");
+const isEmail = (value) => value.match(emailRegex);
+const isPasswordConfirmed = (value1, value2) => value1 === value2;
 
 const PersonalTrainerForm = () => {
   const {
@@ -77,7 +79,7 @@ const PersonalTrainerForm = () => {
     valueChangeHandler: passwordConfirmationChangeHandler,
     inputBlurHandler: passwordConfirmationBlurHandler,
     reset: resetPasswordConfirmation,
-  } = useInput(isNotEmpty);
+  } = useInput((value) => isPasswordConfirmed(value, passwordValue));
 
   let formIsValid = false;
 

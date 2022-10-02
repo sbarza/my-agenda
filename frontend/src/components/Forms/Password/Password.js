@@ -32,6 +32,7 @@ const Password = ({ label, htmlFor, id, value, onChange, onBlur }) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        autoComplete="off"
       />
       <button type="button" onClick={toogleShowPasswordHandler}>
         <FontAwesomeIcon icon={passIcon} />
