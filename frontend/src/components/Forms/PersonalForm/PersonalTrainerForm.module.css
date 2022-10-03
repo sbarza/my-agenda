@@ -1,5 +1,43 @@
+.container-top-image {
+  position: relative;
+}
+
+.container-top-image img {
+  height: 400px;
+  width: 100%;
+  display: block;
+}
+
+.container-top-image h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+}
+
+.form-personal-gymnasium form {
+  width: 520px;
+  margin: 44px auto 0;
+  color: var(--color-7A7A7A);
+  font-size: var(--font-size-md);
+}
+
+.form-personal-gymnasium h2 {
+  padding: 25px 25px 25px 25px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
 .form-control {
-  margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 15px;
 }
 
 .form-control input,
@@ -8,82 +46,43 @@
 }
 
 .form-control label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 3px;
 }
 
-.form-control input,
-.form-control select {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 20rem;
-  max-width: 100%;
+button.submit-button {
+  display: block;
+  font-weight: 400;
+  color: var(--color-CC3366);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid var(--color-CC3366);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: all .3s;
 }
 
-.form-control input:focus,
-.form-control select:focus {
-  outline: none;
-  border-color: #240370;
-  background-color: #e0d4fd;
-}
-
-.control-group {
-  display: flex;
-  column-gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.control-group .form-control {
-  min-width: 15rem;
-  flex: 1;
-}
-
-button {
-  font: inherit;
-  background-color: #240370;
-  color: white;
-  border: 1px solid #240370;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover,
-button:active {
-  background-color: #33059e;
-  border-color: #33059e;
-}
-
-button:disabled,
-button:disabled:hover,
-button:disabled:active {
-  background-color: #ccc;
-  color: #292929;
-  border-color: #ccc;
+button.submit-button:disabled,
+button.submit-button:disabled:hover,
+button.submit-button:disabled:active {
+  background-color: var(--color-CCCCCC);
+  color: var(--color-292929);
+  border-color: var(--color-CCCCCC);
   cursor: not-allowed;
 }
 
-.form-actions {
-  text-align: right;
+button.submit-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-CC3366);
 }
 
-.form-actions button {
-  margin-left: 1rem;
+.termos-privacidade {
+  display: block;
+  margin-bottom: 10px;
 }
 
-.invalid input,
-.invalid select {
-  border: 1px solid #b40e0e;
-  background-color: #fddddd;
-}
-
-.invalid input:focus,
-.invalid select:focus {
-  border-color: #ff8800;
-  background-color: #fbe8d2;
-}
-
-.error-text {
-  color: #b40e0e;
+.termos-privacidade input {
+  margin-right: 3px;
 }

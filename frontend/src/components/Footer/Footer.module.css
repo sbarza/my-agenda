@@ -1,5 +1,5 @@
 footer {
-    background-color: var(--color-F5F5F5);
+    background-color: var(--color-FAFAFA);
   }
   
   .footer-container {
@@ -47,7 +47,7 @@ footer {
   }
   
   .footer-container__item ul li a svg {
-    color: var(--color-f20000);
+    color: var(--color-red);
     position: absolute;
     top: 5px;
   }

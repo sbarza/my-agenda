@@ -15,9 +15,7 @@ function App() {
     <>
       <Header />
       <main>
-        <div className="container">
-          <PersonalTrainerForm />
-        </div>
+        <PersonalTrainerForm />
       </main>
       <Footer />
     </>
