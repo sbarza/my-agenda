@@ -14,7 +14,7 @@ use App\Entity\User;
 #[Route('/api', name: 'api_')]
 class RegistrationController extends AbstractController
 {
-    #[Route('/register', name: 'register', methods: "POST")]
+    #[Route('/registerPersonalTrainer', name: 'registerPersonalTrainer', methods: "POST")]
     public function index(ManagerRegistry $doctrine, Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
         $em = $doctrine->getManager();
@@ -42,7 +42,7 @@ class RegistrationController extends AbstractController
         $user->setPassword($hashedPassword);
 
         $personal = new PersonalTrainer();
-        $personal->setNif($data['lastName']);
+        $personal->setNif($data['nif']);
         $personal->setUser($user);
 
         $em->persist($personal);
