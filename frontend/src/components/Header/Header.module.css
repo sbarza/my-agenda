@@ -36,8 +36,12 @@
 .header-info__data {
   color: var(--color-white);
   font-size: var(--font-size-text-xs);
-  padding: 0 13px;
+  padding-right: 13px;
   margin-right: 28px;
+}
+
+.header-info__data svg {
+  margin-right: 10px;
 }
 
 .header-info__data--email {
@@ -181,7 +185,7 @@
     height: 80px;
   }
 
-  .header-menu__logo {
+  .header-menu__logo svg {
     width: 80px;
   }
 
