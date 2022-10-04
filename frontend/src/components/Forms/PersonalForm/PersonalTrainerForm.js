@@ -347,6 +347,7 @@ const PersonalTrainerForm = () => {
               <a href="#"> Política de Privacidade</a>
             </label>
             <button className={styles["submit-button"]} disabled={!formIsValid}>Subscrever</button>
+          </div>
         </form>
         <p className={`container ${styles["form-personal-gymnasium__warning"]}`}>
           Acesso válido após, o pagamento efectuado por transferência bancária ou
