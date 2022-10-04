@@ -4,7 +4,7 @@ import styles from "./PersonalTrainerForm.module.css";
 import imageForm from "../../../images/personal-gymnasium-main.jpeg";
 
 const emailRegex =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 const isPasswordConfirmed = (value1, value2) => value1 === value2;
