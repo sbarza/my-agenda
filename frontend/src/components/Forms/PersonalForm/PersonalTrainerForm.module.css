@@ -1,9 +1,10 @@
 .container-top-image {
   position: relative;
+  overflow: hidden;
+  max-height: 400px;
 }
 
 .container-top-image img {
-  height: 400px;
   width: 100%;
   display: block;
 }
@@ -26,7 +27,7 @@
 }
 
 .form-personal-gymnasium h2 {
-  padding: 25px 25px 25px 25px;
+  padding: 25px;
   margin: 0;
   font-size: 17px;
   font-weight: 400;
@@ -85,4 +86,36 @@ button.submit-button:hover {
 
 .termos-privacidade input {
   margin-right: 3px;
+}
+
+.form-personal-gymnasium__warning {
+  margin: 40px auto 80px;
+  font-size: var(--font-size-sm);
+  font-family: "Montserrat", Sans-serif;
+  line-height: 1.5;
+  color: var(--color-7A7A7A);
+}
+
+@media only screen and (max-width: 767px) {
+  .header-info {
+    padding: 10px;
+  }
+
+  .container-top-image h2 {
+    font-size: 28px;
+  }
+
+  .form-personal-gymnasium h2 {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container-top-image h2 {
+    font-size: 22px;
+  }
+
+  .form-personal-gymnasium form {
+    width: calc(100% - 20px);
+  }
 }

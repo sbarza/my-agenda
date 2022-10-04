@@ -338,27 +338,24 @@ const PersonalTrainerForm = () => {
                 </p>
               )}
             </div>
-          </div>
-          <label className={styles["termos-privacidade"]}>
-            <input type="checkbox" />
-            <a href="#">Li e concordo com os Termos e Condições</a>*
-          </label>
-          <label className={styles["termos-privacidade"]}>
-            <input type="checkbox" />A PT TRAINING recolhe dados informativos do
-            usuário. Li e Concordo com a nossa
-            <a href="#">Política de Privacidade</a>
-          </label>
-          <button className={styles["submit-button"]} disabled={!formIsValid}>
-            Subscrever
-          </button>
-          <p>
-            Acesso válido após, o pagamento efectuado por transferência bancária
-            ou depósito directo na nossa conta. IBAN: PT50
-            003300004564015394805, LILAS ABSTRATO UNIP LDA. Por favor envie o
-            seu comprovativo para geral@pt-training.pt e indique o Primeiro e
-            Ultimo Nome juntamente com o nome de utilizador/membro.
-          </p>
+            <label className={styles["termos-privacidade"]}>
+              <input type="checkbox"/>
+              <a href="#">Li e concordo com os Termos e Condições</a>*
+            </label>
+            <label className={styles["termos-privacidade"]}>
+              <input type="checkbox"/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
+              <a href="#"> Política de Privacidade</a>
+            </label>
+            <button className={styles["submit-button"]} disabled={!formIsValid}>Subscrever</button>
         </form>
+        <p className={`container ${styles["form-personal-gymnasium__warning"]}`}>
+          Acesso válido após, o pagamento efectuado por transferência bancária ou
+          depósito directo na nossa conta.<br/>
+          IBAN: <strong>PT50 003300004564015394805, LILAS
+          ABSTRATO UNIP LDA.</strong> Por favor envie o seu comprovativo para
+          geral@pt-training.pt e indique o Primeiro e Ultimo Nome juntamente com o
+          nome de utilizador/membro.
+        </p>
       </section>
     </>
   );

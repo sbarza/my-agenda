@@ -98,7 +98,7 @@
 
 @media only screen and (max-width: 1024px) {
   .header-info {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
   }
 
   .header-menu__nav input {
@@ -128,8 +128,9 @@
     display: inline-block;
   }
 
-  .header-menu__nav input ~ .header-menu__list {
+  .header-menu__nav .header-menu__list {
     position: absolute;
+    z-index: 1;
     left: -10px;
     top: 140px;
     width: calc(100% + 20px);
@@ -151,5 +152,27 @@
     display: block;
     line-height: 3;
     font-size: var(--font-size-delta);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-info {
+    padding: 0;
+  }
+
+  .header-info__container {
+    padding-right: 0;
+  }
+
+  .header-menu {
+    height: 80px;
+  }
+
+  .header-menu__logo {
+    width: 80px;
+  }
+
+  .header-menu__nav .header-menu__list {
+    top: 80px;
   }
 }

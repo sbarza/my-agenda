@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&display=swap');
 
 html, body, body > div {
   height: 100%;
@@ -26,6 +26,10 @@ main {
   padding: 0 20px;
 }
 
+.container-full {
+  padding: 0 10px;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -45,6 +49,7 @@ code {
 
 a {
   text-decoration: none;
+  color: var(--color-CC3366);
 }
 
 h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
