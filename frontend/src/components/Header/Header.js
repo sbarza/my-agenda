@@ -68,10 +68,10 @@ const Header = () => {
                 <a className={styles["header-menu__list-item-link"]} href="#">Contactos</a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Inscrição</a>
+                <a className={styles["header-menu__list-item-link"]} href="/personal-registration">Inscrição</a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Login</a>
+                <a className={styles["header-menu__list-item-link"]} href="/login">Login</a>
               </li>
             </ul>
           </nav>
