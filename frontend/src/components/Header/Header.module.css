@@ -160,6 +160,19 @@
     padding: 0;
   }
 
+  .header-info__data {
+    margin-right: 5px;
+    padding: 0 5px;
+  }
+
+  .header-info__data:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .header-info__data svg {
+    margin-right: 5px;
+  }
+
   .header-info__container {
     padding-right: 0;
   }
@@ -173,6 +186,6 @@
   }
 
   .header-menu__nav .header-menu__list {
-    top: 80px;
+    top: 79px;
   }
 }

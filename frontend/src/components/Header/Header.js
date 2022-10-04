@@ -7,15 +7,19 @@ const Header = () => {
     <header>
       <section className={styles["header-info"]}>
         <div className={`container ${styles["header-info__container"]}`}>
-          <FontAwesomeIcon icon="phone" flip="horizontal" className={styles["header-info__icon--contact"]} />
-          <span className={styles["header-info__data"]}>+351 964 278 843</span>
-          <FontAwesomeIcon icon={['far', 'envelope']} className={styles["header-info__icon--contact"]} />
-          <a href="mailto:geral@pt-training.pt" className={`${styles["header-info__data"]} ${styles["header-info__data--email"]}`}>geral@pt-training.pt</a>
+          <a href="tel:+351964278843" className={styles["header-info__data"]}>
+            <FontAwesomeIcon icon="phone" flip="horizontal" className={styles["header-info__icon--contact"]}/>
+            +351 964 278 843
+          </a>
+          <a href="mailto:geral@pt-training.pt" className={`${styles["header-info__data"]} ${styles["header-info__data--email"]}`}>
+            <FontAwesomeIcon icon={['far', 'envelope']} className={styles["header-info__icon--contact"]}/>
+            geral@pt-training.pt
+          </a>
           <a href="https://www.facebook.com/pttrainingoficial" className={styles["header-info__data--social"]} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'facebook-f']} className={styles["header-info__icon--social"]} />
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} className={styles["header-info__icon--social"]}/>
           </a>
           <a href="https://www.instagram.com/pttraining_oficial/" className={styles["header-info__data--social"]} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'instagram']} className={styles["header-info__icon--social"]} />
+            <FontAwesomeIcon icon={['fab', 'instagram']} className={styles["header-info__icon--social"]}/>
           </a>
         </div>
       </section>
