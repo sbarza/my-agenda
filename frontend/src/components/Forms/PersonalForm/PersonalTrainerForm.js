@@ -3,8 +3,7 @@ import Password from "../Password/Password";
 import styles from "./PersonalTrainerForm.module.css";
 import imageForm from "../../../images/personal-gymnasium-main.jpeg";
 
-const emailRegex =
-/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 const isPasswordConfirmed = (value1, value2) => value1 === value2;
@@ -96,7 +95,7 @@ const PersonalTrainerForm = () => {
   if (
     firstNameIsValid &&
     lastNameIsValid &&
-    addressValue &&
+    addressIsValid &&
     cityIsValid &&
     zipCodeIsValid &&
     stateIsValid &&
@@ -190,7 +189,7 @@ const PersonalTrainerForm = () => {
         <h2 className={"title title--alpha"}>
           Os Melhores Ginásios e Estúdios
         </h2>
-        <img src={imageForm} />
+        <img src={imageForm} alt="Ginásio" />
       </section>
 
       <section className={styles["form-personal-gymnasium"]}>
