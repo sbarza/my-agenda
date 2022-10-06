@@ -107,7 +107,8 @@ input[type=password] {
 @keyframes fadeInUp {
   from {
       opacity: 0;
-      transform: translate3d(0,100%,0)
+      /* transform: translate3d(0,100%,0) */
+      transform: translate(0, 20%);
   }
 
   to {
