@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const urlOrigin = window.location.origin;
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <section className={styles["header-info"]}>
@@ -70,16 +70,30 @@ const Header = () => {
               <FontAwesomeIcon icon="xmark" size="lg" className={styles["header-menu__close-icon"]} />
             <ul className={styles["header-menu__list"]}>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Sobre Nós</a>
+                <a className={styles["header-menu__list-item-link"]} href="#">
+                  Sobre Nós
+                </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Contactos</a>
+                <a className={styles["header-menu__list-item-link"]} href="#">
+                  Contactos
+                </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Inscrição</a>
+                <a className={styles["header-menu__list-item-link"]} href="/personal-registration">
+                  Inscrição
+                </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">Login</a>
+                {!props.isLoggedIn ? (
+                  <a className={styles["header-menu__list-item-link"]} href="/login">
+                    Login
+                  </a>
+                ) : (
+                  <a className={styles["header-menu__list-item-link"]} onClick={props.onLogout} href="/">
+                    Logout
+                  </a>
+                )}
               </li>
             </ul>
           </nav>
