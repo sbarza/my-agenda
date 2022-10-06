@@ -90,7 +90,12 @@ input[type=password] {
 .invalid input,
 .invalid select {
   border: 2px solid var(--color-red);
-  background-color: var(--color-FF6666);
+  background-color: var(--color-FFDFDF);
+}
+
+.invalid input:focus,
+.invalid select:focus {
+  border: 2px solid var(--color-red);
 }
 
 .error-text {
