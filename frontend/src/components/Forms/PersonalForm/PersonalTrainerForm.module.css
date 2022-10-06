@@ -113,10 +113,10 @@ button.submit-button:hover {
 @media only screen and (max-width: 540px) {
   .container-top-image h2 {
     font-size: 22px;
+    left: calc(50% - 182px);
   }
 
   .form-personal-gymnasium form {
     width: calc(100% - 20px);
-    left: calc(50% - 182px);
   }
 }
