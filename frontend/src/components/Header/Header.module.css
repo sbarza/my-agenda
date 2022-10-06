@@ -18,33 +18,34 @@
   height: 100%;
 }
 
-.header-info__icon--contact,
-.header-info__icon--social {
+.header-info__data-contact {
+  padding-right: 13px;
+  margin-right: 28px;
+}
+
+.header-info__data-contact svg,
+.header-info__data--social svg {
   font-size: var(--font-size-md);
 }
 
-.header-info__icon--contact {
+.header-info__data-contact svg {
   color: var(--color-red);
+  margin-right: 10px;
 }
 
-.header-info__icon--social {
+.header-info__data--social svg {
   color: var(--color-white);
   width: 1em;
   height: 1em;
 }
 
-.header-info__data {
-  color: var(--color-white);
+.header-info__data-contact span,
+.header-info__data--social span {
   font-size: var(--font-size-text-xs);
-  padding-right: 13px;
-  margin-right: 28px;
+  color: var(--color-white);
 }
 
-.header-info__data svg {
-  margin-right: 10px;
-}
-
-.header-info__data--email {
+.header-info__data-contact--email {
   margin-right: auto;
 }
 
@@ -67,6 +68,10 @@
 
 .header-menu__logo {
   margin-right: auto;
+}
+
+.header-menu__logo svg {
+  width: 105px
 }
 
 .header-menu__nav input,
@@ -103,6 +108,10 @@
 @media only screen and (max-width: 1024px) {
   .header-info {
     padding: 10px 20px;
+  }
+
+  .header-info__container {
+    padding: 0;
   }
 
   .header-menu__nav input {
@@ -155,7 +164,8 @@
   .header-menu__list-item-link {
     display: block;
     line-height: 3;
-    font-size: var(--font-size-delta);
+    font-size: var(--font-size-md);
+    font-family: "Montserrat", sans-serif;
   }
 }
 
@@ -164,21 +174,35 @@
     padding: 0;
   }
 
-  .header-info__data {
-    margin-right: 5px;
-    padding: 0 5px;
+  .header-info__data-contact {
+    width: 45px;
+    height: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    text-align: center;
+    line-height: 2.5;
+    transition: all 0.3s;
   }
 
-  .header-info__data:nth-child(2) {
+  .header-info__data-contact:nth-child(2) {
     margin-right: auto;
   }
-
-  .header-info__data svg {
-    margin-right: 5px;
+  
+  .header-info__data-contact:hover {
+    background-color: var(--color-red);
+    filter: saturate(65%);
   }
 
-  .header-info__container {
-    padding-right: 0;
+  .header-info__data-contact:hover svg {
+    color: var(--color-white);
+  }
+
+  .header-info__data-contact span {
+    display: none;
+  }
+
+  .header-info__data-contact svg {
+    margin-right: 0;
   }
 
   .header-menu {

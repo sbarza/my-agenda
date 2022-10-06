@@ -11,12 +11,12 @@
 
 .container-top-image h2 {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: calc(50% - 348px);
+  top: 45%;
   margin: 0;
   width: max-content;
-  transform: translate(-50%, -50%);
   color: var(--color-white);
+  font-weight: 600;
 }
 
 .form-personal-gymnasium form {
@@ -113,6 +113,7 @@ button.submit-button:hover {
 @media only screen and (max-width: 540px) {
   .container-top-image h2 {
     font-size: 22px;
+    left: calc(50% - 182px);
   }
 
   .form-personal-gymnasium form {

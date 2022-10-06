@@ -186,7 +186,7 @@ const PersonalTrainerForm = () => {
   return (
     <>
       <section className={styles["container-top-image"]}>
-        <h2 className={"title title--alpha"}>
+        <h2 className={"title title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
         </h2>
         <img src={imageForm} alt="Ginásio" />
