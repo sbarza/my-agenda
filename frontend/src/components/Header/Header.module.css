@@ -69,6 +69,10 @@
   margin-right: auto;
 }
 
+.header-menu__logo svg {
+  width: 105px
+}
+
 .header-menu__nav input,
 .header-menu__nav input ~ svg {
   display: none;
@@ -155,7 +159,8 @@
   .header-menu__list-item-link {
     display: block;
     line-height: 3;
-    font-size: var(--font-size-delta);
+    font-size: var(--font-size-md);
+    font-family: "Montserrat", sans-serif;
   }
 }
 

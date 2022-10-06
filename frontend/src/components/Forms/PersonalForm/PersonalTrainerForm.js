@@ -96,7 +96,7 @@ const PersonalTrainerForm = () => {
   if (
     firstNameIsValid &&
     lastNameIsValid &&
-    addressValue &&
+    addressIsValid &&
     cityIsValid &&
     zipCodeIsValid &&
     stateIsValid &&
@@ -187,10 +187,10 @@ const PersonalTrainerForm = () => {
   return (
     <>
       <section className={styles["container-top-image"]}>
-        <h2 className={"title title--alpha"}>
+        <h2 className={"title title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
         </h2>
-        <img src={imageForm} />
+        <img src={imageForm} alt="Ginásio" />
       </section>
 
       <section className={styles["form-personal-gymnasium"]}>
