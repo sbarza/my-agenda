@@ -7,7 +7,7 @@ const emailRegex =
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 
-const PersonalTrainerForm = () => {
+const Login = (props) => {
   const {
     value: emailValue,
     isValid: emailIsValid,
@@ -33,7 +33,7 @@ const PersonalTrainerForm = () => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    props.onLogin(enteredEmail, enteredPassword, () => {
+    props.onLogin(emailValue, passwordValue, () => {
       resetEmail();
       resetPassword();
     });
@@ -77,4 +77,4 @@ const PersonalTrainerForm = () => {
   );
 };
 
-export default PersonalTrainerForm;
+export default Login;

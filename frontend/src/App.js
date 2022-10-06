@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import Login from "./components/Forms/Login/Login";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -26,15 +26,52 @@ library.add(
 );
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const loginHandler = async (email, password) => {
+    const loginData = {
+      username: email,
+      password: password,
+    };
+
+    const requestOptions = {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/login_check",
+        requestOptions
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        setIsLoggedIn(true);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+  };
+
   return (
     <>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} onLogout={logoutHandler} />
       <main>
         <Route path="/personal-registration">
           <PersonalTrainerForm />
         </Route>
         <Route path="/login">
-          <Login />
+          <Login onLogin={loginHandler} />
         </Route>
       </main>
       <Footer />
