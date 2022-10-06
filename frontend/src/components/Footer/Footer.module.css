@@ -22,7 +22,8 @@ footer {
   
   .footer-container__item--logo-text p {
     font-size: var(--font-size-sm);
-    color: var(--color-7a7a7a);
+    color: var(--color-7A7A7A);
+    line-height: 1.5;
   }
   
   .footer-container__item h2 {
@@ -61,10 +62,14 @@ footer {
   .footer-info {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
     background-color: var(--color-262a2b);
     font-size: var(--font-size-text-xs);
     color: var(--color-white);
+  }
+
+  .footer-info span {
+    display: inline-block;
+    padding: 10px;
   }
   
   .footer-info a {
@@ -73,5 +78,43 @@ footer {
   
   .footer-info a:hover {
     text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .footer-container {
+      flex-wrap: wrap;
+    }
+
+    .footer-container__item--logo-text {
+      padding-right: 10px;
+      flex-basis: 100%;
+    }
+
+    .footer-container__item--logo-text ~ .footer-container__item {
+      flex-basis: calc(33.33% - 20px);
+    }
+
+    .footer-container__item--logo-text p {
+      text-align: center;
+    }
+
+    .footer-container__item--logo-text svg {
+      margin: 20px auto;
+    }
+  }
+
+  @media only screen and (max-width: 540px) {
+    .footer-container__item--logo-text ~ .footer-container__item {
+      flex-basis: 100%;
+    }
+    
+    .footer-container__item h2 {
+      text-align: center;
+    }
+
+    .footer-info {
+      display: block;
+      text-align: center;
+    }
   }
   

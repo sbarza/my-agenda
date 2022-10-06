@@ -4,7 +4,7 @@ import styles from "./PersonalTrainerForm.module.css";
 import imageForm from "../../../images/personal-gymnasium-main.jpeg";
 
 const emailRegex =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 const isPasswordConfirmed = (value1, value2) => value1 === value2;
@@ -96,7 +96,7 @@ const PersonalTrainerForm = () => {
   if (
     firstNameIsValid &&
     lastNameIsValid &&
-    addressValue &&
+    addressIsValid &&
     cityIsValid &&
     zipCodeIsValid &&
     stateIsValid &&
@@ -187,10 +187,10 @@ const PersonalTrainerForm = () => {
   return (
     <>
       <section className={styles["container-top-image"]}>
-        <h2 className={"title title--alpha"}>
+        <h2 className={"title title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
         </h2>
-        <img src={imageForm} />
+        <img src={imageForm} alt="Ginásio" />
       </section>
 
       <section className={styles["form-personal-gymnasium"]}>
@@ -338,27 +338,25 @@ const PersonalTrainerForm = () => {
                 </p>
               )}
             </div>
+            <label className={styles["termos-privacidade"]}>
+              <input type="checkbox"/>
+              <a href="#">Li e concordo com os Termos e Condições</a>*
+            </label>
+            <label className={styles["termos-privacidade"]}>
+              <input type="checkbox"/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
+              <a href="#"> Política de Privacidade</a>
+            </label>
+            <button className={styles["submit-button"]} disabled={!formIsValid}>Subscrever</button>
           </div>
-          <label className={styles["termos-privacidade"]}>
-            <input type="checkbox" />
-            <a href="#">Li e concordo com os Termos e Condições</a>*
-          </label>
-          <label className={styles["termos-privacidade"]}>
-            <input type="checkbox" />A PT TRAINING recolhe dados informativos do
-            usuário. Li e Concordo com a nossa
-            <a href="#">Política de Privacidade</a>
-          </label>
-          <button className={styles["submit-button"]} disabled={!formIsValid}>
-            Subscrever
-          </button>
-          <p>
-            Acesso válido após, o pagamento efectuado por transferência bancária
-            ou depósito directo na nossa conta. IBAN: PT50
-            003300004564015394805, LILAS ABSTRATO UNIP LDA. Por favor envie o
-            seu comprovativo para geral@pt-training.pt e indique o Primeiro e
-            Ultimo Nome juntamente com o nome de utilizador/membro.
-          </p>
         </form>
+        <p className={`container ${styles["form-personal-gymnasium__warning"]}`}>
+          Acesso válido após, o pagamento efectuado por transferência bancária ou
+          depósito directo na nossa conta.<br/>
+          IBAN: <strong>PT50 003300004564015394805, LILAS
+          ABSTRATO UNIP LDA.</strong> Por favor envie o seu comprovativo para
+          geral@pt-training.pt e indique o Primeiro e Ultimo Nome juntamente com o
+          nome de utilizador/membro.
+        </p>
       </section>
     </>
   );
