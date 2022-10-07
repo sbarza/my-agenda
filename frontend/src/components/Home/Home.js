@@ -49,7 +49,8 @@ const Home = () => {
         <div>
           <FontAwesomeIcon icon={faUsers}/>
           <h3 className={"title title--beta"}>Acesso</h3>
-          <p>Tem acesso a todas as ferramentas e vantagens do PT Training enquanto Personal Trainer ou Ginásio/Estúdio.</p>
+          <p>Tem acesso a todas as ferramentas e vantagens do PT Training 
+            enquanto Personal Trainer ou Ginásio/Estúdio.</p>
         </div>
       </section>
 
@@ -60,13 +61,18 @@ const Home = () => {
         <div className={styles["porque-pt-training__text-item"]}>
           <h2>PORQUÊ PT TRAINING ?</h2>
           <h3 className={"title title--beta"}>Ginásios/Estúdios</h3>
-          <p>Todos os dias procuramos disponibilizar a melhor selecção de ginásios e estúdios em Portugal com os seus serviços e espaço servindo a comunidade dos Personal Trainer.</p>
+          <p>Todos os dias procuramos disponibilizar a melhor selecção de ginásios e 
+            estúdios em Portugal com os seus serviços e espaço servindo a comunidade dos Personal Trainer.</p>
           <h3 className={"title title--beta"}>Personal Trainer</h3>
-          <p>Disponibilizamos numa só plataforma as ferramentas necessárias para otimizar os treinos e gestão do Personal Trainer , bem como a gestão de agendamentos com os Membros Ginásios/Estúdios de forma simples.</p>
+          <p>Disponibilizamos numa só plataforma as ferramentas necessárias para 
+            otimizar os treinos e gestão do Personal Trainer , bem como a gestão 
+            de agendamentos com os Membros Ginásios/Estúdios de forma simples.</p>
           <h3 className={"title title--beta"}>Divulgação</h3>
-          <p>Promovemos e divulgamos em diversos canais de comunicação todos os nossos parceiros e membros PT-Training.</p>
+          <p>Promovemos e divulgamos em diversos canais de comunicação todos os 
+            nossos parceiros e membros PT-Training.</p>
           <h3 className={"title title--beta"}>Comunidade</h3>
-          <p>Todas os benefícios em pertencer e crescer com a uma comunidade de profissionais da indústria Fitness.</p>
+          <p>Todas os benefícios em pertencer e crescer com a uma comunidade de 
+            profissionais da indústria Fitness.</p>
         </div>
       </section>
 
@@ -75,23 +81,33 @@ const Home = () => {
         <div className={`container ${styles["perguntas-frequentes__container"]}`}>
           <details>
             <summary>Como posso aderir ao PT TRAINING ?</summary>
-            <p>Para aderir ao PT-TRAINING terá que ser Personal Trainer ou como proprietário de um Ginásio/Estúdio. Neste momento estamos num período de experimentação. A adesão é gratuita, somente com a necessidade de preenchimento de um formulário de registo.</p>
+            <p>Para aderir ao PT-TRAINING terá que ser Personal Trainer ou como 
+              proprietário de um Ginásio/Estúdio. Neste momento estamos num período 
+              de experimentação. A adesão é gratuita, somente com a necessidade de 
+              preenchimento de um formulário de registo.</p>
           </details>
           <details>
             <summary>Para aderir tenho que pagar alguma mensalidade ?</summary>
-            <p>A plataforma PT Training tem 2 planos de Subscrição. Subscrição como Ginásio que é gratuito até 31 de Dezembro de 2022. A Subscrição para Personal Trainer é igualmente gratuito.Não há qualquer pagamento para adesão à PT-Training. O Personal Trainer só irá efectuar pagamentos dos serviços que agendar/comprar dentro da plataforma PT-Training.</p>
+            <p>A plataforma PT Training tem 2 planos de Subscrição. Subscrição como 
+              Ginásio que é gratuito até 31 de Dezembro de 2022. A Subscrição para 
+              Personal Trainer é igualmente gratuito.Não há qualquer pagamento para 
+              adesão à PT-Training. O Personal Trainer só irá efectuar pagamentos 
+              dos serviços que agendar/comprar dentro da plataforma PT-Training.</p>
           </details>
           <details>
             <summary>Sou Personal Trainer como posso aderir ao PT TRAINING ?</summary>
-            <p>Para aderir ao Personal Trainer , basta submeter na escolha de Membros a adesão como Personal Trainer.</p>
+            <p>Para aderir ao Personal Trainer , basta submeter na escolha de 
+              Membros a adesão como Personal Trainer.</p>
           </details>
           <details>
             <summary>Como posso agendar um serviço com qualquer Ginásio/Estúdio?</summary>
-            <p>Ser membro PT Training como Personal Trainer. Procurar no directório de Serviços, quais os Serviços disponibilizados por todos os Membros Ginásios/Estúdios.</p>
+            <p>Ser membro PT Training como Personal Trainer. Procurar no directório 
+              de Serviços, quais os Serviços disponibilizados por todos os Membros Ginásios/Estúdios.</p>
           </details>
           <details>
             <summary>Como posso registar o meu Ginásio/Estúdio na PT TRAINING ?</summary>
-            <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
+            <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona 
+              de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
           </details>
           <a href="/perguntas-frequentes">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
         </div>
@@ -99,12 +115,15 @@ const Home = () => {
 
       <section className={styles["dizem-sobre-pt-training"]}>
         <h2>O QUE DIZEM SOBRE O PT-TRAINING</h2>
-        <img src={homeImageThird} alt="Mulher a sorrir e descansar do treino"/>
-        <div className="dizem-sobre-pt-training__instagram">
-          <a className="" href="https://www.instagram.com/rodrigo_personal.trainer/">
+        <img 
+          src={homeImageThird} alt="Mulher a sorrir e descansar do treino"
+          className={styles["dizem-sobre-pt-training__imagem-fundo"]}
+        />
+        <div className={styles["dizem-sobre-pt-training__instagram"]}>
+          <a href="https://www.instagram.com/rodrigo_personal.trainer/">
             <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
-            <h4 className="dizem-sobre-pt-training__instagram-nome">Rodrigo Godinho</h4>
-            <div className="dizem-sobre-pt-training__instagram-estrelas">
+            <h4>Rodrigo Godinho</h4>
+            <div className={styles["dizem-sobre-pt-training__instagram-estrelas"]}>
               {(() => {
                 let icons = [];
                 for (let i = 1; i <= 5; i++) {
@@ -113,10 +132,12 @@ const Home = () => {
                 return icons;
               })()}
             </div>
-            <div className="dizem-sobre-pt-training__instagram-user">@rodrigo_personal.trainer</div>
-            <FontAwesomeIcon icon={['fab', 'instagram']}/>
+            <div className={styles["dizem-sobre-pt-training__instagram-user"]}>@rodrigo_personal.trainer</div>
+            <FontAwesomeIcon className={styles["dizem-sobre-pt-training__instagram-icon"]} icon={['fab', 'instagram']}/>
           </a>
-          <p className="dizem-sobre-pt-training__instagram-texto">A PT Training é uma excelente plataforma onde disponibiliza ferramentas e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.</p>
+          <p className={styles["dizem-sobre-pt-training__instagram-texto"]}>
+            A PT Training é uma excelente plataforma onde disponibiliza ferramentas 
+            e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.</p>
         </div>
       </section>
     </>

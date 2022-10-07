@@ -5,10 +5,11 @@ html, body, body > div {
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: var(--font-family-poppins);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-white);
+  color: var(--color-333333);
 }
 
 #root {
