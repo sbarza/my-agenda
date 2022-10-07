@@ -1,20 +1,18 @@
 import React from "react";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStreetView, faUserCheck, faUsers, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faStreetView, faUserCheck, faUsers, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
 import homeImageFirst from "../../images/home-first.jpeg";
 import homeImageSecond from "../../images/home-second.jpeg";
+import homeImageThird from "../../images/home-third.jpeg";
+import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
 
 const Home = () => {
-  const urlOrigin = window.location.origin;
-
   React.useEffect(() => {
     const details = document.querySelectorAll("details");
 
-    // Add the onclick listeners.
     details.forEach((targetDetail) => {
       targetDetail.addEventListener("click", () => {
-        // Close all the details that are not targetDetail.
         details.forEach((detail) => {
           if (detail !== targetDetail) {
             detail.removeAttribute("open");
@@ -28,7 +26,7 @@ const Home = () => {
     <>
       <section className={styles["container-top-image"]}>
         <a href="#como-funciona">
-          <img src={homeImageFirst} alt="Personal Trainer" />
+          <img src={homeImageFirst} alt="Personal Trainer"/>
           <h2 className={"title title--alpha"}>
             OTIMIZA OS TEUS TREINOS, RENTABILIZA O TEU GINÁSIO
           </h2>
@@ -39,17 +37,17 @@ const Home = () => {
       <section id="como-funciona" className={`container ${styles["como-funciona"]}`}>
         <h2>COMO FUNCIONA ?</h2>
         <div>
-          <FontAwesomeIcon icon={faStreetView} />
+          <FontAwesomeIcon icon={faStreetView}/>
           <h3 className={"title title--beta"}>Descobrir</h3>
           <p>Descobre na nossa plataforma as vantagens para um Ginásio/Estúdio ou um Personal Trainer.</p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faUserCheck} />
+          <FontAwesomeIcon icon={faUserCheck}/>
           <h3 className={"title title--beta"}>Registar</h3>
           <p>Regista-te como Personal Trainer ou Ginásio/Estúdio de forma gratuita.</p>
         </div>
         <div>
-          <FontAwesomeIcon icon={faUsers} />
+          <FontAwesomeIcon icon={faUsers}/>
           <h3 className={"title title--beta"}>Acesso</h3>
           <p>Tem acesso a todas as ferramentas e vantagens do PT Training enquanto Personal Trainer ou Ginásio/Estúdio.</p>
         </div>
@@ -95,12 +93,31 @@ const Home = () => {
             <summary>Como posso registar o meu Ginásio/Estúdio na PT TRAINING ?</summary>
             <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
           </details>
-          <a href={`${urlOrigin}/perguntas-frequentes`}>Ver mais <FontAwesomeIcon icon={faSearch} /></a>
+          <a href="/perguntas-frequentes">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
         </div>
       </section>
 
       <section className={styles["dizem-sobre-pt-training"]}>
         <h2>O QUE DIZEM SOBRE O PT-TRAINING</h2>
+        <img src={homeImageThird} alt="Mulher a sorrir e descansar do treino"/>
+        <div className="dizem-sobre-pt-training__instagram">
+          <a className="" href="https://www.instagram.com/rodrigo_personal.trainer/">
+            <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
+            <h4 className="dizem-sobre-pt-training__instagram-nome">Rodrigo Godinho</h4>
+            <div className="dizem-sobre-pt-training__instagram-estrelas">
+              {(() => {
+                let icons = [];
+                for (let i = 1; i <= 5; i++) {
+                  icons.push(<FontAwesomeIcon icon={faStar}/>);
+                }
+                return icons;
+              })()}
+            </div>
+            <div className="dizem-sobre-pt-training__instagram-user">@rodrigo_personal.trainer</div>
+            <FontAwesomeIcon icon={['fab', 'instagram']}/>
+          </a>
+          <p className="dizem-sobre-pt-training__instagram-texto">A PT Training é uma excelente plataforma onde disponibiliza ferramentas e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.</p>
+        </div>
       </section>
     </>
   );
