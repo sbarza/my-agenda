@@ -44,6 +44,9 @@
   /* Blues */
   --color-697882: #697882;
 
+  /* Greens */
+  --color-61CE70: #61CE70;
+
   /*-- Font sizes --*/
   --font-size-alpha: 42px;
   --font-size-beta: 22px;
@@ -55,5 +58,5 @@
 
   /*-- Font family --*/
   --font-family-poppins: "Poppins", Sans-serif;
-  --font-family-monserrat: "Monserrat", Sans-serif;
+  --font-family-montserrat: "Montserrat", Sans-serif;
 }

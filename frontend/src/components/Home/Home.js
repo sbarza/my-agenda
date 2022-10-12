@@ -6,6 +6,8 @@ import homeImageFirst from "../../images/home-first.jpeg";
 import homeImageSecond from "../../images/home-second.jpeg";
 import homeImageThird from "../../images/home-third.jpeg";
 import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
+import homeImageForth1 from "../../images/home-forth-1.jpeg";
+import homeImageForth2 from "../../images/home-forth-2.jpeg";
 
 const Home = () => {
   React.useEffect(() => {
@@ -27,7 +29,7 @@ const Home = () => {
       <section className={styles["container-top-image"]}>
         <a href="#como-funciona">
           <img src={homeImageFirst} alt="Personal Trainer"/>
-          <h2 className={"title title--alpha"}>
+          <h2>
             OTIMIZA OS TEUS TREINOS, RENTABILIZA O TEU GINÁSIO
           </h2>
           <span>SABER MAIS</span>
@@ -38,17 +40,17 @@ const Home = () => {
         <h2>COMO FUNCIONA ?</h2>
         <div>
           <FontAwesomeIcon icon={faStreetView}/>
-          <h3 className={"title title--beta"}>Descobrir</h3>
+          <h3 className={"title--beta"}>Descobrir</h3>
           <p>Descobre na nossa plataforma as vantagens para um Ginásio/Estúdio ou um Personal Trainer.</p>
         </div>
         <div>
           <FontAwesomeIcon icon={faUserCheck}/>
-          <h3 className={"title title--beta"}>Registar</h3>
+          <h3 className={"title--beta"}>Registar</h3>
           <p>Regista-te como Personal Trainer ou Ginásio/Estúdio de forma gratuita.</p>
         </div>
         <div>
           <FontAwesomeIcon icon={faUsers}/>
-          <h3 className={"title title--beta"}>Acesso</h3>
+          <h3 className={"title--beta"}>Acesso</h3>
           <p>Tem acesso a todas as ferramentas e vantagens do PT Training 
             enquanto Personal Trainer ou Ginásio/Estúdio.</p>
         </div>
@@ -60,17 +62,17 @@ const Home = () => {
         </div>
         <div className={styles["porque-pt-training__text-item"]}>
           <h2>PORQUÊ PT TRAINING ?</h2>
-          <h3 className={"title title--beta"}>Ginásios/Estúdios</h3>
+          <h3 className={"title--beta"}>Ginásios/Estúdios</h3>
           <p>Todos os dias procuramos disponibilizar a melhor selecção de ginásios e 
             estúdios em Portugal com os seus serviços e espaço servindo a comunidade dos Personal Trainer.</p>
-          <h3 className={"title title--beta"}>Personal Trainer</h3>
+          <h3 className={"title--beta"}>Personal Trainer</h3>
           <p>Disponibilizamos numa só plataforma as ferramentas necessárias para 
             otimizar os treinos e gestão do Personal Trainer , bem como a gestão 
             de agendamentos com os Membros Ginásios/Estúdios de forma simples.</p>
-          <h3 className={"title title--beta"}>Divulgação</h3>
+          <h3 className={"title--beta"}>Divulgação</h3>
           <p>Promovemos e divulgamos em diversos canais de comunicação todos os 
             nossos parceiros e membros PT-Training.</p>
-          <h3 className={"title title--beta"}>Comunidade</h3>
+          <h3 className={"title--beta"}>Comunidade</h3>
           <p>Todas os benefícios em pertencer e crescer com a uma comunidade de 
             profissionais da indústria Fitness.</p>
         </div>
@@ -138,6 +140,25 @@ const Home = () => {
           <p className={styles["dizem-sobre-pt-training__instagram-texto"]}>
             A PT Training é uma excelente plataforma onde disponibiliza ferramentas 
             e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.</p>
+        </div>
+      </section>
+
+      <section className={`container ${styles["pt-training-parceiro"]}`}>
+        <h2>PT TRAINING</h2>
+        <h3 className={`title`}>O teu parceiro no fitness.</h3>
+        <div className={styles["pt-training-parceiro__ginasio-personal"]}>
+          <span>GRATUITO*</span>
+          <img src={homeImageForth1} alt="Ginásio com iluminação natural e equipamentos"/>
+          <h4>SOU UM GINÁSIO/ESTÚDIO</h4>
+          <p>Rentabiliza e otimiza o teu espaço.<br/>* Grátis até 31/12/2022.</p>
+          <button>REGISTAR</button>
+        </div>
+        <div className={styles["pt-training-parceiro__ginasio-personal"]}>
+          <span>GRATUITO*</span>
+          <img src={homeImageForth2} alt="Senho idoso sendo assessorado pelo personal trainer"/>
+          <h4>SOU UM PERSONAL TRAINER</h4>
+          <p>Rentabiliza a gestão dos teus treinos.<br/>* Todas as funcionalidades gratuitamente.</p>
+          <button>REGISTAR</button>
         </div>
       </section>
     </>

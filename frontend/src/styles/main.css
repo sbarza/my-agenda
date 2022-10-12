@@ -53,7 +53,7 @@ a {
   color: var(--color-CC3366);
 }
 
-h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
 }
 
@@ -62,15 +62,16 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 }
 
 .title--beta {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-beta);
+  font-weight: 600;
 }
 
 .title--gamma {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-gamma);
 }
 
 .title--delta {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-delta);
 }
 
 textarea, select, input[type=text], 
