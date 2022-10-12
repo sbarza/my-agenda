@@ -111,7 +111,7 @@ const Home = () => {
             <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona 
               de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
           </details>
-          <a href="/perguntas-frequentes">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
+          <a href="/perguntas-frequentes" target="_blank">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
         </div>
       </section>
 
@@ -122,7 +122,7 @@ const Home = () => {
           className={styles["dizem-sobre-pt-training__imagem-fundo"]}
         />
         <div className={styles["dizem-sobre-pt-training__instagram"]}>
-          <a href="https://www.instagram.com/rodrigo_personal.trainer/">
+          <a href="https://www.instagram.com/rodrigo_personal.trainer/" target="_blank">
             <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
             <h4>Rodrigo Godinho</h4>
             <div className={styles["dizem-sobre-pt-training__instagram-estrelas"]}>
@@ -145,20 +145,56 @@ const Home = () => {
 
       <section className={`container ${styles["pt-training-parceiro"]}`}>
         <h2>PT TRAINING</h2>
-        <h3 className={`title`}>O teu parceiro no fitness.</h3>
+        <h3>O teu parceiro no fitness.</h3>
         <div className={styles["pt-training-parceiro__ginasio-personal"]}>
           <span>GRATUITO*</span>
           <img src={homeImageForth1} alt="Ginásio com iluminação natural e equipamentos"/>
           <h4>SOU UM GINÁSIO/ESTÚDIO</h4>
           <p>Rentabiliza e otimiza o teu espaço.<br/>* Grátis até 31/12/2022.</p>
-          <button>REGISTAR</button>
+          <a href="#" target="_blank">REGISTAR</a>
         </div>
         <div className={styles["pt-training-parceiro__ginasio-personal"]}>
           <span>GRATUITO*</span>
           <img src={homeImageForth2} alt="Senho idoso sendo assessorado pelo personal trainer"/>
           <h4>SOU UM PERSONAL TRAINER</h4>
           <p>Rentabiliza a gestão dos teus treinos.<br/>* Todas as funcionalidades gratuitamente.</p>
-          <button>REGISTAR</button>
+          <a href="#" target="_blank">REGISTAR</a>
+        </div>
+      </section>
+
+      <section className={styles["fica-atento"]}>
+        <div className={`container`}>
+          <h2>Fica Atento!</h2>
+          <h3>Com a nossa newsletter semanal não perderás nenhuma novidade do PT TRAINING.</h3>
+          <input type="text" placeholder="Nome"/>
+          <input type="text" placeholder="O teu melhor email"/>
+          <select name="form_fields[message]" id="form-field-message" class="elementor-field-textual elementor-size-sm">
+            <option value="Aveiro">Aveiro</option>
+            <option value="Beja">Beja</option>
+            <option value="Braga">Braga</option>
+            <option value="Bragança">Bragança</option>
+            <option value="Castelo Branco">Castelo Branco</option>
+            <option value="Coimbra">Coimbra</option>
+            <option value="Évora">Évora</option>
+            <option value="Faro">Faro</option>
+            <option value="Guarda">Guarda</option>
+            <option value="Leiria">Leiria</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Porto">Porto</option>
+            <option value="Portalegre">Portalegre</option>
+            <option value="Santarém">Santarém</option>
+            <option value="Setúbal">Setúbal</option>
+            <option value="Vila Real">Vila Real</option>
+            <option value="Viseu">Viseu</option>
+            <option value="Viana do Castelo">Viana do Castelo</option>
+          </select>
+          <input type="radio" value="Ginásio/Estúdio" id="fica-atento-form__ginasio-estudio" name="fica-atento-form__ginasio-estudio"/>
+          <label for="fica-atento-form__ginasio-estudio">Ginásio/Estúdio</label>
+          <input type="radio" value="Personal Trainer" id="fica-atento-form__personal-trainer" name="fica-atento-form__personal-trainer"/>
+          <label for="fica-atento-form__personal-trainer">Ginásio/Estúdio</label>
+          <input type="checkbox" value="Li e Aceito a Politica de Privacidade." id="fica-atento-form__politica-privacidade" name="fica-atento-form__politica-privacidade"></input>
+          <label for="fica-atento-form__politica-privacidade">Li e Aceito a Politica de Privacidade.</label>
+          <button type="submit">SUBSCREVER</button>
         </div>
       </section>
     </>
