@@ -38,17 +38,17 @@ const Home = () => {
 
       <section id="como-funciona" className={`container ${styles["como-funciona"]}`}>
         <h2>COMO FUNCIONA ?</h2>
-        <div>
+        <div className={styles["como-funciona__item"]}>
           <FontAwesomeIcon icon={faStreetView}/>
           <h3 className={"title--beta"}>Descobrir</h3>
           <p>Descobre na nossa plataforma as vantagens para um Ginásio/Estúdio ou um Personal Trainer.</p>
         </div>
-        <div>
+        <div className={styles["como-funciona__item"]}>
           <FontAwesomeIcon icon={faUserCheck}/>
           <h3 className={"title--beta"}>Registar</h3>
           <p>Regista-te como Personal Trainer ou Ginásio/Estúdio de forma gratuita.</p>
         </div>
-        <div>
+        <div className={styles["como-funciona__item"]}>
           <FontAwesomeIcon icon={faUsers}/>
           <h3 className={"title--beta"}>Acesso</h3>
           <p>Tem acesso a todas as ferramentas e vantagens do PT Training 
@@ -111,7 +111,7 @@ const Home = () => {
             <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona 
               de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
           </details>
-          <a href="/perguntas-frequentes" target="_blank">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
+          <a href="/perguntas-frequentes" target="_blank" rel="noreferrer">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
         </div>
       </section>
 
@@ -122,14 +122,14 @@ const Home = () => {
           className={styles["dizem-sobre-pt-training__imagem-fundo"]}
         />
         <div className={styles["dizem-sobre-pt-training__instagram"]}>
-          <a href="https://www.instagram.com/rodrigo_personal.trainer/" target="_blank">
+          <a href="https://www.instagram.com/rodrigo_personal.trainer/" target="_blank" rel="noreferrer">
             <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
             <h4>Rodrigo Godinho</h4>
             <div className={styles["dizem-sobre-pt-training__instagram-estrelas"]}>
               {(() => {
                 let icons = [];
                 for (let i = 1; i <= 5; i++) {
-                  icons.push(<FontAwesomeIcon icon={faStar}/>);
+                  icons.push(<FontAwesomeIcon key={`instagram-estrelas-${i}`} icon={faStar}/>);
                 }
                 return icons;
               })()}
@@ -151,14 +151,14 @@ const Home = () => {
           <img src={homeImageForth1} alt="Ginásio com iluminação natural e equipamentos"/>
           <h4>SOU UM GINÁSIO/ESTÚDIO</h4>
           <p>Rentabiliza e otimiza o teu espaço.<br/>* Grátis até 31/12/2022.</p>
-          <a href="#" target="_blank">REGISTAR</a>
+          <a href="/registar-ginasio-estudio" target="_blank" rel="noreferrer">REGISTAR</a>
         </div>
         <div className={styles["pt-training-parceiro__ginasio-personal"]}>
           <span>GRATUITO*</span>
           <img src={homeImageForth2} alt="Senho idoso sendo assessorado pelo personal trainer"/>
           <h4>SOU UM PERSONAL TRAINER</h4>
           <p>Rentabiliza a gestão dos teus treinos.<br/>* Todas as funcionalidades gratuitamente.</p>
-          <a href="#" target="_blank">REGISTAR</a>
+          <a href="/registar-personal-trainer" target="_blank" rel="noreferrer">REGISTAR</a>
         </div>
       </section>
 
@@ -168,7 +168,7 @@ const Home = () => {
           <h3>Com a nossa newsletter semanal não perderás nenhuma novidade do PT TRAINING.</h3>
           <input type="text" placeholder="Nome"/>
           <input type="text" placeholder="O teu melhor email"/>
-          <select name="form_fields[message]" id="form-field-message" class="elementor-field-textual elementor-size-sm">
+          <select name="form_fields[message]" id="form-field-message">
             <option value="Aveiro">Aveiro</option>
             <option value="Beja">Beja</option>
             <option value="Braga">Braga</option>
@@ -188,12 +188,16 @@ const Home = () => {
             <option value="Viseu">Viseu</option>
             <option value="Viana do Castelo">Viana do Castelo</option>
           </select>
-          <input type="radio" value="Ginásio/Estúdio" id="fica-atento-form__ginasio-estudio" name="fica-atento-form__ginasio-estudio"/>
-          <label for="fica-atento-form__ginasio-estudio">Ginásio/Estúdio</label>
-          <input type="radio" value="Personal Trainer" id="fica-atento-form__personal-trainer" name="fica-atento-form__personal-trainer"/>
-          <label for="fica-atento-form__personal-trainer">Ginásio/Estúdio</label>
-          <input type="checkbox" value="Li e Aceito a Politica de Privacidade." id="fica-atento-form__politica-privacidade" name="fica-atento-form__politica-privacidade"></input>
-          <label for="fica-atento-form__politica-privacidade">Li e Aceito a Politica de Privacidade.</label>
+          <div>
+            <input type="radio" value="Ginásio/Estúdio" id="fica-atento-form__ginasio-estudio" name="fica-atento-form__ginasio-estudio"/>
+            <label htmlFor="fica-atento-form__ginasio-estudio">Ginásio/Estúdio</label>
+            <input type="radio" value="Personal Trainer" id="fica-atento-form__personal-trainer" name="fica-atento-form__personal-trainer"/>
+            <label htmlFor="fica-atento-form__personal-trainer">Personal Trainer</label>
+          </div>
+          <div>
+            <input type="checkbox" value="Li e Aceito a Politica de Privacidade." id="fica-atento-form__politica-privacidade" name="fica-atento-form__politica-privacidade"></input>
+            <label htmlFor="fica-atento-form__politica-privacidade">Li e Aceito a Politica de Privacidade.</label>
+          </div>
           <button type="submit">SUBSCREVER</button>
         </div>
       </section>

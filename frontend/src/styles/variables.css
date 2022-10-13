@@ -48,10 +48,18 @@
   --color-61CE70: #61CE70;
 
   /*-- Font sizes --*/
+  --font-size-alpha-1: 46px;
   --font-size-alpha: 42px;
+  --font-size-beta-4: 36px;
+  --font-size-beta-3: 28px;
+  --font-size-beta-2: 25px;
+  --font-size-beta-1: 24px;
   --font-size-beta: 22px;
+  --font-size-beta-sm: 20px;
   --font-size-gamma: 18px;
+  --font-size-gamma-sm: 17px;
   --font-size-delta: 16px;
+  --font-size-delta-sm: 15px;
   --font-size-md: 14px;
   --font-size-sm: 12px;
   --font-size-text-xs: 11px;

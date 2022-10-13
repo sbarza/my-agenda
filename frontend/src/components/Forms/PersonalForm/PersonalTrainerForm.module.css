@@ -29,7 +29,7 @@
 .form-personal-gymnasium h2 {
   padding: 25px;
   margin: 0;
-  font-size: 17px;
+  font-size: var(--font-size-gamma-sm);
   font-weight: 400;
   text-align: center;
   color: var(--color-white);
@@ -102,7 +102,7 @@ button.submit-button:hover {
   }
 
   .container-top-image h2 {
-    font-size: 28px;
+    font-size: var(--font-size-beta-3);
   }
 
   .form-personal-gymnasium h2 {
@@ -112,7 +112,7 @@ button.submit-button:hover {
 
 @media only screen and (max-width: 540px) {
   .container-top-image h2 {
-    font-size: 22px;
+    font-size: var(--font-size-beta);;
     left: calc(50% - 182px);
   }
 
