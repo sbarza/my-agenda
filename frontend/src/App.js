@@ -68,7 +68,7 @@ function App() {
     <>
       <Header isLoggedIn={isLoggedIn} onLogout={logoutHandler} />
       <main>
-        <Route path="/">
+        <Route path="/home">
           <Home />
         </Route>
         <Route path="/personal-registration">
