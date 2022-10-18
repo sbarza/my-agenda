@@ -165,7 +165,7 @@
     display: block;
     line-height: 3;
     font-size: var(--font-size-md);
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family-montserrat);
   }
 }
 

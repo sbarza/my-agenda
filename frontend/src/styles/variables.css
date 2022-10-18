@@ -43,6 +43,7 @@
 
   /* Blues */
   --color-697882: #697882;
+  --color-1B252F: #1B252F;
 
   /* Greens */
   --color-61CE70: #61CE70;
@@ -50,7 +51,8 @@
   /*-- Font sizes --*/
   --font-size-alpha-1: 46px;
   --font-size-alpha: 42px;
-  --font-size-beta-4: 36px;
+  --font-size-beta-5: 36px;
+  --font-size-beta-4: 30px;
   --font-size-beta-3: 28px;
   --font-size-beta-2: 25px;
   --font-size-beta-1: 24px;
