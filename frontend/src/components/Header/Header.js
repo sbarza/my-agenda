@@ -68,12 +68,12 @@ const Header = (props) => {
               <FontAwesomeIcon icon="xmark" size="lg" className={styles["header-menu__close-icon"]} />
             <ul className={styles["header-menu__list"]}>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">
+                <a className={styles["header-menu__list-item-link"]} href="/sobre-nos">
                   Sobre Nós
                 </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">
+                <a className={styles["header-menu__list-item-link"]} href="/contactos">
                   Contactos
                 </a>
               </li>

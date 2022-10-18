@@ -12,8 +12,9 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import Home from "./components/Home/Home";
+import SobreNos from "./components/SobreNos/SobreNos";
+import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import styles from "./App.module.css";
 
 library.add(
@@ -70,6 +71,9 @@ function App() {
       <main>
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/sobre-nos">
+          <SobreNos />
         </Route>
         <Route path="/personal-registration">
           <PersonalTrainerForm />
