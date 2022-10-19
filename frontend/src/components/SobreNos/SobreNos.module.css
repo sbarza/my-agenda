@@ -78,8 +78,7 @@
 .porque-pt-training h2,
 .perguntas-frequentes h2,
 .dizem-sobre-pt-training h2,
-.pt-training-parceiro h2,
-.fica-atento h2 {
+.pt-training-parceiro h2 {
   color: var(--color-black);
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-alpha);
@@ -88,8 +87,7 @@
 
 @media only screen and (max-width: 767px) {
   .dizem-sobre-pt-training h2,
-  .pt-training-parceiro h2,
-  .fica-atento h2 {
+  .pt-training-parceiro h2 {
     font-size: var(--font-size-beta-2);
   }
 }
@@ -208,99 +206,4 @@
 
 .container-bottom-image__title-middle {
   top: calc(50% - 15px);
-}
-
-
-
-.fica-atento {
-  gap: 10px;
-  background-image: url(../../images/home-fifth.jpeg);
-  background-position: center center;
-  padding: 35px 0 70px;
-}
-
-.fica-atento > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: baseline;
-}
-
-.fica-atento h2 {
-  margin-bottom: 15px;
-  flex-basis: 100%;
-}
-
-.fica-atento h3 {
-  flex-basis: 100%;
-  margin: 0 0 20px;
-}
-
-.fica-atento input[type=text],
-.fica-atento select {
-  flex-basis: calc(33.33% - 7px);
-  background-color: var(--color-white);
-  border-radius: 50px;
-  font-family: var(--font-family-montserrat);
-  font-size: var(--font-size-beta-sm);
-  font-weight: 400;
-}
-
-.fica-atento div {
-  flex-basis: calc(50% - 10px);
-}
-
-.fica-atento label {
-  margin: 0 15px 0 5px;
-  font-family: var(--font-family-montserrat);
-  font-size: var(--font-size-beta-sm);
-  color: var(--color-7A7A7A);
-}
-
-.fica-atento button {
-  flex-basis: 33.33%;
-  padding: 12px 24px;
-  font-family: var(--font-family-montserrat);
-  font-size: var(--font-size-delta);
-  font-weight: 600;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  border: 2px solid var(--color-black);
-  border-radius: 50px;
-  transition: all .3s;
-}
-
-.fica-atento button:hover {
-  transform: scale(0.9);
-  background-color: var(--color-3D3D3D);
-}
-
-@media only screen and (max-width: 767px) {
-  .fica-atento {
-    margin-top: 70px;
-    padding-top: 0;
-  }
-
-  .fica-atento h3 {
-    font-size: var(--font-size-md);
-  }
-  
-  .fica-atento input[type=text],
-  .fica-atento select {
-    flex-basis: 100%;
-    font-size: var(--font-size-sm);
-  }
-
-  .fica-atento label {
-    font-size: var(--font-size-sm);
-  }
-
-  .fica-atento button {
-    flex-basis: 100%;
-    font-size: var(--font-size-delta-sm);
-  }
-
-  .fica-atento {
-    padding-bottom: 30px;
-  }
 }
