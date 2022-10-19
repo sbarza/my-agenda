@@ -1,6 +1,7 @@
 .container-top-image,
-.container-bottom-image__wrapper {
+.container-bottom__wrapper {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   max-height: 750px;
 }
@@ -37,6 +38,7 @@
 
 .container-top-image h2 {
   position: absolute;
+  z-index: 1;
   top: calc(50% - 15px);
   width: 100%;
   margin: 0;
@@ -46,6 +48,7 @@
 
 .container-top-title {
   position: relative;
+  z-index: 1;
   height: 356px;
   background-color: var(--color-1B252F);
 }
@@ -92,12 +95,19 @@
   }
 }
 
+
 .our-mission {
+  position: relative;
+  z-index: 1;
+  background: var(--color-white);
+}
+
+.our-mission-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  margin-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .our-mission h2 {
@@ -155,12 +165,13 @@
   }  
 }
 
-.container-bottom-image {
+.container-bottom {
   position: relative;
+  height: 750px;
   border-top: 2px solid var(--color-red);
 }
 
-.container-bottom-image__wrapper::before {
+.container-bottom::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -170,19 +181,12 @@
   opacity: .47;
 }
 
-.container-bottom-image__wrapper img {
-  display: block;
-  transform: translateY(calc(25vh - 20vw));
-  width: 100%;
-  height: auto;
-}
-
-.container-bottom-image__title-top,
-.container-bottom-image__title-middle {
+.container-bottom__title-top,
+.container-bottom__title-middle {
   position: absolute;
   z-index: 1;
-  left: 15%;
-  width: 70%;
+  left: calc(50% - 600px);
+  width: 1160px;
   margin: 0;
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-beta-4);
@@ -191,19 +195,28 @@
   color: var(--color-white);
 }
 
-.container-bottom-image__title-top {
-  top: -80px;
+.container-bottom__title-top {
+  top: -70px;
   padding: 80px 20px;
   background-color: var(--color-black);
 }
 
-.container-bottom-image__title-top span,
-.container-bottom-image__title-middle span {
+.container-bottom__title-top span,
+.container-bottom__title-middle span {
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-beta-sm);
   color: var(--color-red);
 }
 
-.container-bottom-image__title-middle {
+.container-bottom__title-middle {
   top: calc(50% - 15px);
+}
+
+.container-bottom-img {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform: scale(1.2);
 }

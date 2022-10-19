@@ -1,3 +1,9 @@
+header {
+  position: relative;
+  z-index: 1;
+  background: var(--color-white);
+}
+
 .header-info {
   height: 45px;
   background-color: var(--color-262a2b);

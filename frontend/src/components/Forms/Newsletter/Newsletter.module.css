@@ -1,5 +1,5 @@
 .newsletter {
-  gap: 10px;
+  position: relative;
   background-image: url(../../../images/home-fifth.jpeg);
   background-position: center center;
   padding: 35px 0 70px;

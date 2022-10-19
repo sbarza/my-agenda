@@ -13,7 +13,7 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import SobreNos from "./components/SobreNos/SobreNos";
+import AboutUs from "./components/AboutUs/AboutUs";
 import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import styles from "./App.module.css";
 
@@ -72,8 +72,8 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/sobre-nos">
-          <SobreNos />
+        <Route path="/about-us">
+          <AboutUs />
         </Route>
         <Route path="/personal-registration">
           <PersonalTrainerForm />
