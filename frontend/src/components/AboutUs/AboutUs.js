@@ -62,6 +62,9 @@ const AboutUs = () => {
           <span>Comunidade</span><br/>
           <strong>PT TRAINING</strong> O TEU PARCEIRO NO FITNESS
         </h2>
+        <svg class={styles["container-bottom__red-bar-svg"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class={styles["container-bottom__red-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
+        </svg>
       </section>
 
       <img className={styles["container-bottom-img"]} src={AboutUsImagem2} alt="Ginásio"/>

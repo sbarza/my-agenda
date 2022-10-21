@@ -107,7 +107,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  padding-bottom: 80px;
+  padding-bottom: 110px;
 }
 
 .our-mission h2 {
@@ -167,6 +167,7 @@
 
 .container-bottom {
   position: relative;
+  z-index: 1;
   height: 750px;
   border-top: 2px solid var(--color-red);
 }
@@ -179,6 +180,32 @@
   height: 100%;
   background: var(--color-black);
   opacity: .47;
+}
+
+/* .container-bottom__bottom-red-bar::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: var(--color-red);
+  width: 110%;
+  height: 100%;
+  right: 0;
+  top: -60px;
+  transform-origin: 100% 0;
+  transform: rotate(-2deg);
+} */
+
+.container-bottom__red-bar-svg {
+  transform: rotateX(180deg);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+}
+
+.container-bottom__red-bar-path {
+  fill: var(--color-red);
 }
 
 .container-bottom__title-top,
