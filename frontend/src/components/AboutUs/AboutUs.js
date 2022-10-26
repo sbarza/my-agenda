@@ -10,9 +10,12 @@ import Newsletter from "../Forms/Newsletter/Newsletter";
 const AboutUs = () => {
   return (
     <>
-      <section className={styles["container-top-image"]}>
+      <section className={styles["container-top"]}>
         <img src={AboutUsImagem1} alt="Personal Trainer"/>
         <h2 className={"title--alpha fadeInUp animated"}>SOBRE NÓS</h2>
+        <svg class={styles["container-bottom__blue-bar-svg"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class={styles["container-bottom__blue-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
+        </svg>
       </section>
 
       <section className={styles["container-top-title"]}>
@@ -25,7 +28,8 @@ const AboutUs = () => {
           <p>Mais do que uma marca, a <strong>PT TRAINING </strong> apresenta-se como a plataforma digital 
             que liga os <em>ginásios</em> e os <em>personal trainers</em>, a <strong>PT TRAINING </strong> 
             apresenta-se como uma solução para rentabilizar os <em>estúdios/ginásios</em>, bem como 
-            otimizar os treinos e a gestão do <em>personal trainer</em>. A <strong>PT TRAINING </strong>
+            otimizar os treinos e a gestão do <em>personal trainer</em>.<br/>
+            A <strong>PT TRAINING </strong>
             é o parceiro que ajuda o <em>personal trainer</em> a otimizar a sua gestão e rentabilidade, 
             na procura do melhor espaço e acessórios, oferecendo uma maior variedade de 
             <em>estúdios/ginásios</em> numa única plataforma, bem como oferecer mais um canal de 
