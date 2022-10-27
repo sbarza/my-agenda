@@ -52,13 +52,13 @@ const Footer = () => {
             <h2>INFORMAÇÃO</h2>
             <ul>
               <li>
-                <a href="#">
+                <a href="/about-us">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/contact">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Contacto</span>
                 </a>
@@ -87,7 +87,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/personal-registration">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Inscrição</span>
                 </a>
@@ -98,7 +98,7 @@ const Footer = () => {
             <h2>SUPORTE</h2>
             <ul>
               <li>
-                <a href="#">
+                <a href="/login">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Login | Logoff</span>
                 </a>
