@@ -15,7 +15,6 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import AboutUs from "./components/AboutUs/AboutUs";
 import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
-import styles from "./App.module.css";
 
 library.add(
   faFacebookF,
