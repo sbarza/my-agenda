@@ -3,8 +3,8 @@ import styles from "./AboutUs.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faEdit } from "@fortawesome/free-regular-svg-icons";
 import { faCalculator } from "@fortawesome/free-solid-svg-icons";
-import AboutUsImagem1 from "../../images/quem-somos__inicio.jpeg";
-import AboutUsImagem2 from "../../images/quem-somos__ginasios-e-estudios.jpeg";
+import AboutUsImagem1 from "../../images/about-us__top.jpeg";
+import AboutUsImagem2 from "../../images/about-us__gymnasiums-estudios.jpeg";
 import Newsletter from "../Forms/Newsletter/Newsletter";
 
 const AboutUs = () => {
