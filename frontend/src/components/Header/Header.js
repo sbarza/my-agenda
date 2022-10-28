@@ -172,7 +172,7 @@ const Header = () => {
                 {!isLoggedIn ? (
                   <a
                     className={styles["header-menu__list-item-link"]}
-                    href="/login"
+                    href="/auth"
                   >
                     Login
                   </a>
