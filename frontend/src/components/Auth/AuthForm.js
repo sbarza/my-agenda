@@ -1,13 +1,20 @@
-import useInput from "../../../hooks/use-input";
-import Password from "../Password/Password";
-import styles from "./Login.module.css";
+import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import AuthContext from "../../store/auth-context";
+import useInput from "../../hooks/use-input";
+import Password from "../Forms/Password/Password";
+import styles from "./AuthForm.module.css";
 
 const emailRegex =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 
-const Login = (props) => {
+const AuthForm = (props) => {
+  const history = useHistory();
+  const authCtx = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     value: emailValue,
     isValid: emailIsValid,
@@ -31,12 +38,48 @@ const Login = (props) => {
     formIsValid = true;
   }
 
-  const submitHandler = async (event) => {
+  const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailValue, passwordValue, () => {
-      resetEmail();
-      resetPassword();
-    });
+    // optional: Add validation
+
+    const loginData = {
+      username: emailValue,
+      password: passwordValue,
+    };
+
+    const requestOptions = {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    setIsLoading(true);
+    fetch("http://localhost:8000/api/login_check", requestOptions)
+      .then((res) => {
+        setIsLoading(false);
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((data) => {
+            let errorMessage = "Authentication failed!";
+            // if (data && data.error && data.error.message) {
+            //   errorMessage = data.error.message;
+            // }
+
+            throw new Error(errorMessage);
+          });
+        }
+      })
+      .then((data) => {
+        const expirationTime = new Date((new Date().getTime() + 3600000));
+        authCtx.login(data.token, expirationTime.toISOString());
+        history.replace("/");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
 
   const emailClasses = emailHasError
@@ -77,4 +120,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default AuthForm;
