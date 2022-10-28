@@ -86,7 +86,7 @@ const Header = (props) => {
               </li>
               <li className={styles["header-menu__list-item"]}>
                 {!props.isLoggedIn ? (
-                  <a className={styles["header-menu__list-item-link"]} href="/login">
+                  <a className={styles["header-menu__list-item-link"]} href="/auth">
                     Login
                   </a>
                 ) : (
