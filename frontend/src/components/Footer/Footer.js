@@ -9,7 +9,7 @@ const Footer = () => {
       <section className={styles["footer-menu"]}>
         <div className={styles["footer-container"]}>
           <div className={`${styles["footer-container__item"]} ${styles["footer-container__item--logo-text"]}`}>
-            <a href="#">
+            <a href="/home">
               <svg enableBackground="new 0 0 289.167 200" version="1.1" width="120px" height="86.122px" viewBox="0 0 120 86.122" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
               <g transform="matrix(.47089 0 0 .47089 -7.2112 -3.0142)">
                 <path d="m218.7 32.513c4e-3 -0.04 4e-3 -0.066 4e-3 -0.066v-21.312s-48.916 25.789-59.087 31.284c-10.171 5.493-9.688 15.204-9.688 15.204v19.857s25.096-13.274 42.753-22.554c-2e-3 2.387-4e-3 4.869-7e-3 7.383 3.453-0.882 6.81-1.738 9.355-2.386v0.078l-9.356 5.457c-2e-3 1.187-2e-3 2.378-2e-3 3.564-23.649 12.523-57.7 30.565-64.212 34.083-10.171 5.495-9.687 15.205-9.687 15.205v19.856s14.394-7.633 31.473-16.676v0.077c-0.033 16.479-0.012 39.807-0.012 39.807l18.471-9.753s7.757-4.285 7.64-17.445c-0.038-4.18-0.061-10.78-0.071-17.839l0.014-2e-3 -0.025-8.607c6.057-3.202 11.707-6.185 16.413-8.662v0.121l18.472-9.757s7.757-4.281 7.64-17.441c-0.063-7.257-0.083-25.008-0.088-39.476z" fill="#d9d9d9"/>
@@ -52,13 +52,13 @@ const Footer = () => {
             <h2>INFORMAÇÃO</h2>
             <ul>
               <li>
-                <a href="#">
+                <a href="/about-us">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/contact">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Contacto</span>
                 </a>
@@ -69,25 +69,25 @@ const Footer = () => {
             <h2>MEMBROS</h2>
             <ul>
               <li>
-                <a href="#">
+                <a href="/personal-directory">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Diretório de Personal Trainers</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/gym-studio-directory">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Diretório de Ginásios/Estúdios</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/pt-training-guide">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Guia PT TRAINING</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/personal-registration">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Inscrição</span>
                 </a>
@@ -98,13 +98,13 @@ const Footer = () => {
             <h2>SUPORTE</h2>
             <ul>
               <li>
-                <a href="#">
+                <a href="/login">
                   <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Login | Logoff</span>
                 </a>
               </li>
             </ul>
-            <img src={livro} />
+            <img src={livro} alt="Livro de Reclamações" />
           </div>
         </div> 
       </section>
@@ -114,7 +114,7 @@ const Footer = () => {
           <a href="https://pt-training.pt/termos-de-utilizacao">Termos e Condições</a>&nbsp;|&nbsp;
           <a href="https://pt-training.pt/politica-de-privacidade-e-cookie">Politica de Privacidade & Cookies</a>
         </span>
-        <span className={styles["footer-info__development"]}>Made with love by <a href="#">Sergio Barza</a> & <a href="https://filipetorres.dev">Filipe Torres</a></span>
+        <span className={styles["footer-info__development"]}>Made with love by <a href="https://www.linkedin.com/in/sergio-barza/">Sergio Barza</a> & <a href="https://filipetorres.dev">Filipe Torres</a></span>
       </section>
     </footer>
   );

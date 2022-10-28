@@ -91,7 +91,7 @@ button.submit-button:hover {
 .form-personal-gymnasium__warning {
   margin: 40px auto 80px;
   font-size: var(--font-size-sm);
-  font-family: "Montserrat", Sans-serif;
+  font-family: var(--font-family-montserrat);
   line-height: 1.5;
   color: var(--color-7A7A7A);
 }
