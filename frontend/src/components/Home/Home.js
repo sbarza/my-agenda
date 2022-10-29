@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStreetView, faUserCheck, faUsers, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
 import homeImageSecond from "../../images/home-second.jpeg";
-import homeImageThird from "../../images/home-third.jpeg";
 import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
 import homeImageForth1 from "../../images/home-forth-1.jpeg";
 import homeImageForth2 from "../../images/home-forth-2.jpeg";
@@ -116,10 +115,6 @@ const Home = () => {
 
       <section className={styles["dizem-sobre-pt-training"]}>
         <h2>O QUE DIZEM SOBRE O PT-TRAINING</h2>
-        {/* <img 
-          src={homeImageThird} alt="Mulher a sorrir e descansar do treino"
-          className={styles["dizem-sobre-pt-training__imagem-fundo"]}
-        /> */}
         <div className={styles["dizem-sobre-pt-training__instagram"]}>
           <a href="https://www.instagram.com/rodrigo_personal.trainer/" target="_blank" rel="noreferrer">
             <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
@@ -138,7 +133,8 @@ const Home = () => {
           </a>
           <p className={styles["dizem-sobre-pt-training__instagram-texto"]}>
             A PT Training é uma excelente plataforma onde disponibiliza ferramentas 
-            e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.</p>
+            e informação para melhor desenvolver e otimizar a minha actividade enquanto Personal Trainer.
+          </p>
         </div>
       </section>
 
