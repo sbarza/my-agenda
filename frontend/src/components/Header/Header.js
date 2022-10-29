@@ -9,8 +9,6 @@ const urlOrigin = window.location.origin;
 const Header = (props) => {
   const authCtx = useContext(AuthContext);
 
-  const isLoggedIn = authCtx.isLoggedIn;
-
   const logoutHandler = () => {
     authCtx.logout();
   };
