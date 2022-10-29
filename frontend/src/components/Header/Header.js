@@ -7,8 +7,6 @@ import AuthContext from "../../store/auth-context";
 const Header = () => {
   const authCtx = useContext(AuthContext);
 
-  const isLoggedIn = authCtx.isLoggedIn;
-
   const logoutHandler = () => {
     authCtx.logout();
   };
@@ -169,7 +167,7 @@ const Header = () => {
                 </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                {!isLoggedIn ? (
+                {!authCtx.isLoggedIn ? (
                   <a
                     className={styles["header-menu__list-item-link"]}
                     href="/auth"

@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPhone,
@@ -34,20 +39,21 @@ function App() {
     <>
       <Header isLoggedIn={authCtx.isLoggedIn} />
       <main>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/about-us">
-            <AboutUs />
-          </Route>
-          <Route path="/personal-registration">
-            <PersonalTrainerForm />
-          </Route>
-          <Route path="/auth">
-            <AuthForm />
-          </Route>
-        </Switch>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/home"/>
+            </Route>
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/about-us" component={AboutUs} />
+            <Route
+              exact
+              path="/personal-registration"
+              component={PersonalTrainerForm}
+            />
+            <Route exact path="/auth" component={AuthForm} />
+          </Switch>
+        </Router>
       </main>
       <Footer />
     </>
