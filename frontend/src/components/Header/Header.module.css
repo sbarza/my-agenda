@@ -69,7 +69,7 @@ header {
 }
 
 .header-menu {
-  height: 140px;
+  height: 160px;
 }
 
 .header-menu__logo {
@@ -78,6 +78,14 @@ header {
 
 .header-menu__logo svg {
   width: 105px
+}
+
+.header-menu__nav {
+  margin-right: 10px;
+}
+
+.header-menu__nav svg {
+  font-size: 20px;
 }
 
 .header-menu__nav input,
@@ -112,6 +120,10 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+  .header-menu {
+    padding: 0 20px;
+  }
+
   .header-info {
     padding: 10px 20px;
   }

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStreetView, faUserCheck, faUsers, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
-import homeImageFirst from "../../images/home-first.jpeg";
 import homeImageSecond from "../../images/home-second.jpeg";
 import homeImageThird from "../../images/home-third.jpeg";
 import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
@@ -29,7 +28,6 @@ const Home = () => {
     <>
       <section className={styles["container-top-image"]}>
         <a href="#como-funciona">
-          <img src={homeImageFirst} alt="Personal Trainer"/>
           <h2>
             OTIMIZA OS TEUS TREINOS, RENTABILIZA O TEU GINÁSIO
           </h2>
@@ -80,7 +78,7 @@ const Home = () => {
       </section>
 
       <section className={styles["perguntas-frequentes"]}>
-        <h2>AS TUAS PERGUNTAS FREQUENTES RESPONDIDAS ?</h2>
+        <h2>AS TUAS PERGUNTAS FREQUENTES RESPONDIDAS</h2>
         <div className={`container ${styles["perguntas-frequentes__container"]}`}>
           <details>
             <summary>Como posso aderir ao PT TRAINING ?</summary>
@@ -118,10 +116,10 @@ const Home = () => {
 
       <section className={styles["dizem-sobre-pt-training"]}>
         <h2>O QUE DIZEM SOBRE O PT-TRAINING</h2>
-        <img 
+        {/* <img 
           src={homeImageThird} alt="Mulher a sorrir e descansar do treino"
           className={styles["dizem-sobre-pt-training__imagem-fundo"]}
-        />
+        /> */}
         <div className={styles["dizem-sobre-pt-training__instagram"]}>
           <a href="https://www.instagram.com/rodrigo_personal.trainer/" target="_blank" rel="noreferrer">
             <img src={homeImageInstagramUser} alt="Foto de Rodrigo Godinho"/>
