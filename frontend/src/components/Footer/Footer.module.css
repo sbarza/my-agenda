@@ -19,7 +19,7 @@ footer {
   
   .footer-container__item--logo-text svg {
     display: block;
-    margin: 40px 0 40px 10%;
+    margin: 40px 0 40px 10px;
   }
   
   .footer-container__item--logo-text p {
@@ -87,13 +87,16 @@ footer {
       flex-wrap: wrap;
     }
 
-    .footer-container__item--logo-text {
-      padding-right: 10px;
+    .footer-container__item {
       flex-basis: 100%;
     }
+    
+    .footer-container__item h2 {
+      text-align: center;
+    }
 
-    .footer-container__item--logo-text ~ .footer-container__item {
-      flex-basis: calc(33.33% - 20px);
+    .footer-container__item--logo-text {
+      padding-right: 10px;
     }
 
     .footer-container__item--logo-text p {
@@ -108,10 +111,6 @@ footer {
   @media only screen and (max-width: 540px) {
     .footer-container__item--logo-text ~ .footer-container__item {
       flex-basis: 100%;
-    }
-    
-    .footer-container__item h2 {
-      text-align: center;
     }
 
     .footer-info {
