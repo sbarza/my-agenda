@@ -12,13 +12,7 @@ body {
   color: var(--color-333333);
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
 main {
-  flex: 1;
   position: relative;
 }
 

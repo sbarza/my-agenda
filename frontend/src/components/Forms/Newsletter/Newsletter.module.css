@@ -2,7 +2,6 @@
   position: relative;
   background-image: url(../../../images/home-fifth.jpeg);
   background-position: center center;
-  padding: 35px 0 70px;
 }
 
 .newsletter > div {
@@ -10,6 +9,7 @@
   flex-wrap: wrap;
   gap: 10px;
   align-items: baseline;
+  padding: 35px 0 70px;
 }
 
 .newsletter h2 {
@@ -36,7 +36,7 @@
   font-weight: 400;
 }
 
-.newsletter div {
+.newsletter > div > div {
   flex-basis: calc(50% - 10px);
 }
 
@@ -94,7 +94,7 @@
     font-size: var(--font-size-delta-sm);
   }
 
-  .newsletter div + div {
+  .newsletter > div > div + div {
     flex-basis: 100%;
     margin-bottom: 30px;
   }

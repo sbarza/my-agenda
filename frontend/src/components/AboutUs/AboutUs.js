@@ -3,15 +3,13 @@ import styles from "./AboutUs.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faEdit } from "@fortawesome/free-regular-svg-icons";
 import { faCalculator } from "@fortawesome/free-solid-svg-icons";
-import AboutUsImagem1 from "../../images/about-us__top.jpeg";
-import AboutUsImagem2 from "../../images/about-us__gymnasiums-estudios.jpeg";
 import Newsletter from "../Forms/Newsletter/Newsletter";
 
 const AboutUs = () => {
   return (
     <>
       <section className={styles["container-top"]}>
-        <img src={AboutUsImagem1} alt="Personal Trainer"/>
+        {/* <img src={AboutUsImagem1} alt="Personal Trainer"/> */}
         <h2 className={"title--alpha fadeInUp animated"}>SOBRE NÓS</h2>
         <svg class={styles["container-bottom__blue-bar-svg"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
           <path class={styles["container-bottom__blue-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
@@ -70,8 +68,6 @@ const AboutUs = () => {
           <path class={styles["container-bottom__red-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
         </svg>
       </section>
-
-      <img className={styles["container-bottom-img"]} src={AboutUsImagem2} alt="Ginásio"/>
 
       <Newsletter />
     </>
