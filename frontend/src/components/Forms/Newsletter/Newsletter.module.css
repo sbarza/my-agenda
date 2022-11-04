@@ -65,10 +65,16 @@
   background-color: var(--color-3D3D3D);
 }
 
+@media only screen and (max-width: 1200px) {
+  .newsletter {
+    padding: 0 20px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .newsletter {
     margin-top: 70px;
-    padding: 0 0 30px;
+    padding: 0 10px0 30px;
   }
 
   .newsletter h2 {
