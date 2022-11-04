@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@400;500&display=swap');
 
 html, body, body > div {
   height: 100%;
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: var(--font-family-poppins);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-white);
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
+  color: var(--color-333333);
 }
 
 main {
-  flex: 1;
+  position: relative;
 }
 
 .container {
@@ -52,7 +48,7 @@ a {
   color: var(--color-CC3366);
 }
 
-h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
 }
 
@@ -61,15 +57,16 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 }
 
 .title--beta {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-beta);
+  font-weight: 600;
 }
 
 .title--gamma {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-gamma);
 }
 
 .title--delta {
-  font-size: var(--font-size-alpha);
+  font-size: var(--font-size-delta);
 }
 
 textarea, select, input[type=text], 

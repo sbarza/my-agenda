@@ -16,6 +16,8 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
+import AboutUs from "./components/AboutUs/AboutUs";
 import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import AuthForm from "./components/Auth/AuthForm";
 import AuthContext from "./store/auth-context";
@@ -39,9 +41,11 @@ function App() {
       <main>
         <Router>
           <Switch>
-            <Route exact path="/" Redirect to="/home">
-              <Redirect to="/home" />
+            <Route exact path="/">
+              <Redirect to="/home"/>
             </Route>
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/about-us" component={AboutUs} />
             <Route
               exact
               path="/personal-registration"

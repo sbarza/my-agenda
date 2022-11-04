@@ -1,0 +1,488 @@
+.container-top-image {
+  position: relative;
+  overflow: hidden;
+  height: 750px;
+  background-image: url(../../images/home-first.jpeg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1210px) {
+  .container-top-image img {
+    min-width: 1210px;
+    min-height: 837px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-top-image img {
+    transform: translateX(-60px);
+  }
+}
+
+.container-top-image h2 {
+  position: absolute;
+  right: 50px;
+  bottom: 113px;
+  max-width: 66%;
+  margin: 0;
+  color: var(--color-5C5C5C);
+  font-size: var(--font-size-beta-2);
+  text-align: right;
+  line-height: 37.5px;
+}
+
+.container-top-image span {
+  position: absolute;
+  right: 50px;
+  bottom: 47px;
+  padding: 11px 22px;
+  border: 2px solid var(--color-black);
+  border-radius: 30px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var();
+  font-family: var(--font-family-montserrat);
+  font-weight: 700;
+  transition: all .5s;
+}
+
+.container-top-image span:hover {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-top-image h2,
+  .container-top-image span {
+    right: 30px;
+  }
+
+  .container-top-image h2 {
+    bottom: 93px;
+    margin-left: calc(33% + 20px);
+  }
+
+  .container-top-image span {
+    bottom: 30px;
+  }
+}
+
+.como-funciona {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.como-funciona h2,
+.porque-pt-training h2,
+.perguntas-frequentes h2,
+.dizem-sobre-pt-training h2,
+.pt-training-parceiro h2 {
+  color: var(--color-black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-alpha);
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .dizem-sobre-pt-training h2,
+  .pt-training-parceiro h2 {
+    font-size: var(--font-size-beta-2);
+  }
+}
+
+.como-funciona h2 {
+  flex-basis: 100%;
+}
+
+.como-funciona .como-funciona__item {
+  flex-basis: calc(33.33% - 20px);
+  text-align: center;
+}
+
+.como-funciona .como-funciona__item svg {
+  font-size: var(--font-size-alpha-1);
+  margin-bottom: 13px;
+}
+
+.como-funciona .como-funciona__item h3 {
+  margin: 8px 0 7px;
+  font-family: var(--font-family-poppins);
+}
+
+.como-funciona .como-funciona__item p {
+  margin: 8px 0 7px;
+  color: var(--color-525252);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+  .como-funciona .como-funciona__item {
+    flex-basis: 100%;
+  }
+
+  .como-funciona .como-funciona__item svg {
+    font-size: var(--font-size-beta-5);
+  }
+
+  .como-funciona .como-funciona__item h3 {
+    font-size: var(--font-size-beta-sm);
+  }  
+
+  .como-funciona .como-funciona__item p {
+    font-size: var(--font-size-sm);
+  }  
+}
+
+.porque-pt-training {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.porque-pt-training h2 {
+  margin-bottom: 54px;
+}
+
+.porque-pt-training h2 span {
+  white-space: nowrap;
+}
+
+.porque-pt-training__image-item {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+}
+
+.porque-pt-training img {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.porque-pt-training__text-item {
+  flex-basis: calc(50% - 20px);
+  padding: 10px;
+}
+
+.porque-pt-training h3 {
+  margin: 0 0 7px;
+  font-family: var(--font-family-poppins);
+}
+
+.porque-pt-training p {
+  margin: 0 100px 40px 0;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-7A7A7A);
+}
+
+@media only screen and (max-width: 1024px) {
+  .porque-pt-training__image-item {
+    align-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .porque-pt-training__image-item,
+  .porque-pt-training__text-item {
+    flex-basis: 100%;
+  }
+
+  .porque-pt-training p {
+    margin-right: 0;
+  }
+}
+
+.perguntas-frequentes {
+  padding-bottom: 50px;
+}
+
+.perguntas-frequentes h2 {
+  margin-top: 50px;
+}
+
+.perguntas-frequentes__container {
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.perguntas-frequentes__container details {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  border: 1px solid var(--color-D6D6D6);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.perguntas-frequentes__container summary {
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.perguntas-frequentes__container summary::marker {
+  color: var(--color-white);
+}
+
+.perguntas-frequentes__container summary::before {
+  content: ">";
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-red);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  line-height: 0.9;
+  text-indent: 3px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.perguntas-frequentes__container details[open] summary::before {
+  transform: rotate(-90deg);
+}
+
+.perguntas-frequentes__container details p {
+  color: var(--color-7A7A7A);
+  margin: 10px 0 0;
+}
+
+.perguntas-frequentes__container a {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.perguntas-frequentes__container a svg {
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .perguntas-frequentes {
+    padding-bottom: 0;
+  }
+}
+
+.dizem-sobre-pt-training {
+  position: relative;
+  height: 100vh;
+  margin-top: 70px;
+  background-image: url(../../images/home-third.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dizem-sobre-pt-training h2 {
+  position: relative;
+  top: -90px;
+}
+
+.dizem-sobre-pt-training__instagram {
+  position: absolute;
+  top: calc(50% - 94px);
+  left: calc(50% - 255px);
+  width: 510px;
+  border-radius: 7px;
+  background-color: var(--color-white);
+}
+
+.dizem-sobre-pt-training__instagram a {
+  display: block;
+  height: 64px;
+  padding: 15px 15px 6px;
+  color: unset;
+  line-height: 1.5;
+}
+
+.dizem-sobre-pt-training__instagram a img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+}
+
+.dizem-sobre-pt-training__instagram a h4 {
+  margin: 0 0 5px;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-1F1F1F);
+}
+
+.dizem-sobre-pt-training__instagram a .dizem-sobre-pt-training__instagram-estrelas {
+  color: var(--color-EEE00B);
+  font-size: var(--font-size-md);
+}
+
+.dizem-sobre-pt-training__instagram a .dizem-sobre-pt-training__instagram-user {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-697882);
+}
+
+.dizem-sobre-pt-training__instagram a .dizem-sobre-pt-training__instagram-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: var(--font-size-beta-2);
+}
+
+.dizem-sobre-pt-training__instagram p {
+  padding: 6px 15px 15px;
+  clear: left;
+}
+
+.dizem-sobre-pt-training__instagram-texto {
+  font-size: var(--font-size-delta);
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .dizem-sobre-pt-training {
+    height: 288px;
+  }
+
+  .dizem-sobre-pt-training h2 {
+    top: -70px;
+  }
+
+  .dizem-sobre-pt-training__instagram {
+    left: calc(50% - 154px);
+    top: calc(50% - 130px);
+    width: 307px;
+  }
+}
+
+.pt-training-parceiro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.pt-training-parceiro h2 {
+  margin-bottom: 0;
+  flex-basis: 100%;
+}
+
+.pt-training-parceiro h3 {
+  flex-basis: 100%;
+  margin: -7px 0 49px;
+  text-align: center;
+  font-size: var(--font-size-beta-sm);
+  font-weight: 600;
+}
+
+.pt-training-parceiro__ginasio-personal {
+  flex-basis: calc(50% - 10px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 70px;
+  text-align: center;
+  background-color: var(--color-F5F5F5);
+}
+
+.pt-training-parceiro__ginasio-personal span {
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: -38px;
+  padding: 6px 40px;
+  transform: rotate(45deg);
+  background-color: var(--color-61CE70);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.pt-training-parceiro__ginasio-personal img {
+  max-width: 100%;
+  margin-top: -75px;
+  transform: scale(1);
+  filter: brightness(100%);
+  transition: all 1.5s;
+}
+
+.pt-training-parceiro__ginasio-personal:hover img {
+  transform: scale(1.2);
+  filter: brightness(70%);
+}
+
+.pt-training-parceiro__ginasio-personal h4 {
+  position: relative;
+  z-index: 1;
+  margin: -150px 0 0;
+  padding: 40px 0;
+  background-color: var(--color-F5F5F5);
+  font-size: var(--font-size-beta-1);
+}
+
+.pt-training-parceiro__ginasio-personal p {
+  position: relative;
+  z-index: 1;
+  margin: -35px 0 0;
+  padding: 0 0 126px;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  color: var(--color-525252);
+  background-color: var(--color-F5F5F5);
+}
+
+.pt-training-parceiro__ginasio-personal a {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: calc(50% - 67px);
+  padding: 12px 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-training-parceiro {
+    padding-top: 0;
+  }
+
+  .pt-training-parceiro h2 {
+    margin-top: 50px;
+  }
+
+  .pt-training-parceiro h3 {
+    font-size: var(--font-size-sm)
+  }
+
+  .pt-training-parceiro__ginasio-personal img {
+    width: 100%;
+  }
+  
+  .pt-training-parceiro__ginasio-personal {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}

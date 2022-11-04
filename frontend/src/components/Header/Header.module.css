@@ -1,3 +1,9 @@
+header {
+  position: relative;
+  z-index: 2;
+  background: var(--color-white);
+}
+
 .header-info {
   height: 45px;
   background-color: var(--color-262a2b);
@@ -74,6 +80,14 @@
   width: 105px
 }
 
+.header-menu__nav {
+  margin-right: 10px;
+}
+
+.header-menu__nav svg {
+  font-size: 20px;
+}
+
 .header-menu__nav input,
 .header-menu__nav input ~ svg {
   display: none;
@@ -106,6 +120,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .header-menu {
+    padding: 0 20px;
+  }
+
   .header-info {
     padding: 10px 20px;
   }
@@ -144,9 +162,9 @@
   .header-menu__nav .header-menu__list {
     position: absolute;
     z-index: 1;
-    left: -10px;
+    left: -20px;
     top: 140px;
-    width: calc(100% + 20px);
+    width: 100vw;
     height: auto;
     flex-direction: column;
     background-color: var(--color-F5F5F5);
@@ -165,7 +183,7 @@
     display: block;
     line-height: 3;
     font-size: var(--font-size-md);
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family-montserrat);
   }
 }
 

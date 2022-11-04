@@ -4,9 +4,7 @@ import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AuthContext from "../../store/auth-context";
 
-const urlOrigin = window.location.origin;
-
-const Header = (props) => {
+const Header = () => {
   const authCtx = useContext(AuthContext);
 
   const logoutHandler = () => {
@@ -51,7 +49,7 @@ const Header = (props) => {
       </section>
       <section className={`container ${styles["header-menu"]}`}>
         <div className={styles["header-menu__container"]}>
-          <a className={styles["header-menu__logo"]} href={`${urlOrigin}`}>
+          <a className={styles["header-menu__logo"]} href="/">
             <svg
               enableBackground="new 0 0 289.167 200"
               version="1.1"
@@ -145,12 +143,18 @@ const Header = (props) => {
             />
             <ul className={styles["header-menu__list"]}>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">
+                <a
+                  className={styles["header-menu__list-item-link"]}
+                  href="/about-us"
+                >
                   Sobre Nós
                 </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                <a className={styles["header-menu__list-item-link"]} href="#">
+                <a
+                  className={styles["header-menu__list-item-link"]}
+                  href="/contact"
+                >
                   Contactos
                 </a>
               </li>
@@ -163,7 +167,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className={styles["header-menu__list-item"]}>
-                {!props.isLoggedIn ? (
+                {!authCtx.isLoggedIn ? (
                   <a
                     className={styles["header-menu__list-item-link"]}
                     href="/auth"

@@ -1,0 +1,106 @@
+.newsletter {
+  position: relative;
+  background-image: url(../../../images/home-fifth.jpeg);
+  background-position: center center;
+}
+
+.newsletter > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  padding: 35px 0 70px;
+}
+
+.newsletter h2 {
+  margin-bottom: 15px;
+  flex-basis: 100%;
+  color: var(--color-black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-alpha);
+  text-align: center;
+}
+
+.newsletter h3 {
+  flex-basis: 100%;
+  margin: 0 0 20px;
+}
+
+.newsletter input[type=text],
+.newsletter select {
+  flex-basis: calc(33.33% - 7px);
+  background-color: var(--color-white);
+  border-radius: 50px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-beta-sm);
+  font-weight: 400;
+}
+
+.newsletter > div > div {
+  flex-basis: calc(50% - 10px);
+}
+
+.newsletter label {
+  margin: 0 15px 0 5px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-beta-sm);
+  color: var(--color-7A7A7A);
+}
+
+.newsletter button {
+  flex-basis: 33.33%;
+  padding: 12px 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+  transition: all .3s;
+}
+
+.newsletter button:hover {
+  transform: scale(0.9);
+  background-color: var(--color-3D3D3D);
+}
+
+@media only screen and (max-width: 1200px) {
+  .newsletter {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .newsletter {
+    padding: 0 10px 0 30px;
+  }
+
+  .newsletter h2 {
+    font-size: var(--font-size-beta-2);
+  }
+
+  .newsletter h3 {
+    font-size: var(--font-size-md);
+  }
+  
+  .newsletter input[type=text],
+  .newsletter select {
+    flex-basis: 100%;
+    font-size: var(--font-size-sm);
+  }
+
+  .newsletter label {
+    font-size: var(--font-size-sm);
+  }
+
+  .newsletter button {
+    flex-basis: 100%;
+    font-size: var(--font-size-delta-sm);
+  }
+
+  .newsletter > div > div + div {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}

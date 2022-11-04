@@ -32,18 +32,42 @@
   --color-141414: #141414;
   --color-0A0A0A: #0A0A0A;
   --color-black: #000000;
-/* Reds */
+  /* Reds */
   --color-red: #ff0000;
   --color-FF6666: #FF6666;
   --color-CC3366: #CC3366;
   --color-FFDFDF: #FFDFDF;
 
+  /* Yellows */
+  --color-EEE00B: #EEE00B;
+
+  /* Blues */
+  --color-697882: #697882;
+  --color-1B252F: #1B252F;
+
+  /* Greens */
+  --color-61CE70: #61CE70;
+
   /*-- Font sizes --*/
+  --font-size-alpha-1: 46px;
   --font-size-alpha: 42px;
+  --font-size-beta-5: 36px;
+  --font-size-beta-4: 30px;
+  --font-size-beta-3: 28px;
+  --font-size-beta-2-1: 26px;
+  --font-size-beta-2: 25px;
+  --font-size-beta-1: 24px;
   --font-size-beta: 22px;
+  --font-size-beta-sm: 20px;
   --font-size-gamma: 18px;
+  --font-size-gamma-sm: 17px;
   --font-size-delta: 16px;
+  --font-size-delta-sm: 15px;
   --font-size-md: 14px;
   --font-size-sm: 12px;
   --font-size-text-xs: 11px;
+
+  /*-- Font family --*/
+  --font-family-poppins: "Poppins", Sans-serif;
+  --font-family-montserrat: "Montserrat", Sans-serif;
 }
