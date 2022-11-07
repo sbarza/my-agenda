@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@400;500&display=swap');
 
-html, body, body > div {
+html, body, body #root {
   height: 100%;
 }
 
@@ -12,8 +12,14 @@ body {
   color: var(--color-333333);
 }
 
+body #root {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   position: relative;
+  flex-grow: 1;
 }
 
 .container {
@@ -53,7 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title--alpha {
+  color: var(--color-black);
+  font-family: var(--font-family-montserrat);
   font-size: var(--font-size-alpha);
+  text-align: center;
 }
 
 .title--beta {
@@ -69,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--font-size-delta);
 }
 
+/*--- Forms ---*/
 textarea, select, input[type=text], 
 input[type=url], input[type=email], 
 input[type=tel], input[type=number], 
@@ -82,6 +92,44 @@ input[type=password] {
   border-radius: 3px;
   background-color: var(--color-white);
   box-sizing: border-box;
+}
+
+
+.subscription-login form {
+  width: 520px;
+  margin: 54px auto 0;
+  color: var(--color-7A7A7A);
+  font-size: var(--font-size-md);
+}
+
+@media only screen and (max-width: 540px) {
+  .subscription-login form {
+    width: calc(100% - 20px);
+  }
+}
+
+.form-control {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-control input,
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  margin-top: 3px;
+}
+
+.form-control__checkbox {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control__checkbox input {
+  margin-right: 5px;
 }
 
 .invalid input,
@@ -98,6 +146,35 @@ input[type=password] {
 .error-text {
   margin: 0;
   color: #b40e0e;
+}
+
+button.submit-button {
+  display: block;
+  font-weight: 400;
+  color: var(--color-CC3366);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid var(--color-CC3366);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+button.submit-button:disabled,
+button.submit-button:disabled:hover,
+button.submit-button:disabled:active {
+  background-color: var(--color-CCCCCC);
+  color: var(--color-292929);
+  border-color: var(--color-CCCCCC);
+  cursor: not-allowed;
+}
+
+button.submit-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-CC3366);
 }
 
 /*--- Animations ---*/

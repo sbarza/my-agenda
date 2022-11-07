@@ -38,6 +38,7 @@
 .container-top-title {
   position: relative;
   z-index: 1;
+  top: -1px;
   height: 356px;
   background-color: var(--color-1B252F);
 }
