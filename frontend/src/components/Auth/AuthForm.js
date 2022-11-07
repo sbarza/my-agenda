@@ -83,7 +83,7 @@ const AuthForm = (props) => {
 
   return (
     <>
-      <section className={`subscription-login ${styles["auth-contaner"]}`}>
+      <section className={`subscription-login ${styles["auth-container"]}`}>
         <h2 className={`title--alpha`}>Login</h2>
         <form onSubmit={submitHandler}>
           <label
