@@ -54,13 +54,13 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/about-us">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
                 <a href="/contact">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Contacto</span>
                 </a>
               </li>
@@ -71,25 +71,25 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/personal-directory">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Diretório de Personal Trainers</span>
                 </a>
               </li>
               <li>
                 <a href="/gym-studio-directory">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Diretório de Ginásios/Estúdios</span>
                 </a>
               </li>
               <li>
                 <a href="/pt-training-guide">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Guia PT TRAINING</span>
                 </a>
               </li>
               <li>
                 <a href="/personal-registration">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Inscrição</span>
                 </a>
               </li>
@@ -100,7 +100,7 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/login">
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Login | Logoff</span>
                 </a>
               </li>

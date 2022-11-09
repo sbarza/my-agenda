@@ -137,7 +137,7 @@ const Header = () => {
             <input type="checkbox" />
             <FontAwesomeIcon
               icon={faBars}
-              className={styles["header-menu__menu-icon"]}
+              className={styles["header-menu__bars-icon"]}
             />
             <FontAwesomeIcon
               icon={faXmark}
@@ -145,44 +145,32 @@ const Header = () => {
               className={styles["header-menu__close-icon"]}
             />
             <ul className={styles["header-menu__list"]}>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/about-us"
-                >
-                  Sobre Nós
-                </a>
+              <li>
+                <a href="/about-us">Sobre Nós</a>
               </li>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/contact"
-                >
-                  Contactos
-                </a>
+              <li>
+                <a href="/contact">Contactos</a>
               </li>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/personal-registration"
-                >
-                  Inscrição
-                </a>
-                <FontAwesomeIcon icon={faCaretDown}/>
+              <li className={styles["header-menu__list-item-submenu"]}>
+                <span>Aderir</span>
+                <FontAwesomeIcon icon={faCaretDown} size="sm"/>
+                <ul>
+                  <li>
+                    <a href="/personal-registration">Adesão Personal Trainers</a>
+                  </li>
+                  <li>
+                    <a href="/gymnasium-studium-registration">Adesão Ginásios/Estúdios</a>
+                  </li>
+                </ul>
+                 
               </li>
-              <li className={styles["header-menu__list-item"]}>
+              <li>
                 {!authCtx.isLoggedIn ? (
-                  <a
-                    className={styles["header-menu__list-item-link"]}
-                    href="/auth"
-                  >
+                  <a href="/auth">
                     Login
                   </a>
                 ) : (
-                  <a
-                    className={styles["header-menu__list-item-link"]}
-                    onClick={logoutHandler}
-                  >
+                  <a onClick={logoutHandler}>
                     Logout
                   </a>
                 )}
