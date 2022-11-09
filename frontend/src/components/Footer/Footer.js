@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import livro from '../../images/./livro-de-reclamacoes.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -53,13 +54,13 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/about-us">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
                 <a href="/contact">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Contacto</span>
                 </a>
               </li>
@@ -70,25 +71,25 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/personal-directory">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Diretório de Personal Trainers</span>
                 </a>
               </li>
               <li>
                 <a href="/gym-studio-directory">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Diretório de Ginásios/Estúdios</span>
                 </a>
               </li>
               <li>
                 <a href="/pt-training-guide">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Guia PT TRAINING</span>
                 </a>
               </li>
               <li>
                 <a href="/personal-registration">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Inscrição</span>
                 </a>
               </li>
@@ -99,7 +100,7 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="/login">
-                  <FontAwesomeIcon icon="angle-right" size="sm" className={styles["header-menu__menu-icon"]} />
+                  <FontAwesomeIcon icon={faAngleRight} size="sm" className={styles["header-menu__menu-icon"]} />
                   <span>Login | Logoff</span>
                 </a>
               </li>

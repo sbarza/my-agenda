@@ -2,6 +2,9 @@ import React from "react";
 import { useContext } from "react";
 import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import AuthContext from "../../store/auth-context";
 
 const Header = () => {
@@ -19,14 +22,14 @@ const Header = () => {
             href="tel:+351964278843"
             className={styles["header-info__data-contact"]}
           >
-            <FontAwesomeIcon icon="phone" flip="horizontal" />
+            <FontAwesomeIcon icon={faPhone} flip="horizontal" />
             <span>+351 964 278 843</span>
           </a>
           <a
             href="mailto:geral@pt-training.pt"
             className={`${styles["header-info__data-contact"]} ${styles["header-info__data-contact--email"]}`}
           >
-            <FontAwesomeIcon icon={["far", "envelope"]} />
+            <FontAwesomeIcon icon={faEnvelope} />
             <span>geral@pt-training.pt</span>
           </a>
           <a
@@ -35,7 +38,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
+            <FontAwesomeIcon icon={faFacebookF} />
           </a>
           <a
             href="https://www.instagram.com/pttraining_oficial/"
@@ -43,7 +46,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={["fab", "instagram"]} />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
       </section>
@@ -133,11 +136,11 @@ const Header = () => {
           <nav className={styles["header-menu__nav"]}>
             <input type="checkbox" />
             <FontAwesomeIcon
-              icon="bars"
+              icon={faBars}
               className={styles["header-menu__menu-icon"]}
             />
             <FontAwesomeIcon
-              icon="xmark"
+              icon={faXmark}
               size="lg"
               className={styles["header-menu__close-icon"]}
             />
@@ -165,6 +168,7 @@ const Header = () => {
                 >
                   Inscrição
                 </a>
+                <FontAwesomeIcon icon={faCaretDown}/>
               </li>
               <li className={styles["header-menu__list-item"]}>
                 {!authCtx.isLoggedIn ? (
