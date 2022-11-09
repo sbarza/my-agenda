@@ -6,6 +6,7 @@ import { faPhone, faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-s
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import AuthContext from "../../store/auth-context";
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const authCtx = useContext(AuthContext);
@@ -13,6 +14,8 @@ const Header = () => {
   const logoutHandler = () => {
     authCtx.logout();
   };
+
+  const location = useLocation();
 
   return (
     <header>
@@ -145,15 +148,25 @@ const Header = () => {
               className={styles["header-menu__close-icon"]}
             />
             <ul className={styles["header-menu__list"]}>
-              <li>
+              <li className={location.pathname === "/about-us" ? styles["header-menu__item-active"] : ""}>
                 <a href="/about-us">Sobre Nós</a>
               </li>
-              <li>
+              <li className={location.pathname === "/contact" ? styles["header-menu__item-active"] : ""}>
                 <a href="/contact">Contactos</a>
               </li>
-              <li className={styles["header-menu__list-item-submenu"]}>
-                <span>Aderir</span>
-                <FontAwesomeIcon icon={faCaretDown} size="sm"/>
+              <li 
+                className={`
+                  ${styles["header-menu__list-item-submenu"]}
+                  ${location.pathname === "/join-us" ||location.pathname === "/personal-registration" || location.pathname === "/gymnasium-studium-registration" 
+                    ? styles["header-menu__item-active"] 
+                    : ""
+                  }
+                `}
+                >
+                <a href="/join-us">
+                  Aderir
+                  <FontAwesomeIcon icon={faCaretDown} size="sm"/>
+                </a>
                 <ul>
                   <li>
                     <a href="/personal-registration">Adesão Personal Trainers</a>
@@ -164,7 +177,7 @@ const Header = () => {
                 </ul>
                  
               </li>
-              <li>
+              <li className={location.pathname === "/auth" ? styles["header-menu__item-active"] : ""}>
                 {!authCtx.isLoggedIn ? (
                   <a href="/auth">
                     Login

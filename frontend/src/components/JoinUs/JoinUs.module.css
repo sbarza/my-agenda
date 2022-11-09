@@ -1,0 +1,173 @@
+.container-top {
+  position: relative;
+  z-index: 1;
+  height: 60vh;
+  padding: 4% 0;
+  transition: max-height 1s;
+  background-image: url(../../images/about-us__top.jpeg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  opacity: .47;
+}
+
+.container-top h2 {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 15px);
+  width: 100%;
+  margin: 0;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container-top-title {
+  position: relative;
+  z-index: 1;
+  top: -1px;
+  margin-bottom: -1px;
+  height: 356px;
+  background-color: var(--color-1B252F);
+}
+
+.container-top-title h2 {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 15px);
+  margin: 0;
+  width: 100%;
+  color: var(--color-white);
+  font-size: var(--font-size-beta-4);
+  text-align: center;
+}
+
+.container-bottom__blue-bar-svg {
+  transform: rotateX(180deg);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+}
+
+.container-bottom__blue-bar-path {
+  fill: var(--color-1B252F);
+}
+
+.pt-training-parceiro h2 {
+  margin-bottom: 80px;
+}
+
+.pt-training-parceiro > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.pt-training-parceiro__ginasio-personal {
+  flex-basis: calc(50% - 10px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 140px;
+  text-align: center;
+  background-color: var(--color-F5F5F5);
+}
+
+.pt-training-parceiro__ginasio-personal span {
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  right: -38px;
+  padding: 6px 40px;
+  transform: rotate(45deg);
+  background-color: var(--color-61CE70);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.pt-training-parceiro__ginasio-personal img {
+  max-width: 100%;
+  margin-top: -75px;
+  transform: scale(1);
+  filter: brightness(100%);
+  transition: all 1.5s;
+}
+
+.pt-training-parceiro__ginasio-personal:hover img {
+  transform: scale(1.2);
+  filter: brightness(70%);
+}
+
+.pt-training-parceiro__ginasio-personal h4 {
+  position: relative;
+  z-index: 1;
+  margin: -80px 0 0;
+  padding: 40px 0;
+  background-color: var(--color-F5F5F5);
+  font-size: var(--font-size-beta-1);
+}
+
+.pt-training-parceiro__ginasio-personal p {
+  position: relative;
+  z-index: 1;
+  margin: -35px 0 0;
+  padding: 0 0 126px;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  color: var(--color-525252);
+  background-color: var(--color-F5F5F5);
+}
+
+.pt-training-parceiro__ginasio-personal a {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: calc(50% - 67px);
+  padding: 12px 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-top {
+    background-size: 260%;
+    height: 77vh;
+    background-position: center;
+  }
+
+  .container-top h2,
+  .our-mission h2 {
+    font-size: var(--font-size-beta-2-1);
+  }
+
+  .container-top-title {
+    height: 130px;
+  }
+
+  .container-top-title h2 {
+    font-size: var(--font-size-delta);
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

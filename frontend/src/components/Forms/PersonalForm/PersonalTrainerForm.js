@@ -162,7 +162,7 @@ const PersonalTrainerForm = () => {
       </section>
 
       <section className={"subscription-login"}>
-        <h2 className={styles["subscription__title"]}>Subscrição - Membro Personal Trainer</h2>
+        <h2 className={"title--negative"}>Subscrição - Membro Personal Trainer</h2>
         <form onSubmit={submitHandler}>
           <p>Preço: Grátis</p>
           <label

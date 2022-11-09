@@ -19,16 +19,6 @@
   font-weight: 600;
 }
 
-.subscription__title {
-  padding: 25px;
-  margin: 0;
-  font-size: var(--font-size-gamma-sm);
-  font-weight: 400;
-  text-align: center;
-  color: var(--color-white);
-  background-color: var(--color-black);
-}
-
 .subscription-warning {
   margin: 40px auto 80px;
   font-size: var(--font-size-sm);
@@ -44,10 +34,6 @@
 
   .container-top-image h2 {
     font-size: var(--font-size-beta-3);
-  }
-
-  h2.subscription__title {
-    padding: 15px;
   }
 }
 

@@ -32,19 +32,6 @@ main {
   padding: 0 10px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    padding: 0 10px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .container {
-    max-width: 767px;
-  }
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -76,6 +63,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .title--delta {
   font-size: var(--font-size-delta);
+}
+
+.title--negative {
+  padding: 25px;
+  margin: 0;
+  font-size: var(--font-size-gamma-sm);
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+
+  .title--negative {
+    padding: 15px;
+  }
 }
 
 /*--- Forms ---*/
