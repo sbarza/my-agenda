@@ -2,7 +2,11 @@ import React from "react";
 import { useContext } from "react";
 import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import AuthContext from "../../store/auth-context";
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const authCtx = useContext(AuthContext);
@@ -10,6 +14,8 @@ const Header = () => {
   const logoutHandler = () => {
     authCtx.logout();
   };
+
+  const location = useLocation();
 
   return (
     <header>
@@ -19,14 +25,14 @@ const Header = () => {
             href="tel:+351964278843"
             className={styles["header-info__data-contact"]}
           >
-            <FontAwesomeIcon icon="phone" flip="horizontal" />
+            <FontAwesomeIcon icon={faPhone} flip="horizontal" />
             <span>+351 964 278 843</span>
           </a>
           <a
             href="mailto:geral@pt-training.pt"
             className={`${styles["header-info__data-contact"]} ${styles["header-info__data-contact--email"]}`}
           >
-            <FontAwesomeIcon icon={["far", "envelope"]} />
+            <FontAwesomeIcon icon={faEnvelope} />
             <span>geral@pt-training.pt</span>
           </a>
           <a
@@ -35,7 +41,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={["fab", "facebook-f"]} />
+            <FontAwesomeIcon icon={faFacebookF} />
           </a>
           <a
             href="https://www.instagram.com/pttraining_oficial/"
@@ -43,7 +49,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={["fab", "instagram"]} />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
       </section>
@@ -133,52 +139,51 @@ const Header = () => {
           <nav className={styles["header-menu__nav"]}>
             <input type="checkbox" />
             <FontAwesomeIcon
-              icon="bars"
-              className={styles["header-menu__menu-icon"]}
+              icon={faBars}
+              className={styles["header-menu__bars-icon"]}
             />
             <FontAwesomeIcon
-              icon="xmark"
+              icon={faXmark}
               size="lg"
               className={styles["header-menu__close-icon"]}
             />
             <ul className={styles["header-menu__list"]}>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/about-us"
-                >
-                  Sobre Nós
-                </a>
+              <li className={location.pathname === "/about-us" ? styles["header-menu__item-active"] : ""}>
+                <a href="/about-us">Sobre Nós</a>
               </li>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/contact"
-                >
-                  Contactos
-                </a>
+              <li className={location.pathname === "/contact" ? styles["header-menu__item-active"] : ""}>
+                <a href="/contact">Contactos</a>
               </li>
-              <li className={styles["header-menu__list-item"]}>
-                <a
-                  className={styles["header-menu__list-item-link"]}
-                  href="/personal-registration"
+              <li 
+                className={`
+                  ${styles["header-menu__list-item-submenu"]}
+                  ${location.pathname === "/join-us" ||location.pathname === "/personal-registration" || location.pathname === "/gymnasium-studium-registration" 
+                    ? styles["header-menu__item-active"] 
+                    : ""
+                  }
+                `}
                 >
-                  Inscrição
+                <a href="/join-us">
+                  Aderir
+                  <FontAwesomeIcon icon={faCaretDown} size="sm"/>
                 </a>
+                <ul>
+                  <li>
+                    <a href="/personal-registration">Adesão Personal Trainers</a>
+                  </li>
+                  <li>
+                    <a href="/gymnasium-studium-registration">Adesão Ginásios/Estúdios</a>
+                  </li>
+                </ul>
+                 
               </li>
-              <li className={styles["header-menu__list-item"]}>
+              <li className={location.pathname === "/auth" ? styles["header-menu__item-active"] : ""}>
                 {!authCtx.isLoggedIn ? (
-                  <a
-                    className={styles["header-menu__list-item-link"]}
-                    href="/auth"
-                  >
+                  <a href="/auth">
                     Login
                   </a>
                 ) : (
-                  <a
-                    className={styles["header-menu__list-item-link"]}
-                    onClick={logoutHandler}
-                  >
+                  <a onClick={logoutHandler}>
                     Logout
                   </a>
                 )}

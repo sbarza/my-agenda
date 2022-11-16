@@ -19,76 +19,7 @@
   font-weight: 600;
 }
 
-.form-personal-gymnasium form {
-  width: 520px;
-  margin: 44px auto 0;
-  color: var(--color-7A7A7A);
-  font-size: var(--font-size-md);
-}
-
-.form-personal-gymnasium h2 {
-  padding: 25px;
-  margin: 0;
-  font-size: var(--font-size-gamma-sm);
-  font-weight: 400;
-  text-align: center;
-  color: var(--color-white);
-  background-color: var(--color-black);
-}
-
-.form-control {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.form-control input,
-.form-control label {
-  display: block;
-}
-
-.form-control label {
-  margin-bottom: 3px;
-}
-
-button.submit-button {
-  display: block;
-  font-weight: 400;
-  color: var(--color-CC3366);
-  text-align: center;
-  white-space: nowrap;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid var(--color-CC3366);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 3px;
-  transition: all .3s;
-}
-
-button.submit-button:disabled,
-button.submit-button:disabled:hover,
-button.submit-button:disabled:active {
-  background-color: var(--color-CCCCCC);
-  color: var(--color-292929);
-  border-color: var(--color-CCCCCC);
-  cursor: not-allowed;
-}
-
-button.submit-button:hover {
-  color: var(--color-white);
-  background-color: var(--color-CC3366);
-}
-
-.termos-privacidade {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.termos-privacidade input {
-  margin-right: 3px;
-}
-
-.form-personal-gymnasium__warning {
+.subscription-warning {
   margin: 40px auto 80px;
   font-size: var(--font-size-sm);
   font-family: var(--font-family-montserrat);
@@ -104,19 +35,11 @@ button.submit-button:hover {
   .container-top-image h2 {
     font-size: var(--font-size-beta-3);
   }
-
-  .form-personal-gymnasium h2 {
-    padding: 15px;
-  }
 }
 
 @media only screen and (max-width: 540px) {
   .container-top-image h2 {
     font-size: var(--font-size-beta);;
     left: calc(50% - 182px);
-  }
-
-  .form-personal-gymnasium form {
-    width: calc(100% - 20px);
   }
 }

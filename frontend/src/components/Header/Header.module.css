@@ -2,6 +2,7 @@ header {
   position: relative;
   z-index: 2;
   background: var(--color-white);
+  border-bottom: 1px solid var(--color-D6D6D6);
 }
 
 .header-info {
@@ -84,10 +85,6 @@ header {
   margin-right: 10px;
 }
 
-.header-menu__nav svg {
-  font-size: 20px;
-}
-
 .header-menu__nav input,
 .header-menu__nav input ~ svg {
   display: none;
@@ -102,7 +99,11 @@ header {
   font-size: var(--font-size-md);
 }
 
-.header-menu__list-item-link {
+.header-menu__list > li {
+  position: relative;
+}
+
+.header-menu__list > li > a {
   display: inline-block;
   height: 100%;
   padding: 0 20px;
@@ -112,10 +113,43 @@ header {
   transition: all 0.3s;
 }
 
-.header-menu__list-item-link:hover,
-.header-menu__list-item-link:focus {
+.header-menu__list > li > a svg {
+  margin-left: 10px;
+}
+
+.header-menu__list > li > a:hover,
+.header-menu__list > li > a:focus,
+.header-menu__list > li.header-menu__item-active > a {
   color: var(--color-7a7a7a);
   box-shadow: inset 0 -3px 0 0 var(--color-red);
+  background-color: var(--color-white);
+}
+
+.header-menu__list ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  list-style: none;
+}
+
+.header-menu__list > li.header-menu__list-item-submenu:hover ul {
+  display: block;
+}
+
+.header-menu__list ul li {
+  white-space: nowrap;
+}
+
+.header-menu__list ul li a {
+  display: block;
+  padding: 13px 20px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  color: var(--color-292929);
+  background-color: var(--color-F5F5F5);
+}
+
+.header-menu__list ul li a:hover {
   background-color: var(--color-white);
 }
 
@@ -143,11 +177,16 @@ header {
     opacity: 0;
   }
 
-  .header-menu__nav input ~ .header-menu__menu-icon {
+  .header-menu__nav input ~ .header-menu__bars-icon,
+  .header-menu__nav input ~ .header-menu__close-icon {
+    font-size: 20px;
+  }
+
+  .header-menu__nav input ~ .header-menu__bars-icon {
     display: inline-block;
   }
 
-  .header-menu__nav input:checked ~ .header-menu__menu-icon {
+  .header-menu__nav input:checked ~ .header-menu__bars-icon {
     display: none;
   }
 
@@ -179,7 +218,7 @@ header {
     max-height: 100vh;
   }
 
-  .header-menu__list-item-link {
+  .header-menu__list > li > a {
     display: block;
     line-height: 3;
     font-size: var(--font-size-md);

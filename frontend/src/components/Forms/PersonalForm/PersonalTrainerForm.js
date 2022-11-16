@@ -152,37 +152,6 @@ const PersonalTrainerForm = () => {
     resetPasswordConfirmation();
   };
 
-  const firstNameClasses = firstNameHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const lastNameClasses = lastNameHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const cityClasses = cityHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const addressClasses = addressHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const zipCodeClasses = zipCodeHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const stateClasses = stateHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const nifClasses = nifHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const emailClasses = emailHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const passwordClasses = passwordHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const passwordConfirmationClasses = passwordConfirmationHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-
   return (
     <>
       <section className={styles["container-top-image"]}>
@@ -192,163 +161,198 @@ const PersonalTrainerForm = () => {
         <img src={imageForm} alt="Ginásio" />
       </section>
 
-      <section className={styles["form-personal-gymnasium"]}>
-        <h2>Subscrição - Membro Personal Trainer</h2>
+      <section className={"subscription-login"}>
+        <h2 className={"title--negative"}>Subscrição - Membro Personal Trainer</h2>
         <form onSubmit={submitHandler}>
           <p>Preço: Grátis</p>
-          <div className={styles["control-group"]}>
-            <div className={firstNameClasses}>
-              <label htmlFor="firstName">Primeiro Nome:*</label>
-              <input
-                type="text"
-                id="firstName"
-                value={firstNameValue}
-                onChange={firstNameChangeHandler}
-                onBlur={firstNameBlurHandler}
-              />
-              {firstNameHasError && (
-                <p className={`error-text`}>Primeiro Nome é necessário.</p>
-              )}
-            </div>
-            <div className={lastNameClasses}>
-              <label htmlFor="lastName">Último Nome:*</label>
-              <input
-                type="text"
-                id="lastName"
-                value={lastNameValue}
-                onChange={lastNameChangeHandler}
-                onBlur={lastNameBlurHandler}
-              />
-              {lastNameHasError && (
-                <p className={`error-text`}>Último Nome é necessário.</p>
-              )}
-            </div>
-            <div className={addressClasses}>
-              <label htmlFor="address">Morada:*</label>
-              <input
-                type="text"
-                id="address"
-                value={addressValue}
-                onChange={addressChangeHandler}
-                onBlur={addressBlurHandler}
-              />
-              {addressHasError && (
-                <p className={`error-text`}>Morada é necessário.</p>
-              )}
-            </div>
-            <div className={cityClasses}>
-              <label htmlFor="city">Cidade:*</label>
-              <input
-                type="text"
-                id="city"
-                value={cityValue}
-                onChange={cityChangeHandler}
-                onBlur={cityBlurHandler}
-              />
-              {cityHasError && (
-                <p className={`error-text`}>Cidade é necessário.</p>
-              )}
-            </div>
-            <div className={zipCodeClasses}>
-              <label htmlFor="zipCode">Código Postal:*</label>
-              <input
-                type="text"
-                id="zipCode"
-                value={zipCodeValue}
-                onChange={zipCodeChangeHandler}
-                onBlur={zipCodeBlurHandler}
-              />
-              {zipCodeHasError && (
-                <p className={`error-text`}>Código Postal é necessário.</p>
-              )}
-            </div>
-            <div className={stateClasses}>
-              <label htmlFor="state">Região:*</label>
-              <select
-                id="state"
-                value={stateValue}
-                onChange={stateChangeHandler}
-                onBlur={stateBlurHandler}
-              >
-                <option value="">-- Selecione a região --</option>
-                <option value="norte">Norte</option>
-                <option value="centro">Centro</option>
-                <option value="lisboa">Lisboa e Vale do Tejo</option>
-                <option value="algarve">Algarve</option>
-                <option value="alentejo">Alentejo</option>
-                <option value="madeira">Madeira</option>
-                <option value="açores">Açores</option>
-              </select>
-              {stateHasError && (
-                <p className={`error-text`}>Estado/Região é necessário.</p>
-              )}
-            </div>
-            <div className={nifClasses}>
-              <label htmlFor="nif">NIF Contribuinte:*</label>
-              <input
-                type="text"
-                id="nif"
-                value={nifValue}
-                onChange={nifChangeHandler}
-                onBlur={nifBlurHandler}
-              />
-              {nifHasError && (
-                <p className={`error-text`}>NIF Contribuinte é necessário.</p>
-              )}
-            </div>
-            <div className={emailClasses}>
-              <label htmlFor="email">E-Mail:*</label>
-              <input
-                type="text"
-                id="email"
-                value={emailValue}
-                onChange={emailChangeHandler}
-                onBlur={emailBlurHandler}
-              />
-              {emailHasError && (
-                <p className={`error-text`}>E-Mail é necessário.</p>
-              )}
-            </div>
-            <div className={passwordClasses}>
-              <Password
-                label="Password:*"
-                htmlFor="password"
-                id="password"
-                value={passwordValue}
-                onChange={passwordChangeHandler}
-                onBlur={passwordBlurHandler}
-              />
-              {passwordHasError && (
-                <p className={`error-text`}>Password é necessário.</p>
-              )}
-            </div>
-            <div className={passwordConfirmationClasses}>
-              <Password
-                label="Confirme Nova Password*"
-                htmlFor="passwordConfirmation"
-                id="passwordConfirmation"
-                value={passwordConfirmationValue}
-                onChange={passwordConfirmationChangeHandler}
-                onBlur={passwordConfirmationBlurHandler}
-              />
-              {passwordConfirmationHasError && (
-                <p className={`error-text`}>
-                  A confirmação da Password não corresponde.
-                </p>
-              )}
-            </div>
-            <label className={styles["termos-privacidade"]}>
-              <input type="checkbox"/>
-              <a href="#">Li e concordo com os Termos e Condições</a>*
-            </label>
-            <label className={styles["termos-privacidade"]}>
-              <input type="checkbox"/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
-              <a href="#"> Política de Privacidade</a>
-            </label>
-            <button className={styles["submit-button"]} disabled={!formIsValid}>Subscrever</button>
-          </div>
+          <label
+            className={`form-control ${firstNameHasError ? "invalid" : ""}`}
+            htmlFor="firstName"
+          >
+            Primeiro Nome:*
+            <input
+              type="text"
+              id="firstName"
+              value={firstNameValue}
+              onChange={firstNameChangeHandler}
+              onBlur={firstNameBlurHandler}
+            />
+            {firstNameHasError && (
+              <p className={`error-text`}>Primeiro Nome é necessário.</p>
+            )}
+          </label>
+
+          <label
+            className={`form-control ${lastNameHasError ? "invalid" : ""}`}
+            htmlFor="lastName"
+          >
+            Último Nome:*
+            <input
+              type="text"
+              id="lastName"
+              value={lastNameValue}
+              onChange={lastNameChangeHandler}
+              onBlur={lastNameBlurHandler}
+            />
+            {lastNameHasError && (
+              <p className={`error-text`}>Último Nome é necessário.</p>
+            )}
+          </label>
+
+          <label 
+            className={`form-control ${addressHasError ? "invalid" : ""}`}
+            htmlFor="address"
+          >
+            Morada:*
+            <input
+              type="text"
+              id="address"
+              value={addressValue}
+              onChange={addressChangeHandler}
+              onBlur={addressBlurHandler}
+            />
+            {addressHasError && (
+              <p className={`error-text`}>Morada é necessário.</p>
+            )}
+          </label>
+          
+          <label 
+            className={`form-control ${cityHasError ? "invalid" : ""}`}
+            htmlFor="city"
+          >
+            Cidade:*
+            <input
+              type="text"
+              id="city"
+              value={cityValue}
+              onChange={cityChangeHandler}
+              onBlur={cityBlurHandler}
+            />
+            {cityHasError && (
+              <p className={`error-text`}>Cidade é necessário.</p>
+            )}
+          </label>
+
+          <label 
+            className={`form-control ${zipCodeHasError ? "invalid" : ""}`}
+            htmlFor="zipCode"
+          >
+            Código Postal:*
+            <input
+              type="text"
+              id="zipCode"
+              value={zipCodeValue}
+              onChange={zipCodeChangeHandler}
+              onBlur={zipCodeBlurHandler}
+            />
+            {zipCodeHasError && (
+              <p className={`error-text`}>Código Postal é necessário.</p>
+            )}
+          </label>
+
+          <label 
+            className={`form-control ${stateHasError ? "invalid" : ""}`}
+            htmlFor="state"
+          >
+            Região:*
+            <select
+              id="state"
+              value={stateValue}
+              onChange={stateChangeHandler}
+              onBlur={stateBlurHandler}
+            >
+              <option value="">-- Selecione a região --</option>
+              <option value="norte">Norte</option>
+              <option value="centro">Centro</option>
+              <option value="lisboa">Lisboa e Vale do Tejo</option>
+              <option value="algarve">Algarve</option>
+              <option value="alentejo">Alentejo</option>
+              <option value="madeira">Madeira</option>
+              <option value="açores">Açores</option>
+            </select>
+            {stateHasError && (
+              <p className={`error-text`}>Estado/Região é necessário.</p>
+            )}
+          </label>
+
+          <label 
+            className={`form-control ${nifHasError ? "invalid" : ""}`}
+            htmlFor="nif"
+          >
+            NIF Contribuinte:*
+            <input
+              type="text"
+              id="nif"
+              value={nifValue}
+              onChange={nifChangeHandler}
+              onBlur={nifBlurHandler}
+            />
+            {nifHasError && (
+              <p className={`error-text`}>NIF Contribuinte é necessário.</p>
+            )}
+          </label>
+
+          <label 
+            className={`form-control ${emailHasError ? "invalid" : ""}`}
+            htmlFor="email"
+          >
+            E-Mail:*
+            <input
+              type="text"
+              id="email"
+              value={emailValue}
+              onChange={emailChangeHandler}
+              onBlur={emailBlurHandler}
+            />
+            {emailHasError && (
+              <p className={`error-text`}>E-Mail é necessário.</p>
+            )}
+          </label>
+
+          <Password
+            label="Password:*"
+            error={passwordHasError}
+            htmlFor="password"
+            id="password"
+            value={passwordValue}
+            onChange={passwordChangeHandler}
+            onBlur={passwordBlurHandler}
+          >
+            {passwordHasError && (
+              <p className={`error-text`}>Password é necessário.</p>
+            )}
+          </Password>
+
+          <Password
+            label="Confirme Nova Password*"
+            error={passwordConfirmationHasError}
+            htmlFor="passwordConfirmation"
+            id="passwordConfirmation"
+            value={passwordConfirmationValue}
+            onChange={passwordConfirmationChangeHandler}
+            onBlur={passwordConfirmationBlurHandler}
+          >
+            {passwordConfirmationHasError && (
+              <p className={`error-text`}>
+                A confirmação da Password não corresponde.
+              </p>
+            )}
+          </Password>
+
+          <label className={'form-control__checkbox'}>
+            <input type="checkbox"/>
+            <a href="#">Li e concordo com os Termos e Condições</a>*
+          </label>
+
+          <label className={'form-control__checkbox'}>
+            <input type="checkbox"/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
+            <a href="#"> Política de Privacidade</a>
+          </label>
+
+          <button className={"submit-button"} disabled={!formIsValid}>Subscrever</button>
         </form>
-        <p className={`container ${styles["form-personal-gymnasium__warning"]}`}>
+
+        <p className={`container ${styles["subscription-warning"]}`}>
           Acesso válido após, o pagamento efectuado por transferência bancária ou
           depósito directo na nossa conta.<br/>
           IBAN: <strong>PT50 003300004564015394805, LILAS

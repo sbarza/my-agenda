@@ -5,8 +5,7 @@ import useInput from "../../hooks/use-input";
 import Password from "../Forms/Password/Password";
 import styles from "./AuthForm.module.css";
 
-const emailRegex =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 
@@ -82,40 +81,47 @@ const AuthForm = (props) => {
       });
   };
 
-  const emailClasses = emailHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-  const passwordClasses = passwordHasError
-    ? `${styles["form-control"]} invalid`
-    : styles["form-control"];
-
   return (
     <>
-      <form onSubmit={submitHandler}>
-        <div className={emailClasses}>
-          <label htmlFor="email">E-Mail:</label>
-          <input
-            type="text"
-            id="email"
-            value={emailValue}
-            onChange={emailChangeHandler}
-            onBlur={emailBlurHandler}
-          />
-        </div>
-        <div className={passwordClasses}>
+      <section className={`subscription-login ${styles["auth-container"]}`}>
+        <h2 className={`title--alpha`}>Login</h2>
+        <form onSubmit={submitHandler}>
+          <label
+            className={`form-control ${emailHasError ? "invalid" : ""}`}
+            htmlFor="email"
+          >
+            E-Mail:
+            <input
+              type="text"
+              id="email"
+              value={emailValue}
+              onChange={emailChangeHandler}
+              onBlur={emailBlurHandler}
+            />
+          </label>
+
           <Password
             label="Password:"
             htmlFor="password"
+            error={passwordHasError}
             id="password"
             value={passwordValue}
             onChange={passwordChangeHandler}
             onBlur={passwordBlurHandler}
           />
-        </div>
-        <button className={styles["submit-button"]} disabled={!formIsValid}>
-          Log In
-        </button>
-      </form>
+
+          <label className={'form-control__checkbox'}>
+            <input type="checkbox"/>
+            Lembrar-me da Password
+          </label>
+
+          <button className={"submit-button"} disabled={!formIsValid}>
+            Log In
+          </button>
+
+          <a className={styles["auth-lost-password"]} href="#">Perdeu a Password ?</a>
+        </form>
+      </section>
     </>
   );
 };
