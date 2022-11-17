@@ -129,7 +129,6 @@ const Home = () => {
               })()}
             </div>
             <div className={styles["dizem-sobre-pt-training__instagram-user"]}>@rodrigo_personal.trainer</div>
-            <FontAwesomeIcon className={styles["dizem-sobre-pt-training__instagram-icon"]} icon={['fab', 'instagram']}/>
           </a>
           <p className={styles["dizem-sobre-pt-training__instagram-texto"]}>
             A PT Training é uma excelente plataforma onde disponibiliza ferramentas 

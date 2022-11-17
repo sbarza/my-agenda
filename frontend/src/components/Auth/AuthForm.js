@@ -4,12 +4,21 @@ import AuthContext from "../../store/auth-context";
 import useInput from "../../hooks/use-input";
 import Password from "../Forms/Password/Password";
 import styles from "./AuthForm.module.css";
+import React, { CSSProperties } from "react";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 
-const AuthForm = (props) => {
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  zIndex: 1,
+  top: "56%"
+};
+
+const AuthForm = () => {
   const history = useHistory();
   const authCtx = useContext(AuthContext);
   const [isLoading, setIsLoading] = useState(false);
@@ -83,6 +92,7 @@ const AuthForm = (props) => {
 
   return (
     <>
+      {isLoading && <FadeLoader color="#36d7b7" cssOverride={override}/>}
       <section className={`subscription-login ${styles["auth-container"]}`}>
         <h2 className={`title--alpha`}>Login</h2>
         <form onSubmit={submitHandler}>
@@ -97,6 +107,7 @@ const AuthForm = (props) => {
               value={emailValue}
               onChange={emailChangeHandler}
               onBlur={emailBlurHandler}
+              disabled={isLoading}
             />
           </label>
 
@@ -108,6 +119,7 @@ const AuthForm = (props) => {
             value={passwordValue}
             onChange={passwordChangeHandler}
             onBlur={passwordBlurHandler}
+            disabled={isLoading}
           />
 
           <label className={'form-control__checkbox'}>
@@ -115,7 +127,7 @@ const AuthForm = (props) => {
             Lembrar-me da Password
           </label>
 
-          <button className={"submit-button"} disabled={!formIsValid}>
+          <button className={"submit-button"} disabled={!formIsValid || isLoading}>
             Log In
           </button>
 

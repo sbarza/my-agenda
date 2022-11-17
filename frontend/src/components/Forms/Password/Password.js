@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import styles from "./Password.module.css";
 
-const Password = ({ label, htmlFor, error, id, value, onChange, onBlur }) => {
+const Password = ({ label, htmlFor, error, id, value, onChange, onBlur, disabled }) => {
   const [toogleShowPass, setToogleShowPass] = useState(true);
   const [passIcon, setPassIcon] = useState(faEye);
   const [buttonPassClass, setButtonPassClass] = useState(`${styles["show-hide-password-displayed"]}`);
@@ -39,6 +39,7 @@ const Password = ({ label, htmlFor, error, id, value, onChange, onBlur }) => {
           onChange={onChange}
           onBlur={onBlur}
           autoComplete="off"
+          disabled={disabled}
         />
         <button type="button" className={buttonPassClass} onClick={toogleShowPasswordHandler}>
           <FontAwesomeIcon icon={passIcon} />

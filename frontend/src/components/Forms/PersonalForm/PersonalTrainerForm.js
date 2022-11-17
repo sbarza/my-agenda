@@ -1,12 +1,21 @@
+import { useState, CSSProperties } from "react";
 import useInput from "../../../hooks/use-input";
 import Password from "../Password/Password";
 import styles from "./PersonalTrainerForm.module.css";
 import imageForm from "../../../images/personal-gymnasium-main.jpeg";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.match(emailRegex);
 const isPasswordConfirmed = (value1, value2) => value1 === value2;
+
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  zIndex: 1,
+  top: "60%"
+};
 
 const PersonalTrainerForm = () => {
   const {
@@ -91,6 +100,7 @@ const PersonalTrainerForm = () => {
   } = useInput((value) => isPasswordConfirmed(value, passwordValue));
 
   let formIsValid = false;
+  const [isLoading, setIsLoading] = useState(false);
 
   if (
     firstNameIsValid &&
@@ -110,6 +120,7 @@ const PersonalTrainerForm = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
 
+    setIsLoading(true);
     if (!formIsValid) {
       return;
     }
@@ -138,6 +149,7 @@ const PersonalTrainerForm = () => {
       }
     );
     const responseData = await response.json();
+    setIsLoading(false);
     console.log(responseData);
 
     resetFirstName();
@@ -154,6 +166,7 @@ const PersonalTrainerForm = () => {
 
   return (
     <>
+      {isLoading && <FadeLoader color="#36d7b7" cssOverride={override}/>}
       <section className={styles["container-top-image"]}>
         <h2 className={"title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
@@ -176,6 +189,7 @@ const PersonalTrainerForm = () => {
               value={firstNameValue}
               onChange={firstNameChangeHandler}
               onBlur={firstNameBlurHandler}
+              disabled={isLoading}
             />
             {firstNameHasError && (
               <p className={`error-text`}>Primeiro Nome é necessário.</p>
@@ -193,6 +207,7 @@ const PersonalTrainerForm = () => {
               value={lastNameValue}
               onChange={lastNameChangeHandler}
               onBlur={lastNameBlurHandler}
+              disabled={isLoading}
             />
             {lastNameHasError && (
               <p className={`error-text`}>Último Nome é necessário.</p>
@@ -210,6 +225,7 @@ const PersonalTrainerForm = () => {
               value={addressValue}
               onChange={addressChangeHandler}
               onBlur={addressBlurHandler}
+              disabled={isLoading}
             />
             {addressHasError && (
               <p className={`error-text`}>Morada é necessário.</p>
@@ -227,6 +243,7 @@ const PersonalTrainerForm = () => {
               value={cityValue}
               onChange={cityChangeHandler}
               onBlur={cityBlurHandler}
+              disabled={isLoading}
             />
             {cityHasError && (
               <p className={`error-text`}>Cidade é necessário.</p>
@@ -244,6 +261,7 @@ const PersonalTrainerForm = () => {
               value={zipCodeValue}
               onChange={zipCodeChangeHandler}
               onBlur={zipCodeBlurHandler}
+              disabled={isLoading}
             />
             {zipCodeHasError && (
               <p className={`error-text`}>Código Postal é necessário.</p>
@@ -260,6 +278,7 @@ const PersonalTrainerForm = () => {
               value={stateValue}
               onChange={stateChangeHandler}
               onBlur={stateBlurHandler}
+              disabled={isLoading}
             >
               <option value="">-- Selecione a região --</option>
               <option value="norte">Norte</option>
@@ -286,6 +305,7 @@ const PersonalTrainerForm = () => {
               value={nifValue}
               onChange={nifChangeHandler}
               onBlur={nifBlurHandler}
+              disabled={isLoading}
             />
             {nifHasError && (
               <p className={`error-text`}>NIF Contribuinte é necessário.</p>
@@ -303,6 +323,7 @@ const PersonalTrainerForm = () => {
               value={emailValue}
               onChange={emailChangeHandler}
               onBlur={emailBlurHandler}
+              disabled={isLoading}
             />
             {emailHasError && (
               <p className={`error-text`}>E-Mail é necessário.</p>
@@ -317,6 +338,7 @@ const PersonalTrainerForm = () => {
             value={passwordValue}
             onChange={passwordChangeHandler}
             onBlur={passwordBlurHandler}
+            disabled={isLoading}
           >
             {passwordHasError && (
               <p className={`error-text`}>Password é necessário.</p>
@@ -331,6 +353,7 @@ const PersonalTrainerForm = () => {
             value={passwordConfirmationValue}
             onChange={passwordConfirmationChangeHandler}
             onBlur={passwordConfirmationBlurHandler}
+            disabled={isLoading}
           >
             {passwordConfirmationHasError && (
               <p className={`error-text`}>
@@ -340,16 +363,16 @@ const PersonalTrainerForm = () => {
           </Password>
 
           <label className={'form-control__checkbox'}>
-            <input type="checkbox"/>
+            <input type="checkbox" disabled={isLoading}/>
             <a href="#">Li e concordo com os Termos e Condições</a>*
           </label>
 
           <label className={'form-control__checkbox'}>
-            <input type="checkbox"/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
+            <input type="checkbox" disabled={isLoading}/>A PT TRAINING recolhe dados informativos do usuário. Li e Concordo com a nossa
             <a href="#"> Política de Privacidade</a>
           </label>
 
-          <button className={"submit-button"} disabled={!formIsValid}>Subscrever</button>
+          <button className={"submit-button"} disabled={!formIsValid || isLoading}>Subscrever</button>
         </form>
 
         <p className={`container ${styles["subscription-warning"]}`}>

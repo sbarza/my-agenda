@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Header isLoggedIn={authCtx.isLoggedIn} />
+      <Header />
       <main>
         <Router>
           <Switch>
