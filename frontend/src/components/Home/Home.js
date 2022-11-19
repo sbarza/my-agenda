@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStreetView, faUserCheck, faUsers, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import homeImageSecond from "../../images/home-second.jpeg";
 import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
 import homeImageForth1 from "../../images/home-forth-1.jpeg";
@@ -9,7 +10,7 @@ import homeImageForth2 from "../../images/home-forth-2.jpeg";
 import Newsletter from "../Forms/Newsletter/Newsletter";
 
 const Home = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     const details = document.querySelectorAll("details");
 
     details.forEach((targetDetail) => {
@@ -129,7 +130,7 @@ const Home = () => {
               })()}
             </div>
             <div className={styles["dizem-sobre-pt-training__instagram-user"]}>@rodrigo_personal.trainer</div>
-            <FontAwesomeIcon className={styles["dizem-sobre-pt-training__instagram-icon"]} icon={['fab', 'instagram']}/>
+            <FontAwesomeIcon className={styles["dizem-sobre-pt-training__instagram-icon"]} icon={faInstagram}/>
           </a>
           <p className={styles["dizem-sobre-pt-training__instagram-texto"]}>
             A PT Training é uma excelente plataforma onde disponibiliza ferramentas 
@@ -146,14 +147,14 @@ const Home = () => {
           <img src={homeImageForth1} alt="Ginásio com iluminação natural e equipamentos"/>
           <h4>SOU UM GINÁSIO/ESTÚDIO</h4>
           <p>Rentabiliza e otimiza o teu espaço.<br/>* Grátis até 31/12/2022.</p>
-          <a href="/registar-ginasio-estudio" target="_blank" rel="noreferrer">REGISTAR</a>
+          <a href="/gymnasium-studium-registration">REGISTAR</a>
         </div>
         <div className={styles["pt-training-parceiro__ginasio-personal"]}>
           <span>GRATUITO*</span>
           <img src={homeImageForth2} alt="Senho idoso sendo assessorado pelo personal trainer"/>
           <h4>SOU UM PERSONAL TRAINER</h4>
           <p>Rentabiliza a gestão dos teus treinos.<br/>* Todas as funcionalidades gratuitamente.</p>
-          <a href="/registar-personal-trainer" target="_blank" rel="noreferrer">REGISTAR</a>
+          <a href="/personal-registration">REGISTAR</a>
         </div>
       </section>
 

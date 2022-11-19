@@ -1,12 +1,11 @@
-import React from "react";
-import { useContext } from "react";
-import styles from "./Header.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import AuthContext from "../../store/auth-context";
+import React, { useEffect, useContext, useState } from 'react';
+import styles from './Header.module.css';
+import AuthContext from '../../store/auth-context';
 import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faCaretDown, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
   const authCtx = useContext(AuthContext);
@@ -17,6 +16,56 @@ const Header = () => {
 
   const location = useLocation();
 
+  const [couldNavigate, setCouldNavigate] = useState(true);
+
+  useEffect(() => {
+    let linkJoinUs = document.getElementById('header-menu__item-join-us');
+
+    let timeout = false, // holder for timeout id
+        delay = 250; // delay time to execute resize event
+
+    // window.resize callback function
+    function getDimensions(event) {
+      // mobile only
+      if (window.innerWidth < 1024) {
+        // Initial loading
+        if(event === undefined) {
+          return setCouldNavigate(false)
+        }
+        // On resize event
+        else if(event.type === 'resize') {
+          return setCouldNavigate(false);
+        }
+        // On click event
+        else {
+          setCouldNavigate(true);
+        }
+      } else { // desktop view
+        setCouldNavigate(true);
+      }
+    }
+
+    getDimensions();
+
+    // window.resize event listener
+    window.addEventListener('resize', function(event) {
+      // clear the timeout
+      clearTimeout(timeout);
+      // start timing for event "completion"
+      timeout = setTimeout(function() {
+        getDimensions(event);
+      }, delay);
+    });
+
+    linkJoinUs.addEventListener('click', function(event) {
+      // Avoid link be triggered on first click
+      if(linkJoinUs.getAttribute('href') === '#') {
+        event.preventDefault();
+      }
+      getDimensions(event);
+    }, true);
+  }, []);
+  
   return (
     <header>
       <section className={styles["header-info"]}>
@@ -163,7 +212,7 @@ const Header = () => {
                   }
                 `}
                 >
-                <a href="/join-us">
+                <a id="header-menu__item-join-us" href={couldNavigate ? "/join-us" : "#"}>
                   Aderir
                   <FontAwesomeIcon icon={faCaretDown} size="sm"/>
                 </a>

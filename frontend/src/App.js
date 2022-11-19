@@ -27,20 +27,12 @@ function App() {
             <Route exact path="/">
               <Redirect to="/home"/>
             </Route>
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/about-us" component={AboutUs} />
-            <Route exact path="/join-us" component={JoinUs} />
-            <Route
-              exact
-              path="/personal-registration"
-              component={PersonalTrainerForm}
-            />
-            <Route
-              exact
-              path="/gymnasium-studium-registration"
-              component={GymnasiumForm}
-            />
-            <Route exact path="/auth" component={AuthForm} />
+            <Route exact path="/home" render={(props) => <Home {...props} />} />
+            <Route exact path="/about-us" render={(props) => <AboutUs {...props} />} />
+            <Route exact path="/join-us" render={(props) => <JoinUs {...props} />} />
+            <Route exact path="/personal-registration" render={(props) => <PersonalTrainerForm {...props} />} />
+            <Route exact path="/gymnasium-studium-registration" render={(props) => <GymnasiumForm {...props} />} />
+            <Route exact path="/auth" render={(props) => <AuthForm {...props} />} />
           </Switch>
         </Router>
       </main>
