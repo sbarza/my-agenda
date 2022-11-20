@@ -142,7 +142,7 @@ const GymnasiumForm = () => {
     const formData = new FormData();
 
     files.map((file) => {
-      formData.append('photos[]', file, file.name);
+      formData.append("photos[]", file, file.name);
     });
 
     const personalTrainerData = {
@@ -154,13 +154,13 @@ const GymnasiumForm = () => {
       zipCode: zipCodeValue,
       nif: nifValue,
       email: emailValue,
-      password: passwordValue
+      password: passwordValue,
     };
 
-    formData.append('data', JSON.stringify(personalTrainerData));
+    formData.append("data", JSON.stringify(personalTrainerData));
 
-    for (let [key, value] of formData.entries()){
-      console.log(key,value);
+    for (let [key, value] of formData.entries()) {
+      console.log(key, value);
     }
 
     const response = await fetch(
@@ -169,7 +169,7 @@ const GymnasiumForm = () => {
         method: "POST",
         body: formData,
         headers: {
-          "Accept": "application/json"
+          Accept: "application/json",
         },
       }
     );
@@ -378,7 +378,12 @@ const GymnasiumForm = () => {
           />
           <div className="uploaded-files-list">
             {files.map((file, index) => (
-              <div key={index}>{file.name}</div>
+              <div>
+                <button>
+                  X
+                </button>
+                <div key={index}>{file.name}</div>
+              </div>
             ))}
           </div>
 
