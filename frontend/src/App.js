@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,10 +13,8 @@ import JoinUs from "./components/JoinUs/JoinUs";
 import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import GymnasiumForm from "./components/Forms/GymnasiumForm/GymnasiumForm";
 import AuthForm from "./components/Auth/AuthForm";
-import AuthContext from "./store/auth-context";
 
 function App() {
-  const authCtx = useContext(AuthContext);
 
   return (
     <>

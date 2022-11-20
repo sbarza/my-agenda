@@ -18,7 +18,8 @@ class RegistrationController extends AbstractController
     public function index(ManagerRegistry $doctrine, Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
         $em = $doctrine->getManager();
-        $data = $request->toArray();
+        $data = json_decode($request->request->get('data'), true);
+        $files = $request->files->get('photos');
 
         $user = new User();
         $user->setAddress($data['address']);
