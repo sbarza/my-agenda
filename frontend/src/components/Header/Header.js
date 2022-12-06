@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext, useState, useRef } from 'react';
 import styles from './Header.module.css';
 import AuthContext from '../../store/auth-context';
 import { useLocation } from 'react-router-dom';
@@ -31,14 +31,14 @@ const Header = () => {
         // Initial loading
         if(event === undefined) {
           return setCouldNavigate(false)
-        }
-        // On resize event
-        else if(event.type === 'resize') {
+        } else if(event.type === 'resize') { // On resize event
           return setCouldNavigate(false);
-        }
-        // On click event
-        else {
-          setCouldNavigate(true);
+        } else { // On click event
+          // Avoid link be triggered on first click
+          if (linkJoinUs.getAttribute('href') === '#') {
+            event.preventDefault();
+            setCouldNavigate(true);
+          }
         }
       } else { // desktop view
         setCouldNavigate(true);
@@ -58,10 +58,6 @@ const Header = () => {
     });
 
     linkJoinUs.addEventListener('click', function(event) {
-      // Avoid link be triggered on first click
-      if(linkJoinUs.getAttribute('href') === '#') {
-        event.preventDefault();
-      }
       getDimensions(event);
     }, true);
   }, []);

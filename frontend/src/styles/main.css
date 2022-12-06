@@ -92,6 +92,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.container-top-image-text {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.container-top-image-text img {
+  width: 100%;
+  display: block;
+}
+
+.container-top-image-text h2 {
+  position: absolute;
+  left: calc(50% - 348px);
+  top: 45%;
+  margin: 0;
+  width: max-content;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-top-image-text h2 {
+    font-size: var(--font-size-beta-3);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container-top-image-text h2 {
+    font-size: var(--font-size-beta);;
+    left: calc(50% - 182px);
+  }
+}
+
 /*--- Forms ---*/
 textarea, select, input[type=text], 
 input[type=url], input[type=email], 
@@ -111,15 +145,69 @@ input[type=password] {
 
 .subscription-login form {
   width: 520px;
-  margin: 54px auto 0;
+  margin: 54px auto;
   color: var(--color-7A7A7A);
   font-size: var(--font-size-md);
 }
 
-@media only screen and (max-width: 540px) {
-  .subscription-login form {
-    width: calc(100% - 20px);
-  }
+.uploaded-files {
+  margin-bottom: 5px;
+}
+
+.uploaded-files-list {
+  margin-bottom: 20px;
+}
+
+.uploaded-files-list button {
+  background: none;
+  border: none;
+  border-radius: 3px;
+  color: var(--color-CC3366);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.uploaded-files-list button:hover {
+  background: var(--color-CC3366);
+  color: var(--color-white);
+}
+
+button.submit-button,
+.uploaded-files::file-selector-button {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+button.submit-button {
+  color: var(--color-CC3366);
+  border: 1px solid var(--color-CC3366);
+}
+
+.uploaded-files::file-selector-button {
+  color: var(--color-666666);
+  border: 1px solid var(--color-666666);
+}
+
+.uploaded-files::file-selector-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-666666);
+}
+
+button.submit-button:disabled,
+button.submit-button:disabled:hover,
+button.submit-button:disabled:active {
+  background-color: var(--color-CCCCCC);
+  color: var(--color-858585);
+  border-color: var(--color-CCCCCC);
+  cursor: not-allowed;
+}
+
+button.submit-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-CC3366);
 }
 
 .form-control {
@@ -162,33 +250,10 @@ input[type=password] {
   color: #b40e0e;
 }
 
-button.submit-button {
-  display: block;
-  font-weight: 400;
-  color: var(--color-CC3366);
-  text-align: center;
-  white-space: nowrap;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid var(--color-CC3366);
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 3px;
-  transition: all .3s;
-}
-
-button.submit-button:disabled,
-button.submit-button:disabled:hover,
-button.submit-button:disabled:active {
-  background-color: var(--color-CCCCCC);
-  color: var(--color-292929);
-  border-color: var(--color-CCCCCC);
-  cursor: not-allowed;
-}
-
-button.submit-button:hover {
-  color: var(--color-white);
-  background-color: var(--color-CC3366);
+@media only screen and (max-width: 540px) {
+  .subscription-login form {
+    width: calc(100% - 20px);
+  }
 }
 
 /*--- Animations ---*/

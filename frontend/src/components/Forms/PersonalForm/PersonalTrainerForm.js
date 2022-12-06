@@ -167,7 +167,7 @@ const PersonalTrainerForm = () => {
   return (
     <>
       {isLoading && <FadeLoader color="#36d7b7" cssOverride={override}/>}
-      <section className={styles["container-top-image"]}>
+      <section className={"container-top-image-text"}>
         <h2 className={"title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
         </h2>
