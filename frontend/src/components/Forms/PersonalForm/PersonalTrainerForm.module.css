@@ -1,23 +1,4 @@
-.container-top-image {
-  position: relative;
-  overflow: hidden;
-  max-height: 400px;
-}
 
-.container-top-image img {
-  width: 100%;
-  display: block;
-}
-
-.container-top-image h2 {
-  position: absolute;
-  left: calc(50% - 348px);
-  top: 45%;
-  margin: 0;
-  width: max-content;
-  color: var(--color-white);
-  font-weight: 600;
-}
 
 .subscription-warning {
   margin: 40px auto 80px;
@@ -30,16 +11,5 @@
 @media only screen and (max-width: 767px) {
   .header-info {
     padding: 10px;
-  }
-
-  .container-top-image h2 {
-    font-size: var(--font-size-beta-3);
-  }
-}
-
-@media only screen and (max-width: 540px) {
-  .container-top-image h2 {
-    font-size: var(--font-size-beta);;
-    left: calc(50% - 182px);
   }
 }

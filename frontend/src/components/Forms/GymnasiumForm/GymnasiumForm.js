@@ -191,7 +191,7 @@ const GymnasiumForm = () => {
   return (
     <>
       {isLoading && <FadeLoader color="#36d7b7" cssOverride={override} />}
-      <section className={styles["container-top-image"]}>
+      <section className={"container-top-image-text"}>
         <h2 className={"title--alpha fadeInUp animated"}>
           Os Melhores Ginásios e Estúdios
         </h2>
@@ -370,20 +370,16 @@ const GymnasiumForm = () => {
 
           <input
             id="fileUpload"
+            className={"uploaded-files"}
             type="file"
             multiple
             accept="image/*"
             onChange={uploadFilesHandler}
             disabled={fileLimit}
           />
-          <div className="uploaded-files-list">
+          <div className={"uploaded-files-list"}>
             {files.map((file, index) => (
-              <div>
-                <button>
-                  X
-                </button>
-                <div key={index}>{file.name}</div>
-              </div>
+              <div key={index}><button>X</button> {file.name}</div>
             ))}
           </div>
 
