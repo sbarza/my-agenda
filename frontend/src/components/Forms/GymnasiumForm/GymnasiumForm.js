@@ -131,6 +131,15 @@ const GymnasiumForm = () => {
     console.log(uploaded);
   };
 
+  const removeFileHandler = (event, index) => {
+    event.preventDefault();
+    const filteredFiles = files.filter((elem, i) => {
+      return i !== index;
+    });
+    setFiles(filteredFiles);
+    setFileLimit(false);
+  };
+
   const submitHandler = async (event) => {
     event.preventDefault();
 
@@ -374,12 +383,13 @@ const GymnasiumForm = () => {
             type="file"
             multiple
             accept="image/*"
+            style={{ color: "transparent", width: "100%"}}
             onChange={uploadFilesHandler}
             disabled={fileLimit}
           />
           <div className={"uploaded-files-list"}>
             {files.map((file, index) => (
-              <div key={index}><button>X</button> {file.name}</div>
+              <div key={index}><button onClick={event=> removeFileHandler(event, index)}>X</button> {file.name}</div>
             ))}
           </div>
 
