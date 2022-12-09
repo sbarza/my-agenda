@@ -52,6 +52,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
 
+    #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?Gymnasium $gymnasium = null;
+
+    #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?PersonalTrainer $personalTrainer = null;
+
     /**
      * @return string
      */
@@ -218,6 +224,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getPersonalTrainer(): ?PersonalTrainer
+    {
+        return $this->personalTrainer;
+    }
+
+    public function setPersonalTrainer(PersonalTrainer $personalTrainer): self
+    {
+        // set the owning side of the relation if necessary
+        if ($personalTrainer->getUser() !== $this) {
+            $personalTrainer->setUser($this);
+        }
+
+        $this->personalTrainer = $personalTrainer;
+
+        return $this;
+    }
+
+    public function getGymnasium(): ?Gymnasium
+    {
+        return $this->gymnasium;
+    }
+
+    public function setGymnasium(Gymnasium $gymnasium): self
+    {
+        // set the owning side of the relation if necessary
+        if ($gymnasium->getUser() !== $this) {
+            $gymnasium->setUser($this);
+        }
+
+        $this->gymnasium = $gymnasium;
 
         return $this;
     }

@@ -131,7 +131,7 @@ const PersonalTrainerForm = () => {
       address: addressValue,
       city: cityValue,
       state: stateValue,
-      country: 'portugal',
+      country: 'Portugal',
       zipCode: zipCodeValue,
       nif: nifValue,
       email: emailValue,
@@ -150,7 +150,6 @@ const PersonalTrainerForm = () => {
     );
     const responseData = await response.json();
     setIsLoading(false);
-    console.log(responseData);
 
     resetFirstName();
     resetLastName();

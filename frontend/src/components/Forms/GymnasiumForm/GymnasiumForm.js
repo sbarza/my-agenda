@@ -92,7 +92,7 @@ const GymnasiumForm = () => {
     reset: resetPasswordConfirmation,
   } = useInput((value) => isPasswordConfirmed(value, passwordValue));
 
-  let formIsValid = true;
+  let formIsValid = false;
   const [isLoading, setIsLoading] = useState(false);
   const [files, setFiles] = useState([]);
   const [fileLimit, setFileLimit] = useState(false);
@@ -159,7 +159,7 @@ const GymnasiumForm = () => {
       address: addressValue,
       city: cityValue,
       state: stateValue,
-      country: "portugal",
+      country: "Portugal",
       zipCode: zipCodeValue,
       nif: nifValue,
       email: emailValue,
@@ -173,7 +173,7 @@ const GymnasiumForm = () => {
     }
 
     const response = await fetch(
-      "http://localhost:8000/api/registerPersonalTrainer",
+      "http://localhost:8000/api/registerGymnasium",
       {
         method: "POST",
         body: formData,
