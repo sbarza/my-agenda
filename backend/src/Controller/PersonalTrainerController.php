@@ -18,8 +18,7 @@ class PersonalTrainerController extends AbstractController
     public function index(ManagerRegistry $doctrine, Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
         $em = $doctrine->getManager();
-        $data = json_decode($request->request->get('data'), true);
-        $files = $request->files->get('photos');
+        $data = $request->toArray();;
 
         $user = new User();
         $user->setAddress($data['address']);
