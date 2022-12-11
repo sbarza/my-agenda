@@ -4,6 +4,7 @@
   --color-primary: #6EC1E4;
   --color-accent: #61CE70;
   --color-262a2b: #262a2b;
+  
 /* From white to black */
   --color-white: #ffffff;
   --color-FAFAFA: #fafafa;
@@ -32,6 +33,7 @@
   --color-141414: #141414;
   --color-0A0A0A: #0A0A0A;
   --color-black: #000000;
+
   /* Reds */
   --color-red: #ff0000;
   --color-FF6666: #FF6666;
@@ -51,6 +53,7 @@
   /*-- Font sizes --*/
   --font-size-alpha-1: 46px;
   --font-size-alpha: 42px;
+  --font-size-beta-6: 40px;
   --font-size-beta-5: 36px;
   --font-size-beta-4: 30px;
   --font-size-beta-3: 28px;

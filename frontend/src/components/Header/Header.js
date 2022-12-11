@@ -70,14 +70,14 @@ const Header = () => {
             href="tel:+351964278843"
             className={styles["header-info__data-contact"]}
           >
-            <FontAwesomeIcon icon={faPhone} flip="horizontal" />
+            <FontAwesomeIcon icon={faPhone} flip="horizontal"/>
             <span>+351 964 278 843</span>
           </a>
           <a
             href="mailto:geral@pt-training.pt"
             className={`${styles["header-info__data-contact"]} ${styles["header-info__data-contact--email"]}`}
           >
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope}/>
             <span>geral@pt-training.pt</span>
           </a>
           <a
@@ -86,7 +86,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebookF} />
+            <FontAwesomeIcon icon={faFacebookF}/>
           </a>
           <a
             href="https://www.instagram.com/pttraining_oficial/"
@@ -94,7 +94,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faInstagram}/>
           </a>
         </div>
       </section>

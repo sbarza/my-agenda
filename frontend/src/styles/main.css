@@ -278,3 +278,53 @@ button.submit-button:hover {
 .fadeInUp {
   animation-name: fadeInUp
 }
+
+
+/*--- Personal and Gymnasiums styles ---*/
+.directory-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.directory-container h2 {
+  flex-basis: 100%;
+  margin-bottom: 0;
+}
+
+.directory-container__item {
+  flex-basis: calc(33.33% - 25px);
+  margin: 0;
+}
+
+.directory-container__item figcaption {
+  text-align: center;
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  margin: 8px 0 16px;
+}
+
+.directory-container__item img {
+  max-width: 100%;
+}
+
+.directory-container__item ul {
+  padding-left: 15px;
+}
+
+.directory-container__item ul li {
+  list-style-type: "- ";
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.directory-container__item button {
+  background-color: var(--color-474747);
+  border-radius: 7px;
+  font-size: var(--font-size-beta-sm);
+  padding: 11px 31px;
+  color: var(--color-white);
+  cursor: pointer;
+}

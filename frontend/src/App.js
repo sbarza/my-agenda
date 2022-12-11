@@ -13,6 +13,8 @@ import JoinUs from "./components/JoinUs/JoinUs";
 import PersonalTrainerForm from "./components/Forms/PersonalForm/PersonalTrainerForm";
 import GymnasiumForm from "./components/Forms/GymnasiumForm/GymnasiumForm";
 import AuthForm from "./components/Auth/AuthForm";
+import PersonalDirectory from "./components/PersonalDirectory/PersonalDirectory";
+import PersonalPage from "./components/PersonalPage/PersonalPage";
 
 function App() {
 
@@ -31,6 +33,8 @@ function App() {
             <Route exact path="/personal-registration" render={(props) => <PersonalTrainerForm {...props} />} />
             <Route exact path="/gymnasium-studium-registration" render={(props) => <GymnasiumForm {...props} />} />
             <Route exact path="/auth" render={(props) => <AuthForm {...props} />} />
+            <Route exact path="/personal-directory" render={(props) => <PersonalDirectory {...props} />} />
+            <Route exact path="/personal-trainer/personal-page" render={(props) => <PersonalPage {...props} />} />
           </Switch>
         </Router>
       </main>
