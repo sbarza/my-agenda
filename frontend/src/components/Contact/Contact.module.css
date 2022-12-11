@@ -238,46 +238,50 @@
     bottom: 330px;
     top: unset;
   }
+
+  .container-contact-form__internal {
+    flex-flow: column;
+  }
+
+  .container-contact-form__title-info {
+    text-align: center;
+  }
+
+  .container-contact-form__form {
+    padding: 30px 50px 90px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .container-top {
-    background-size: 260%;
+    background-size: 190%;
     height: 77vh;
     background-position: center;
   }
 
-  .container-top h2,
-  .our-mission h2 {
+  .container-top h2 {
     font-size: var(--font-size-beta-2-1);
   }
 
-  .container-contact-form {
-    height: 130px;
-  }
-
   .container-contact-form h2 {
-    font-size: var(--font-size-delta);
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: var(--font-size-beta-sm);
   }
 
-  .our-mission .our-mission__item {
+  .container-contact-form h2 br {
+    display: none;
+  }
+
+  .container-contact-form__form input[type=text]:nth-child(-n + 4),
+  .container-contact-form__form input[type=email]:nth-child(-n + 4),
+  .container-contact-form__form input[type=tel]:nth-child(-n + 4),
+  .container-contact-form__form textarea {
     flex-basis: 100%;
   }
 
-  .our-mission .our-mission__item svg {
-    font-size: var(--font-size-beta-5);
-  }
-
-  .our-mission .our-mission__item h3 {
-    font-size: var(--font-size-beta-sm);
-  }  
-
-  .our-mission .our-mission__item p {
-    font-size: var(--font-size-sm);
+  .container-contact-form__form textarea {
+    min-width: unset;
+    max-width: unset;
+    max-height: 150px;
   }
 
   .container-bottom__title-top,
