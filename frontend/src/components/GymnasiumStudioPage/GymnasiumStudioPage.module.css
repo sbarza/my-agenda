@@ -10,7 +10,7 @@
   margin: 0;
 }
 
-.gymnasium-studio-container figure img {
+.gymnasium-studio-container figure > img {
   max-width: 300px;
 }
 

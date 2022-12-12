@@ -279,8 +279,30 @@ button.submit-button:hover {
   animation-name: fadeInUp
 }
 
+/*--- Carousel component styles ---*/
+.custom-carousel .carousel.carousel-slider .control-arrow {
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+  top: calc(50% - 20px);
+  bottom: unset;
+  padding: 5px 11px;
+}
 
-/*--- Personal and Gymnasiums styles ---*/
+.carousel .slide {
+  height: 500px;
+}
+
+.custom-carousel .carousel .slide img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/*--- Directory of Personal Trainer and Gymnasiums/Studios styles ---*/
 .directory-container {
   display: flex;
   flex-wrap: wrap;
