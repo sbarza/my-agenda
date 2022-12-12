@@ -6,7 +6,7 @@ import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import AbsoluteHealthClub from '../../images/personal-gymnasium/absolute-health-club.png';
 import AbsoluteHealthClubCarrousel1 from '../../images/personal-gymnasium/absolute-health-club__image1.jpeg';
 import AbsoluteHealthClubCarrousel2 from '../../images/personal-gymnasium/absolute-health-club__image2.jpeg';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import styles from "./GymnasiumStudioPage.module.css";
 
