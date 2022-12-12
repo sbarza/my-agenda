@@ -5,7 +5,7 @@ const GymnasiumStudioDirectory = () => {
   return (
     <>
       <section className={`container directory-container`}>
-        <h2 className={`title--alpha`}>DIRECTÓRIO DE PERSONAL TRAINERS</h2>
+        <h1 className={`title--alpha`}>DIRECTÓRIO DE PERSONAL TRAINERS</h1>
         <GymnasiumStudioItem/>
         <GymnasiumStudioItem/>
         <GymnasiumStudioItem/>

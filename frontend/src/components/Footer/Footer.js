@@ -77,7 +77,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/gym-studio-directory">
+                <a href="/gymnasium-studio-directory">
                   <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Diretório de Ginásios/Estúdios</span>
                 </a>

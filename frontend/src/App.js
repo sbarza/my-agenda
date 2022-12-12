@@ -16,6 +16,7 @@ import AuthForm from "./components/Auth/AuthForm";
 import PersonalDirectory from "./components/PersonalDirectory/PersonalDirectory";
 import PersonalPage from "./components/PersonalPage/PersonalPage";
 import GymnasiumStudioDirectory from "./components/GymnasiumStudioDirectory/GymnasiumStudioDirectory";
+import GymnasiumStudioPage from "./components/GymnasiumStudioPage/GymnasiumStudioPage";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/personal-directory" render={(props) => <PersonalDirectory {...props} />} />
             <Route exact path="/personal-trainer/personal-page" render={(props) => <PersonalPage {...props} />} />
             <Route exact path="/gymnasium-studio-directory" render={(props) => <GymnasiumStudioDirectory {...props} />} />
+            <Route exact path="/ginasio-estudio/gymnasium-studio-page" render={(props) => <GymnasiumStudioPage {...props} />} />
           </Switch>
         </Router>
       </main>

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, useRef } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import styles from './Header.module.css';
 import AuthContext from '../../store/auth-context';
 import { useLocation } from 'react-router-dom';

@@ -49,6 +49,8 @@
 .personal-container-info ul {
   margin: 0;
   padding-left: 15px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
 }
 
 .personal-container-info ul li {

@@ -1,0 +1,55 @@
+.gymnasium-studio-container h1 {
+  margin: 8px 0 0;
+  font-size: var(--font-size-beta-6);
+  font-weight: 600;
+  line-height: 1.2;
+  flex-basis: 100%;
+}
+
+.gymnasium-studio-container figure {
+  margin: 0;
+}
+
+.gymnasium-studio-container figure img {
+  max-width: 300px;
+}
+
+.gymnasium-studio-container figure figcaption {
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-beta-2-1);
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+.gymnasium-studio-container figure p,
+.gymnasium-studio-container figure h2 {
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+}
+
+.gymnasium-studio-container figure h2 {
+  margin-bottom: 0;
+}
+
+.gymnasium-studio-container figure p {
+  margin: 0;
+}
+
+.gymnasium-studio-container figure .gymnasium-studio-location {
+  margin: 15px 0;
+}
+
+.gymnasium-studio-container figure p.gymnasium-studio-social-media svg {
+  background: var(--color-666666);
+  color: var(--color-white);
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px 5px 5px 0;
+}
+
+.gymnasium-studio-container figure p.gymnasium-studio-stars {
+  color: var(--color-EEE00B);
+  font-size: var(--font-size-gamma);
+}
