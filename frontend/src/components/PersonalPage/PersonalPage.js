@@ -10,27 +10,9 @@ const PersonalPage = () => {
   return (
     <>
       <section className={`container directory-container ${styles["personal-container"]}`}>
-        <h2>Thomas Ravera</h2>
+        <h1>Thomas Ravera</h1>
         <figure>
-          <img src={FotoPersonal} alt="Thomas Ravera" />
-          <figcaption>Thomas Ravera</figcaption>
-          <p>
-            <FontAwesomeIcon icon={faLocationDot}/> Porto<br/>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faFacebookF}/>
-            <FontAwesomeIcon icon={faInstagram}/>
-            <FontAwesomeIcon icon={faEnvelope}/>
-          </p>
-          <p>
-            {(() => {
-              let icons = [];
-              for (let i = 1; i <= 5; i++) {
-                icons.push(<FontAwesomeIcon key={`instagram-estrelas-${i}`} icon={faStar}/>);
-              }
-              return icons;
-            })()}
-          </p>
+          <img src={FotoPersonal} alt="Thomas Ravera"/>
         </figure>
         <div className={styles["personal-container-info"]}>
           <ul>
@@ -39,14 +21,31 @@ const PersonalPage = () => {
             </li>
             <li>Com mais de 20 anos de experiência na área de desporto.</li>
           </ul>
-          <h3>Formação</h3>
+          <h2>Formação</h2>
           <ul>
             <li>Licenciado em Educação Física e Desporto - ULHT</li>
             <li>Mestrando em Treino de Alto Rendimento - FMH</li>
             <li>Personal Training Avançado</li>
           </ul>
-          <h3>Especialidades</h3>
+          <h2>Especialidades</h2>
           <p>Perda de Peso, Hipertrofia, Alta Performance, Musculação</p>
+          <p className={`directory-container__location`}>
+            <FontAwesomeIcon icon={faLocationDot}/> Porto<br/>
+          </p>
+          <p className={`directory-container__social-media`}>
+            <FontAwesomeIcon icon={faFacebookF}/>
+            <FontAwesomeIcon icon={faInstagram}/>
+            <FontAwesomeIcon icon={faEnvelope}/>
+          </p>
+          <p className={`directory-container__stars`}>
+            {(() => {
+              let icons = [];
+              for (let i = 1; i <= 5; i++) {
+                icons.push(<FontAwesomeIcon key={`instagram-estrelas-${i}`} icon={faStar}/>);
+              }
+              return icons;
+            })()}
+          </p>
         </div>
       </section>
     </>

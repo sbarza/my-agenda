@@ -17,7 +17,6 @@ const PersonalPage = () => {
         <h1>Absolute Health Club</h1>
         <figure>
           <img src={AbsoluteHealthClub} alt="Absolute Health Club"/>
-          <figcaption>Absolute Health Club</figcaption>
           <p>
             O Absolute Health Club nasce da paixão pela área do fitness e pelo desejo de criar 
             um conceito totalmente direcionado para o sócio, fugindo de tudo aquilo que se 
@@ -29,13 +28,13 @@ const PersonalPage = () => {
           <p>Step, corda, caixa, zona de cardio, zona de musculação.</p>
           <h2>Termos e Condições de Utilização do Espaço</h2>
           <p>Toalha, ténis lavados e roupa de treino</p>
-          <p className={styles["gymnasium-studio-location"]}><FontAwesomeIcon icon={faLocationDot}/> Porto<br/></p>
-          <p className={styles["gymnasium-studio-social-media"]}>
+          <p className={`directory-container__location`}><FontAwesomeIcon icon={faLocationDot}/> Porto<br/></p>
+          <p className={`directory-container__social-media`}>
             <FontAwesomeIcon icon={faFacebookF}/>
             <FontAwesomeIcon icon={faInstagram}/>
             <FontAwesomeIcon icon={faEnvelope}/>
           </p>
-          <p className={styles["gymnasium-studio-stars"]}>
+          <p className={`directory-container__stars`}>
             {(() => {
               let icons = [];
               for (let i = 1; i <= 5; i++) {
