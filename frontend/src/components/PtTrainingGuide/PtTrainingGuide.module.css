@@ -1,3 +1,9 @@
+section p,
+section ul {
+  font-size: var(--font-size-md);
+  color: var(--color-7A7A7A);
+}
+
 .container-top,
 .container-bottom {
   position: relative;

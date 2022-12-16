@@ -113,10 +113,10 @@ const PtTrainingGuide = () => {
           </p>
           <p>Dentro do Perfil de Membro Ginásio/Estúdio, o utilizador tem a possibilidade de visualizar:</p>
           <ul>
-            <li><strong>Serviços</strong> – Verificar todos os seus serviços disponíveis , bem como alterar os seus valores.</li>
-            <li><strong>Horário de Trabalho</strong> – Verificar e Alterar o horário de funcionamento.</li>
-            <li><strong>Dias de Folga</strong> – Visualizar os Dias de Folga , bem como adicionar ou alterar.</li>
-            <li><strong>Dias Especiais</strong> – Visualizar Dias Especiais, bem como adicionar ou alterar.</li>
+            <li><strong><em>Serviços</em></strong> – Verificar todos os seus serviços disponíveis , bem como alterar os seus valores.</li>
+            <li><strong><em>Horário de Trabalho</em></strong> – Verificar e Alterar o horário de funcionamento.</li>
+            <li><strong><em>Dias de Folga</em></strong> – Visualizar os Dias de Folga , bem como adicionar ou alterar.</li>
+            <li><strong><em>Dias Especiais</em></strong> – Visualizar Dias Especiais, bem como adicionar ou alterar.</li>
           </ul>
           <details className={`accordion`}>
             <summary>Página - Directório de Serviços</summary>
