@@ -75,6 +75,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-black);
 }
 
+.title-icon {
+  font-size: var(--font-size-gamma);
+}
+
+.title-icon span {
+  display: inline-block;
+  position: relative;
+  width: 59px;
+  height: 59px;
+  margin-right: 14px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: var(--font-size-beta-4-1);
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.title-icon span svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -210,6 +234,17 @@ button.submit-button:hover {
   background-color: var(--color-CC3366);
 }
 
+.button--rounded {
+  padding: 12px 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+}
+
 .form-control {
   position: relative;
   display: block;
@@ -310,6 +345,57 @@ button.submit-button:hover {
   .carousel .slide {
     height: 300px;
   }
+}
+
+/*--- Accordion component styles ---*/
+details.accordion {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  border: 1px solid var(--color-D6D6D6);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+details.accordion summary {
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+details.accordion summary:hover {
+  color: var(--color-red);
+}
+
+details.accordion summary::marker {
+  color: var(--color-white);
+}
+
+details.accordion summary::before {
+  content: ">";
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-red);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  line-height: 0.9;
+  text-indent: 3px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+details.accordion[open] summary::before {
+  transform: rotate(-90deg);
+}
+
+details.accordion > p,
+details.accordion > div {
+  color: var(--color-7A7A7A);
+  margin: 10px 0 0;
 }
 
 /*--- Directory of Personal Trainer and Gymnasiums/Studios styles ---*/

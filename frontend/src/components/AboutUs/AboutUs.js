@@ -8,18 +8,18 @@ import Newsletter from "../Forms/Newsletter/Newsletter";
 const AboutUs = () => {
   return (
     <>
-      <section className={styles["container-top"]}>
+      <section className={`${styles["container-top"]}`}>
         <h2 className={"title--alpha fadeInUp animated"}>SOBRE NÓS</h2>
-        <svg className={styles["container-bottom__blue-bar-svg"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className={styles["container-bottom__blue-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
+        <svg className={`${styles["container-bottom__blue-bar-svg"]}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path className={`${styles["container-bottom__blue-bar-path"]}`} d="M0,6V0h1000v100L0,6z"></path>
         </svg>
       </section>
 
-      <section className={styles["container-top-title"]}>
+      <section className={`${styles["container-top-title"]}`}>
         <h2>OTIMIZA OS TEUS TREINOS, RENTABILIZA O TEU GINÁSIO</h2>
       </section>
 
-      <section className={styles["our-mission"]}>
+      <section className={`${styles["our-mission"]}`}>
         <div className={`container ${styles["our-mission-wrapper"]}`}>
           <h2>A NOSSA MISSÃO</h2>
           <p>Mais do que uma marca, a <strong>PT TRAINING </strong> apresenta-se como a plataforma digital 
@@ -34,18 +34,18 @@ const AboutUs = () => {
             A <strong>PT TRAINING</strong>, apresenta a sua plataforma como uma ferramenta de 
             rentabilidade e otimização de recursos do <em>estúdio/ginásio</em>, oferecendo gratuitamente 
             um perfil a cada espaço para que possam servir todos os <em>personal trainers</em>.</p>
-            <div className={styles["our-mission__item"]}>
+            <div className={`${styles["our-mission__item"]}`}>
             <FontAwesomeIcon icon={faClock}/>
             <h3 className={"title--beta"}>Otimização</h3>
             <p>Ajudamos a otimizar os treinos do Personal Trainer com agendamentos através da nossa plataforma.</p>
           </div>
-          <div className={styles["our-mission__item"]}>
+          <div className={`${styles["our-mission__item"]}`}>
             <FontAwesomeIcon icon={faEdit}/>
             <h3 className={"title--beta"}>Gestão</h3>
             <p>Disponibilizamos numa só plataforma as ferramentas necessárias para otimizar os treinos e gestão 
               do Personal Trainer.</p>
           </div>
-          <div className={styles["our-mission__item"]}>
+          <div className={`${styles["our-mission__item"]}`}>
             <FontAwesomeIcon icon={faCalculator}/>
             <h3 className={"title--beta"}>Rentabilidade</h3>
             <p>Torna-te parceiro e regista os teus Ginásios/Estúdios. Rentabiliza o teu espaço e acessórios 
@@ -54,17 +54,17 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className={styles["container-bottom"]}>
-        <h2 className={styles["container-bottom__title-top"]}>
+      <section className={`${styles["container-bottom"]}`}>
+        <h2 className={`${styles["container-bottom__title-top"]}`}>
           <span>Performance</span><br/>
           NÓS AJUDAMOS-TE NA OTIMIZAÇÃO DE RESULTADOS
         </h2>
-        <h2 className={styles["container-bottom__title-middle"]}>
+        <h2 className={`${styles["container-bottom__title-middle"]}`}>
           <span>Comunidade</span><br/>
           <strong>PT TRAINING</strong> O TEU PARCEIRO NO FITNESS
         </h2>
-        <svg className={styles["container-bottom__red-bar-svg"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className={styles["container-bottom__red-bar-path"]} d="M0,6V0h1000v100L0,6z"></path>
+        <svg className={`${styles["container-bottom__red-bar-svg"]}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path className={`${styles["container-bottom__red-bar-path"]}`} d="M0,6V0h1000v100L0,6z"></path>
         </svg>
       </section>
 

@@ -14,7 +14,7 @@ const PersonalPage = () => {
         <figure>
           <img src={FotoPersonal} alt="Thomas Ravera"/>
         </figure>
-        <div className={styles["personal-container-info"]}>
+        <div className={`${styles["personal-container-info"]}`}>
           <ul>
             <li>Fisiologista do Exercício que procura a cima de tudo ajudar e ensinar a treinar de acordo os seus objetivos.<br/>
               “A mente que se abre a uma nova ideia jamais voltará ao seu estado original." (Albert Einstein)
