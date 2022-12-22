@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./PtTrainingGuide.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
@@ -7,28 +7,15 @@ import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import criarNovoServico from "../../images/pt-training-guide-criar-novo-servico.jpeg";
 import adicionarFotos from "../../images/pt-training-guide-criar-novo-servico-adicionar-fotos.jpeg";
 import adicionarExtras from "../../images/pt-training-guide-criar-novo-servico-adicionar-extras.jpeg";
+import Accordion from "../Page/Accordion/Accordion";
 
 const PtTrainingGuide = () => {
-  useEffect(() => {
-    const details = document.querySelectorAll("details");
-
-    details.forEach((targetDetail) => {
-      targetDetail.addEventListener("click", () => {
-        details.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute("open");
-          }
-        });
-      });
-    });
-  }, []);
-
   return (
     <>
       <section className={`${styles["container-top"]}`}>
         <h2 className={"title--alpha fadeInUp animated"}>GUIA PT TRAINING</h2>
-        <svg className={`${styles["container-bottom__blue-bar-svg"]}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className={`${styles["container-bottom__blue-bar-path"]}`} d="M0,6V0h1000v100L0,6z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path d="M0,6V0h1000v100L0,6z"></path>
         </svg>
       </section>
 
@@ -43,23 +30,21 @@ const PtTrainingGuide = () => {
             <span><FontAwesomeIcon icon={faUsers}/></span>
             MEMBROS
           </h3>
-          <details className={`accordion`}>
-            <summary>Ginásios/Estúdios</summary>
+          <Accordion summary={`Ginásios/Estúdios`}>
             <p>Na Área(Página) de Membros Ginásio/Estúdios, o Membro tem todas as 
               opções disponíveis de membro nomeadamente a  opção para Adicionar o 
               seu Ginásio/Estúdio é onde cria um perfil do seu Ginásio/Estúdio, 
               onde será disponibilizado num directório e página de perfil do mesmo 
               Ginásio/Estúdio.
             </p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Personal Trainer</summary>
+          </Accordion>
+          <Accordion summary={`Personal Trainer`}>
             <p>Na Área(Página) de Membros Personal Trainer, o Membro  tem todas as 
               opções disponíveis de membro nomeadamente a  opção para Criar o seu 
               Perfil de Personal Trainer com toda a informação, onde será 
               disponibilizado num directório de Personal Trainers e página de 
               perfil exclusivo do Personal Trainer.</p>
-          </details>
+          </Accordion>
 
           <h3 className={"title--beta title-icon"}>
             <span><FontAwesomeIcon icon={faCalendarCheck}/></span>
@@ -72,8 +57,7 @@ const PtTrainingGuide = () => {
             Será criado no prazo de até 48H pela PT-TRAINING o acesso para a 
             Gestão de Agendamentos.
           </p>
-          <details className={`accordion`}>
-            <summary>Disponibilizar Serviços como Ginásio/Estúdio</summary>
+          <Accordion summary={`Disponibilizar Serviços como Ginásio/Estúdio`}>
             <p>Todos os Ginásios/Estúdios, após criarem o seu perfil, devem entrar 
               na Área de Membros Ginásios/Estúdios e pedir a criação de serviços na 
               opção Criar Serviços. Confirma o seu email, e é enviado um email 
@@ -82,7 +66,7 @@ const PtTrainingGuide = () => {
               carregados e disponibilizados para os Personal Trainers dentro da 
               Plataforma PT TRAINING.
             </p>
-          </details>
+          </Accordion>
 
           <h4>SERVIÇOS</h4>
           <p>Criação de Serviços. Os serviços disponibilizados são os que estão 
@@ -118,27 +102,23 @@ const PtTrainingGuide = () => {
             <li><strong><em>Dias de Folga</em></strong> – Visualizar os Dias de Folga , bem como adicionar ou alterar.</li>
             <li><strong><em>Dias Especiais</em></strong> – Visualizar Dias Especiais, bem como adicionar ou alterar.</li>
           </ul>
-          <details className={`accordion`}>
-            <summary>Página - Directório de Serviços</summary>
+          <Accordion summary={`Página - Directório de Serviços`}>
             <p>Nesta página será possível verificar todas as categorias com serviços disponíveis de cada 
               ginásio/estúdio. Será possível visualizar, escolher e fazer logo agendamentos enquanto 
               Personal Trainer.
             </p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Pagamentos Agendamentos/Serviços</summary>
+          </Accordion>
+          <Accordion summary={`Pagamentos Agendamentos/Serviços`}>
             <p>Todos os pagamentos de agendamentos/marcações estão por defeito configurados para serem pagas 
               no local ( ginásio/estúdio ) . Não é feita nenhuma gestão de pagamentos referente aos 
               agendamentos/marcações pela PT TRAINING.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Anular Agendamentos</summary>
+          </Accordion>
+          <Accordion summary={`Anular Agendamentos`}>
             <p>No painel de agendamentos é onde poderá reagendar ou anular agendamentos.</p>
-          </details>
+          </Accordion>
 
           <h4>MEMBROS - PERSONAL TRAINER</h4>
-          <details className={`accordion`}>
-            <summary>Agendamentos como funciona?</summary>
+          <Accordion summary={`Agendamentos como funciona?`}>
             <div>
               <p>Os Membros Personal Trainer, podem fazer agendamentos de várias formas.</p>
               <ul className={`numbered-list`}>
@@ -151,22 +131,20 @@ const PtTrainingGuide = () => {
                 </li>
               </ul>
             </div>
-          </details>
-          <details className={`accordion`}>
-            <summary>Categorias e Serviços</summary>
+          </Accordion>
+          <Accordion summary={`Categorias e Serviços`}>
             <p>Todas as Categorias / Serviços que estão disponíveis na plataforma, são 
               disponibilizados pelos Ginásios/Estúdios, bem como o número de slots disponíveis 
               estão de acordo com o horário de funcionamento de cada Ginásio/Estúdio. É da inteira 
               responsabilidade dos Membros Ginásios/Estúdios os Serviços que são disponibilizados.
             </p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Painel de Agendamentos</summary>
+          </Accordion>
+          <Accordion summary={`Painel de Agendamentos`}>
             <p>
               No Painel de Agendamentos, o Personal Trainer terá acesso a todos os agendamentos/marcações 
               feitas, bem como a reagendar ou cancelar essas mesmas marcações.
             </p>
-          </details>
+          </Accordion>
           <p>
             Em todos os Agendamentos e Reagendamentos entre Membros é enviado automaticamente pela 
             plataforma as notificações com toda a informação para os Membros. 
@@ -174,36 +152,31 @@ const PtTrainingGuide = () => {
           
           <h3 className={"title--beta title-icon"}><span><FontAwesomeIcon icon={faUserFriends}/></span>GESTÃO DE PAGAMENTOS</h3>
           <h4>MEMBROS - GINÁSIO/ESTÚDIO</h4>
-          <details className={`accordion`}>
-            <summary>Como funciona os Pagamentos de Serviços</summary>
+          <Accordion summary={`Como funciona os Pagamentos de Serviços`}>
             <p>Todas as Categorias / Serviços que estão disponíveis na plataforma, são 
               disponibilizados pelos Ginásios/Estúdios, bem como o número de slots disponíveis 
               estão de acordo com o horário de funcionamento de cada Ginásio/Estúdio. É da inteira 
               responsabilidade dos Membros Ginásios/Estúdios os Serviços que são disponibilizados.
             </p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Serviço Renda Mensal</summary>
+          </Accordion>
+          <Accordion summary={`Serviço Renda Mensal`}>
             <p>A PT Training sobre o Serviço de Renda Mensal, retém uma taxa(fee) de 7%.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Processamento de Pagamentos</summary>
+          </Accordion>
+          <Accordion summary={`Processamento de Pagamentos`}>
             <p>
             A PT Training procede à transferência dos pagamentos de serviços efectuados pelos Membros 
             Personal Trainer aos Membros Ginásios/Estúdios, até 7 dias úteis.
             </p>
-          </details>
+          </Accordion>
 
           <h4>MEMBROS - PERSONAL TRAINER</h4>
-          <details className={`accordion`}>
-            <summary>Como funciona os Pagamentos de Serviços</summary>
+          <Accordion summary={`Como funciona os Pagamentos de Serviços`}>
             <p>
               Para os Membros Personal Trainer, os Pagamentos de Serviços são efectuados dentro da 
               Plataforma PT-Training e sempre no momento que regista/agenda o serviço.
             </p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Devoluções. Como Funciona?</summary>
+          </Accordion>
+          <Accordion summary={`Devoluções. Como Funciona?`}>
             <ul className={`numbered-list`}>
               <li>
                 Devolução de Serviços: Só é possivel devolução de um serviço agendado, se o PT efectuar 
@@ -222,7 +195,7 @@ const PtTrainingGuide = () => {
                 única diferença é a taxa que, neste caso, é 7%.
               </li>
             </ul>
-          </details>
+          </Accordion>
         </div>
       </section>
 
@@ -230,7 +203,7 @@ const PtTrainingGuide = () => {
         <div className={`container`}>
           <h2>Precisa de Ajuda?</h2>
           <p>Junta-te a esta comunidade.</p>
-          <a className={`button--rounded`} href="/personal-registration" role="button">ABRIR TICKET</a>
+          <a className={`button--rounded`} href="/join-us" role="button">ABRIR TICKET</a>
         </div>
       </section>
     </>

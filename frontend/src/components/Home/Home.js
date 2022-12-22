@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStreetView, faUserCheck, faUsers, faSearch, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -8,22 +8,9 @@ import homeImageInstagramUser from "../../images/home-rodrigogodinho.jpeg";
 import homeImageForth1 from "../../images/home-forth-1.jpeg";
 import homeImageForth2 from "../../images/home-forth-2.jpeg";
 import Newsletter from "../Forms/Newsletter/Newsletter";
+import Accordion from "../Page/Accordion/Accordion";
 
 const Home = () => {
-  useEffect(() => {
-    const details = document.querySelectorAll("details");
-
-    details.forEach((targetDetail) => {
-      targetDetail.addEventListener("click", () => {
-        details.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute("open");
-          }
-        });
-      });
-    });
-  }, []);
-
   return (
     <>
       <section className={`${styles["container-top-image"]}`}>
@@ -80,36 +67,31 @@ const Home = () => {
       <section className={`${styles["perguntas-frequentes"]}`}>
         <h2>AS TUAS PERGUNTAS FREQUENTES RESPONDIDAS</h2>
         <div className={`container ${styles["perguntas-frequentes__container"]}`}>
-          <details className={`accordion`}>
-            <summary>Como posso aderir ao PT TRAINING ?</summary>
+          <Accordion summary={`Como posso aderir ao PT TRAINING?`}>
             <p>Para aderir ao PT-TRAINING terá que ser Personal Trainer ou como 
               proprietário de um Ginásio/Estúdio. Neste momento estamos num período 
               de experimentação. A adesão é gratuita, somente com a necessidade de 
               preenchimento de um formulário de registo.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Para aderir tenho que pagar alguma mensalidade ?</summary>
+          </Accordion>
+          <Accordion summary={`Para aderir tenho que pagar alguma mensalidade?`}>
             <p>A plataforma PT Training tem 2 planos de Subscrição. Subscrição como 
               Ginásio que é gratuito até 31 de Dezembro de 2022. A Subscrição para 
               Personal Trainer é igualmente gratuito.Não há qualquer pagamento para 
               adesão à PT-Training. O Personal Trainer só irá efectuar pagamentos 
               dos serviços que agendar/comprar dentro da plataforma PT-Training.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Sou Personal Trainer como posso aderir ao PT TRAINING ?</summary>
+          </Accordion>
+          <Accordion summary={`Sou Personal Trainer como posso aderir ao PT TRAINING?`}>
             <p>Para aderir ao Personal Trainer , basta submeter na escolha de 
               Membros a adesão como Personal Trainer.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Como posso agendar um serviço com qualquer Ginásio/Estúdio?</summary>
+          </Accordion>
+          <Accordion summary={`Como posso agendar um serviço com qualquer Ginásio/Estúdio?`}>
             <p>Ser membro PT Training como Personal Trainer. Procurar no directório 
               de Serviços, quais os Serviços disponibilizados por todos os Membros Ginásios/Estúdios.</p>
-          </details>
-          <details className={`accordion`}>
-            <summary>Como posso registar o meu Ginásio/Estúdio na PT TRAINING ?</summary>
+          </Accordion>
+          <Accordion summary={`Como posso registar o meu Ginásio/Estúdio na PT TRAINING?`}>
             <p>Ser Membro PT Training como Ginásio/Estúdio. Após adesão, aceder à zona 
               de Membros Ginásio/Estúdio, escolher a opção de Criar Ginásio.</p>
-          </details>
+          </Accordion>
           <a href="/perguntas-frequentes" target="_blank" rel="noreferrer">Ver mais <FontAwesomeIcon icon={faSearch}/></a>
         </div>
       </section>
@@ -158,7 +140,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Newsletter />
+      <Newsletter/>
     </>
   );
 };

@@ -223,7 +223,7 @@
 
 @media only screen and (max-width: 767px) {
   .container-top {
-    background-size: 260%;
+    background-size: 180%;
     height: 77vh;
     background-position: center;
   }

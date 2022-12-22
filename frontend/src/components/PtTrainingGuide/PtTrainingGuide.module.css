@@ -60,6 +60,19 @@ section ul {
   text-align: center;
 }
 
+.container-top svg {
+    transform: rotateX(180deg);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 85px;
+}
+
+.container-top svg path {
+  fill: var(--color-1B252F);
+}
+
 .pt-training-guide {
   position: relative;
   z-index: 1;
@@ -130,7 +143,7 @@ section ul {
 
 @media only screen and (max-width: 767px) {
   .container-top {
-    background-size: 260%;
+    background-size: 160%;
     height: 77vh;
     background-position: center;
   }
@@ -150,5 +163,13 @@ section ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .pt-training-guide .pt-training-guide__container-photos {
+    flex-direction: column;
+  }
+
+  .pt-training-guide .pt-training-guide__container-photos img {
+    max-width: 100%
   }
 }

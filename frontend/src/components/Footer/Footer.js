@@ -89,7 +89,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/personal-registration">
+                <a href="/join-us">
                   <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Inscrição</span>
                 </a>
