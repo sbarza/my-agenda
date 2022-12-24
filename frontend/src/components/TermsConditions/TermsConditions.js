@@ -4,7 +4,7 @@ import styles from "./TermsConditions.module.css";
 const TermsConditions = () => {
   return (
     <>
-      <section className={`container`}>
+      <section className={`container ${styles["container-terms-conditions"]}`}>
         <h2 className={`title--alpha`}>TERMOS E CONDIÇÕES</h2>
         <ol>
           <li>

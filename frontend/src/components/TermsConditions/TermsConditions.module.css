@@ -1,3 +1,7 @@
+section.container-terms-conditions {
+  margin-bottom: 80px;
+}
+
 ol li {
   line-height: 29px;
   font-size: var(--font-size-delta-sm);

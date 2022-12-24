@@ -4,7 +4,7 @@ import styles from "./PrivacyPolicy.module.css";
 const PrivacyPolicy = () => {
   return (
     <>
-      <section className={`container`}>
+      <section className={`container ${styles["privacy-policy"]}`}>
         <h2 className={`title--alpha`}>POLITICA DE PRIVACIDADE & COOKIES</h2>
         <p>Esta Política de Privacidade descreve nossas políticas e procedimentos sobre a coleta, uso e 
           divulgação de Suas informações quando Você usa o Serviço e informa sobre Seus direitos de 
