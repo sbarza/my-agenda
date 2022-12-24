@@ -1,0 +1,33 @@
+ol li {
+  line-height: 29px;
+  font-size: var(--font-size-delta-sm);
+  font-family: var(--font-family-montserrat);
+  color: var(--color-5C5C5C);
+}
+
+ol li::before {
+  font-weight: 600;
+}
+
+ol li::before,
+ol li h3 {
+  font-size: var(--font-size-gamma);
+}
+
+ol li ol li::before {
+  font-weight: 400;
+  font-size: var(--font-size-delta-sm);
+}
+
+ol li h3 {
+  display: inline-block;
+  color: var(--color-5C5C5C);
+}
+
+ol li ol li ol li {
+  margin-bottom: 20px;
+}
+
+ol li ol li ol li::before {
+  content: "";
+}

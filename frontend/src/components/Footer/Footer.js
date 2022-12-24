@@ -113,8 +113,8 @@ const Footer = () => {
       <section className={`${styles["footer-info"]}`}>
         <span className={`${styles["footer-info__copyright"]}`}>2022 © PT TRAINING – Todos os direitos reservados.</span>
         <span className={`${styles["footer-info__links"]}`}>
-          <a href="https://pt-training.pt/termos-de-utilizacao">Termos e Condições</a>&nbsp;|&nbsp;
-          <a href="https://pt-training.pt/politica-de-privacidade-e-cookie">Politica de Privacidade & Cookies</a>
+          <a href="/terms-and-conditions">Termos e Condições</a>&nbsp;|&nbsp;
+          <a href="/privacy-policy-cookies">Politica de Privacidade & Cookies</a>
         </span>
         <span className={`${styles["footer-info__development"]}`}>Made with love by <a href="https://www.linkedin.com/in/sergio-barza/">Sergio Barza</a> & <a href="https://filipetorres.dev">Filipe Torres</a></span>
       </section>
