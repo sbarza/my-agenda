@@ -19,6 +19,7 @@ import GymnasiumStudioDirectory from "./components/GymnasiumStudioDirectory/Gymn
 import GymnasiumStudioPage from "./components/GymnasiumStudioPage/GymnasiumStudioPage";
 import PtTrainingGuide from "./components/PtTrainingGuide/PtTrainingGuide";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route exact path="/ginasio-estudio/gymnasium-studio-page" render={(props) => <GymnasiumStudioPage {...props} />} />
             <Route exact path="/pt-training-guide" render={(props) => <PtTrainingGuide {...props} />} />
             <Route exact path="/terms-and-conditions" render={(props) => <TermsConditions {...props} />} />
+            <Route exact path="/privacy-policy-cookies" render={(props) => <PrivacyPolicy {...props} />} />
           </Switch>
         </Router>
       </main>

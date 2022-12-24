@@ -1,0 +1,18 @@
+
+h3, h4, h5, h6, p {
+  font-family: var(--font-family-montserrat);
+  color: var(--color-5C5C5C);
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+p {
+  line-height: 20px;
+  margin-top: 0;
+}
