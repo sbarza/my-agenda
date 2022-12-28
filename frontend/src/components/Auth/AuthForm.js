@@ -131,7 +131,7 @@ const AuthForm = () => {
             Log In
           </button>
 
-          <a className={styles["auth-lost-password"]} href="#">Perdeu a Password ?</a>
+          <a className={`${styles["auth-lost-password"]}`} href="#">Perdeu a Password ?</a>
         </form>
       </section>
     </>

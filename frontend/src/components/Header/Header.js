@@ -64,43 +64,43 @@ const Header = () => {
   
   return (
     <header>
-      <section className={styles["header-info"]}>
+      <section className={`${styles["header-info"]}`}>
         <div className={`container ${styles["header-info__container"]}`}>
           <a
             href="tel:+351964278843"
-            className={styles["header-info__data-contact"]}
+            className={`${styles["header-info__data-contact"]}`}
           >
-            <FontAwesomeIcon icon={faPhone} flip="horizontal" />
+            <FontAwesomeIcon icon={faPhone} flip="horizontal"/>
             <span>+351 964 278 843</span>
           </a>
           <a
             href="mailto:geral@pt-training.pt"
             className={`${styles["header-info__data-contact"]} ${styles["header-info__data-contact--email"]}`}
           >
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope}/>
             <span>geral@pt-training.pt</span>
           </a>
           <a
             href="https://www.facebook.com/pttrainingoficial"
-            className={styles["header-info__data--social"]}
+            className={`${styles["header-info__data--social"]}`}
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebookF} />
+            <FontAwesomeIcon icon={faFacebookF}/>
           </a>
           <a
             href="https://www.instagram.com/pttraining_oficial/"
-            className={styles["header-info__data--social"]}
+            className={`${styles["header-info__data--social"]}`}
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faInstagram}/>
           </a>
         </div>
       </section>
       <section className={`container ${styles["header-menu"]}`}>
-        <div className={styles["header-menu__container"]}>
-          <a className={styles["header-menu__logo"]} href="/">
+        <div className={`${styles["header-menu__container"]}`}>
+          <a className={`${styles["header-menu__logo"]}`} href="/">
             <svg
               enableBackground="new 0 0 289.167 200"
               version="1.1"
@@ -181,18 +181,18 @@ const Header = () => {
               </g>
             </svg>
           </a>
-          <nav className={styles["header-menu__nav"]}>
+          <nav className={`${styles["header-menu__nav"]}`}>
             <input type="checkbox" />
             <FontAwesomeIcon
               icon={faBars}
-              className={styles["header-menu__bars-icon"]}
+              className={`${styles["header-menu__bars-icon"]}`}
             />
             <FontAwesomeIcon
               icon={faXmark}
               size="lg"
-              className={styles["header-menu__close-icon"]}
+              className={`${styles["header-menu__close-icon"]}`}
             />
-            <ul className={styles["header-menu__list"]}>
+            <ul className={`${styles["header-menu__list"]}`}>
               <li className={location.pathname === "/about-us" ? styles["header-menu__item-active"] : ""}>
                 <a href="/about-us">Sobre Nós</a>
               </li>

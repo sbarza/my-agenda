@@ -83,6 +83,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-black);
 }
 
+.title-icon {
+  font-size: var(--font-size-gamma);
+}
+
+.title-icon span {
+  display: inline-block;
+  position: relative;
+  width: 59px;
+  height: 59px;
+  margin-right: 14px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-size: var(--font-size-beta-4-1);
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.title-icon span svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -133,6 +157,24 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--font-size-beta);;
     left: calc(50% - 182px);
   }
+}
+
+/*--- Text styles ---*/
+.underline {
+  text-decoration: underline;
+}
+
+ol,
+ol ol {
+  counter-reset: item;
+  padding: 0;
+}
+ol li {
+  display: block;
+}
+ol li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
 }
 
 /*--- Forms ---*/
@@ -219,6 +261,17 @@ button.submit-button:hover {
   background-color: var(--color-CC3366);
 }
 
+.button--rounded {
+  padding: 12px 24px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+}
+
 .form-control {
   position: relative;
   display: block;
@@ -286,4 +339,207 @@ button.submit-button:hover {
 
 .fadeInUp {
   animation-name: fadeInUp
+}
+
+/*--- Carousel component styles ---*/
+.custom-carousel .carousel.carousel-slider .control-arrow {
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+  top: calc(50% - 20px);
+  bottom: unset;
+  padding: 5px 11px;
+}
+
+.carousel .slide {
+  height: 500px;
+}
+
+.custom-carousel .carousel .slide img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@media only screen and (max-width: 599px) {
+  .custom-carousel {
+    margin-top: 30px;
+  }
+
+  .carousel .slide {
+    height: 300px;
+  }
+}
+
+/*--- Accordion component styles ---*/
+details.accordion {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  border: 1px solid var(--color-D6D6D6);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+details.accordion summary {
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+details.accordion summary:hover {
+  color: var(--color-red);
+}
+
+details.accordion summary::marker {
+  color: var(--color-white);
+}
+
+details.accordion summary::before {
+  content: ">";
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: -14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-red);
+  font-size: var(--font-size-delta);
+  font-weight: 600;
+  line-height: 0.9;
+  text-indent: 3px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+details.accordion[open] summary::before {
+  transform: rotate(-90deg);
+}
+
+details.accordion > p,
+details.accordion > div {
+  color: var(--color-7A7A7A);
+  margin: 10px 0 0;
+}
+
+/*--- Directory of Personal Trainer and Gymnasiums/Studios styles ---*/
+.directory-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.directory-container h1 {
+  margin: 8px 0 0;
+  font-size: var(--font-size-beta-6);
+  line-height: 1.2;
+  flex-basis: 100%;
+}
+
+.directory-container h2 {
+  font-weight: 600;
+  margin: 55px 0;
+}
+
+.directory-container figure {
+  margin: 0;
+}
+
+.directory-container figure > img {
+  max-width: 300px;
+}
+
+.directory-container .directory-container__location {
+  margin: 15px 0 5px;
+}
+
+.directory-container p.directory-container__social-media svg {
+  background: var(--color-666666);
+  color: var(--color-white);
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px 5px 5px 0;
+}
+
+.directory-container p.directory-container__stars {
+  color: var(--color-EEE00B);
+  font-size: var(--font-size-gamma);
+}
+
+.directory-container__item {
+  flex-basis: calc(33.33% - 25px);
+  margin: 0;
+}
+
+.directory-container__item figcaption {
+  text-align: center;
+  font-size: var(--font-size-delta);
+  margin: 8px 0 16px;
+}
+
+.directory-container__item img {
+  max-width: 100%;
+}
+
+.directory-container ul,
+.directory-container__item ul {
+  padding-left: 15px;
+}
+
+.directory-container ul,
+.directory-container__item ul,
+.directory-container p {
+  margin: 0;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-delta);
+}
+
+.directory-container ul li,
+.directory-container__item ul li {
+  list-style-type: "- ";
+  margin-bottom: 20px;
+}
+
+.directory-container ul li,
+.directory-container__item ul li,
+.directory-container p {
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 599px) {
+  .personal-container-info ul li {
+    margin-bottom: 10px;
+  }
+}
+
+.directory-container__item button {
+  background-color: var(--color-474747);
+  border-radius: 7px;
+  font-size: var(--font-size-beta-sm);
+  padding: 11px 31px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 599px) {
+  .directory-container {
+    flex-direction: column;
+  }
+
+  .directory-container h1 {
+    font-size: var(--font-size-beta-2-1);
+    font-weight: 600;
+  }
+
+  .directory-container h2 {
+    font-size: var(--font-size-beta-sm);
+    margin: 20px 0 5px;
+  }
 }

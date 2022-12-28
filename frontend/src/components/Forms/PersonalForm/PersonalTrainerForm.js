@@ -1,4 +1,4 @@
-import { useState, CSSProperties } from "react";
+import React, { useState, CSSProperties } from "react";
 import useInput from "../../../hooks/use-input";
 import Password from "../Password/Password";
 import styles from "./PersonalTrainerForm.module.css";

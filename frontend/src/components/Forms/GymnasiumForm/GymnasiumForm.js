@@ -1,7 +1,6 @@
-import { useState, CSSProperties } from "react";
+import React, { useState, CSSProperties } from "react";
 import useInput from "../../../hooks/use-input";
 import Password from "../Password/Password";
-import styles from "./GymnasiumForm.module.css";
 import imageForm from "../../../images/personal-gymnasium-main.jpeg";
 import FadeLoader from "react-spinners/FadeLoader";
 
@@ -126,6 +125,7 @@ const GymnasiumForm = () => {
           return true;
         }
       }
+      return false;
     });
     if (!limitExceeded) setFiles(uploaded);
     console.log(uploaded);

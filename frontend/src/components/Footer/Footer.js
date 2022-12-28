@@ -8,8 +8,8 @@ const Footer = () => {
 
   return (
     <footer>
-      <section className={styles["footer-menu"]}>
-        <div className={styles["footer-container"]}>
+      <section className={`${styles["footer-menu"]}`}>
+        <div className={`${styles["footer-container"]}`}>
           <div className={`${styles["footer-container__item"]} ${styles["footer-container__item--logo-text"]}`}>
             <a href="/home">
               <svg enableBackground="new 0 0 289.167 200" version="1.1" width="120px" height="86.122px" viewBox="0 0 120 86.122" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ const Footer = () => {
             </a>
             <p>Mais do que uma marca, a <strong>PT TRAINING</strong> apresenta-se como a plataforma digital que liga os ginásios e os personal trainers. <strong>PT TRAINING</strong> é uma solução para rentabilizar os estúdios/ginásios, bem como otimizar os treinos e a gestão do personal trainer.</p>
           </div>
-          <div className={styles["footer-container__item"]}>
+          <div className={`${styles["footer-container__item"]}`}>
             <h2>INFORMAÇÃO</h2>
             <ul>
               <li>
@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={styles["footer-container__item"]}>
+          <div className={`${styles["footer-container__item"]}`}>
             <h2>MEMBROS</h2>
             <ul>
               <li>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/gym-studio-directory">
+                <a href="/gymnasium-studio-directory">
                   <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Diretório de Ginásios/Estúdios</span>
                 </a>
@@ -89,14 +89,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/personal-registration">
+                <a href="/join-us">
                   <FontAwesomeIcon icon={faAngleRight} size="sm"/>
                   <span>Inscrição</span>
                 </a>
               </li>
             </ul>
           </div>
-          <div className={styles["footer-container__item"]}>
+          <div className={`${styles["footer-container__item"]}`}>
             <h2>SUPORTE</h2>
             <ul>
               <li>
@@ -110,13 +110,13 @@ const Footer = () => {
           </div>
         </div> 
       </section>
-      <section className={styles["footer-info"]}>
-        <span className={styles["footer-info__copyright"]}>2022 © PT TRAINING – Todos os direitos reservados.</span>
-        <span className={styles["footer-info__links"]}>
-          <a href="https://pt-training.pt/termos-de-utilizacao">Termos e Condições</a>&nbsp;|&nbsp;
-          <a href="https://pt-training.pt/politica-de-privacidade-e-cookie">Politica de Privacidade & Cookies</a>
+      <section className={`${styles["footer-info"]}`}>
+        <span className={`${styles["footer-info__copyright"]}`}>2022 © PT TRAINING – Todos os direitos reservados.</span>
+        <span className={`${styles["footer-info__links"]}`}>
+          <a href="/terms-and-conditions">Termos e Condições</a>&nbsp;|&nbsp;
+          <a href="/privacy-policy-cookies">Politica de Privacidade & Cookies</a>
         </span>
-        <span className={styles["footer-info__development"]}>Made with love by <a href="https://www.linkedin.com/in/sergio-barza/">Sergio Barza</a> & <a href="https://filipetorres.dev">Filipe Torres</a></span>
+        <span className={`${styles["footer-info__development"]}`}>Made with love by <a href="https://www.linkedin.com/in/sergio-barza/">Sergio Barza</a> & <a href="https://filipetorres.dev">Filipe Torres</a></span>
       </section>
     </footer>
   );

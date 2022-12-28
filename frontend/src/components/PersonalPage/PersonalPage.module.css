@@ -1,0 +1,11 @@
+.personal-container figure {
+  flex-basis: 38%;
+}
+
+.personal-container figure img {
+  border-radius: 50%;
+}
+
+.personal-container-info {
+  flex-basis: calc(62% - 25px);
+}

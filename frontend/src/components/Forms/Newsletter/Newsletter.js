@@ -1,9 +1,10 @@
+import React from "react";
 import styles from "./Newsletter.module.css";
 
 const Newsletter = () => {
   return (
     <>
-      <section className={styles["newsletter"]}>
+      <section className={`${styles["newsletter"]}`}>
         <div className={`container`}>
           <h2>Fica Atento!</h2>
           <h3>Com a nossa newsletter semanal não perderás nenhuma novidade do PT TRAINING.</h3>
