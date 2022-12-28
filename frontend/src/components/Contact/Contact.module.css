@@ -1,0 +1,291 @@
+.container-top,
+.container-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.container-top {
+  height: 60vh;
+  padding: 4% 0;
+  transition: max-height 1s;
+  background-image: url(../../images/contact__top.jpeg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  opacity: .47;
+}
+
+.container-top h2 {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 15px);
+  width: 100%;
+  margin: 0;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container-contact-form {
+  position: relative;
+  z-index: 1;
+  top: -1px;
+  padding: 12% 0% 10% 0%;
+  background-color: var(--color-1B252F);
+  color: var(--color-white);
+}
+
+.container-contact-form__internal {
+  display: flex;
+}
+
+.container-contact-form__title-info,
+.container-contact-form__form {
+  flex-basis: 50%;
+}
+
+.container-contact-form__title-info h2 {
+  margin: 0 0 40px;
+  font-size: var(--font-size-beta-4);
+}
+
+.container-contact-form__title-info p {
+  margin: 20px 0;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-md);
+  font-style: oblique;
+  line-height: 1.5;
+}
+
+.container-contact-form__form {
+  display: flex;
+  flex-flow: wrap;
+  padding-left: 90px;
+}
+
+.container-contact-form__form input[type=text],
+.container-contact-form__form input[type=email],
+.container-contact-form__form input[type=tel],
+.container-contact-form__form textarea {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.container-contact-form__form textarea {
+  min-width: 545px;
+  max-width: 545px;
+  max-height: 150px;
+}
+
+.container-contact-form__form > div {
+  flex-basis: 100%;
+  padding: 10px 0;
+}
+
+.container-contact-form__form > div:last-child {
+  text-align: right;
+}
+
+.container-contact-form__form input[type=text]:nth-child(-n + 4),
+.container-contact-form__form input[type=email]:nth-child(-n + 4),
+.container-contact-form__form input[type=tel]:nth-child(-n + 4) {
+  flex-basis: calc(50% - 10px);
+}
+
+.container-contact-form__form input[type=radio],
+.container-contact-form__form input[type=checkbox] {
+  vertical-align: middle;
+}
+
+.container-contact-form__form input[type=radio] + label,
+.container-contact-form__form input[type=checkbox] + label {
+  margin: 0 15px 0 5px;
+}
+
+.container-contact-form__form label {
+  margin-right: 10px;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-sm);
+}
+
+.container-contact-form__submit-button {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 30px;
+  padding: 10px 24px;
+  border: none;
+}
+
+.container-bottom {
+  min-height: 550px;
+  padding: 10% 0 5%;
+  border-top: 3px solid var(--color-red);
+  background-image: url(../../images/about-us__gymnasiums-estudios.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  opacity: .47;
+}
+
+.container-bottom__red-bar-svg,
+.container-bottom__blue-bar-svg {
+  transform: rotateX(180deg);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+}
+
+.container-bottom__red-bar-svg {
+  height: 30px;
+}
+
+.container-bottom__blue-bar-svg {
+  height: 85px;
+}
+
+.container-bottom__red-bar-path {
+  fill: var(--color-red);
+}
+
+.container-bottom__blue-bar-path {
+  fill: var(--color-1B252F);
+}
+
+.container-bottom__title-top,
+.container-bottom__title-middle {
+  z-index: 1;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-beta-4);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.container-bottom__title-top {
+  position: absolute;
+  top: -70px;
+  left: calc(50% - 600px);
+  width: calc(100% - 40px);
+  max-width: 1160px;
+  padding: 80px 20px;
+  margin: 0 auto;
+  background-color: var(--color-black);
+}
+
+.container-bottom__title-middle {
+  position: absolute;
+  top: calc(50% - 15px);
+  width: 100%;
+}
+
+.container-bottom__title-top span,
+.container-bottom__title-middle span {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-beta-sm);
+  color: var(--color-red);
+}
+
+.container-bottom-img {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform: scale(1.4);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-bottom__title-top {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-bottom__title-top,
+  .container-bottom__title-middle {
+    margin: 0 5%;
+    width: 80%;
+    padding: 7% 5%;
+  }
+
+  .container-bottom-img {
+    transform: scale(2.1);
+    bottom: 330px;
+    top: unset;
+  }
+
+  .container-contact-form__internal {
+    flex-flow: column;
+  }
+
+  .container-contact-form__title-info {
+    text-align: center;
+  }
+
+  .container-contact-form__form {
+    padding: 30px 50px 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container-top {
+    background-size: 190%;
+    height: 77vh;
+    background-position: center;
+  }
+
+  .container-top h2 {
+    font-size: var(--font-size-beta-2-1);
+  }
+
+  .container-contact-form h2 {
+    font-size: var(--font-size-beta-sm);
+  }
+
+  .container-contact-form h2 br {
+    display: none;
+  }
+
+  .container-contact-form__form input[type=text]:nth-child(-n + 4),
+  .container-contact-form__form input[type=email]:nth-child(-n + 4),
+  .container-contact-form__form input[type=tel]:nth-child(-n + 4),
+  .container-contact-form__form textarea {
+    flex-basis: 100%;
+  }
+
+  .container-contact-form__form textarea {
+    min-width: unset;
+    max-width: unset;
+    max-height: 150px;
+  }
+
+  .container-bottom__title-top,
+  .container-bottom__title-middle {
+    font-size: var(--font-size-beta-sm);
+  }
+}

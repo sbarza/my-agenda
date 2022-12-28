@@ -22,10 +22,18 @@ main {
   flex-grow: 1;
 }
 
-.container {
-  max-width: 1140px;
+.container,
+.container-md {
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.container-md {
+  max-width: 1200px;
 }
 
 .container-full {
@@ -83,7 +91,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
+  .container,
+  .container-md {
     max-width: 767px;
   }
 
